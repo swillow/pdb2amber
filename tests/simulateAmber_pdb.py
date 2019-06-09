@@ -3,7 +3,7 @@ from simtk.openmm import *
 from simtk.unit import *
 from sys import stdout
 
-prmtop = AmberPrmtopFile('input_amber.prmtop')
+prmtop = AmberPrmtopFile('pdb2amber.prmtop')
 inpcrd = AmberInpcrdFile('receptor.inpcrd')
 system = prmtop.createSystem(nonbondedMethod=NoCutoff, constraints=HBonds)
 integrator = LangevinIntegrator(300*kelvin, 1/picosecond, 0.002*picoseconds)
