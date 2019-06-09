@@ -1,7 +1,7 @@
 # tests
 
-Firstly, with amber files of `receptor.inpcrd' and `receptor.prmtop',
-the receptor.pdb is generated using 'parmed_amber2pdb.py'
+Firstly, with amber files of `receptor.inpcrd` and `receptor.prmtop`,
+receptor.pdb is generated using `parmed_amber2pdb.py`.
 
 Check wehther 'simulatePdb.py', which reads the receptor.pdb and calculates its potential energy, reproduces the potential energy from 'simulateAmber.py', which reads both 'receptor.inpcrd' and 'receptor.prmtop' files and calculates its potential energy.
 
