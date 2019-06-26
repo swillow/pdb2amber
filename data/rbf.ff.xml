@@ -1,0 +1,223 @@
+<ForceField>
+  <Info>
+    <DateGenerated>2019-06-23</DateGenerated>
+  </Info>
+  <AtomTypes>
+    <Type class="NC" element="N" mass="14.0100" name="rbf-NC" />
+    <Type class="C" element="C" mass="12.0100" name="rbf-C" />
+    <Type class="O" element="O" mass="16.0000" name="rbf-O" />
+    <Type class="N" element="N" mass="14.0100" name="rbf-N" />
+    <Type class="CD" element="C" mass="12.0100" name="rbf-CD" />
+    <Type class="CA" element="C" mass="12.0100" name="rbf-CA" />
+    <Type class="C3" element="C" mass="12.0100" name="rbf-C3" />
+    <Type class="NA" element="N" mass="14.0100" name="rbf-NA" />
+    <Type class="OH" element="O" mass="16.0000" name="rbf-OH" />
+    <Type class="HO" element="H" mass="1.0080" name="rbf-HO" />
+    <Type class="HC" element="H" mass="1.0080" name="rbf-HC" />
+    <Type class="H1" element="H" mass="1.0080" name="rbf-H1" />
+    <Type class="HN" element="H" mass="1.0080" name="rbf-HN" />
+    <Type class="HA" element="H" mass="1.0080" name="rbf-HA" />
+  </AtomTypes>
+  <Residues>
+    <Residue name="RBF">
+      <Atom charge=" -0.4224" name="N1" type="rbf-NC" />
+      <Atom charge="  0.8529" name="C2" type="rbf-C" />
+      <Atom charge=" -0.5875" name="O2" type="rbf-O" />
+      <Atom charge=" -0.6145" name="N3" type="rbf-N" />
+      <Atom charge="  0.6110" name="C4" type="rbf-C" />
+      <Atom charge=" -0.5725" name="O4" type="rbf-O" />
+      <Atom charge="  0.3048" name="C4A" type="rbf-CD" />
+      <Atom charge=" -0.5170" name="N5" type="rbf-NC" />
+      <Atom charge="  0.2886" name="C5A" type="rbf-CA" />
+      <Atom charge=" -0.1013" name="C6" type="rbf-CA" />
+      <Atom charge=" -0.1113" name="C7" type="rbf-CA" />
+      <Atom charge=" -0.0518" name="C7M" type="rbf-C3" />
+      <Atom charge=" -0.0073" name="C8" type="rbf-CA" />
+      <Atom charge=" -0.0658" name="C8M" type="rbf-C3" />
+      <Atom charge=" -0.1820" name="C9" type="rbf-CA" />
+      <Atom charge=" -0.0026" name="C9A" type="rbf-CA" />
+      <Atom charge=" -0.0961" name="N10" type="rbf-NA" />
+      <Atom charge="  0.0934" name="C10" type="rbf-CD" />
+      <Atom charge=" -0.0097" name="C1'" type="rbf-C3" />
+      <Atom charge="  0.1291" name="C2'" type="rbf-C3" />
+      <Atom charge=" -0.5808" name="O2'" type="rbf-OH" />
+      <Atom charge="  0.0881" name="C3'" type="rbf-C3" />
+      <Atom charge=" -0.6088" name="O3'" type="rbf-OH" />
+      <Atom charge="  0.1111" name="C4'" type="rbf-C3" />
+      <Atom charge=" -0.5908" name="O4'" type="rbf-OH" />
+      <Atom charge="  0.0874" name="C5'" type="rbf-C3" />
+      <Atom charge=" -0.6268" name="O5'" type="rbf-OH" />
+      <Atom charge="  0.4150" name="HO5'" type="rbf-HO" />
+      <Atom charge="  0.4110" name="HO4'" type="rbf-HO" />
+      <Atom charge="  0.4240" name="HO3'" type="rbf-HO" />
+      <Atom charge="  0.4300" name="HO2'" type="rbf-HO" />
+      <Atom charge="  0.0550" name="HC83" type="rbf-HC" />
+      <Atom charge="  0.0550" name="HC82" type="rbf-HC" />
+      <Atom charge="  0.0550" name="HC81" type="rbf-HC" />
+      <Atom charge="  0.0494" name="HC73" type="rbf-HC" />
+      <Atom charge="  0.0494" name="HC72" type="rbf-HC" />
+      <Atom charge="  0.0494" name="HC71" type="rbf-HC" />
+      <Atom charge="  0.0487" name="HC52" type="rbf-H1" />
+      <Atom charge="  0.0487" name="HC51" type="rbf-H1" />
+      <Atom charge="  0.1077" name="HC4'" type="rbf-H1" />
+      <Atom charge="  0.0487" name="HC3'" type="rbf-H1" />
+      <Atom charge="  0.0937" name="HC2'" type="rbf-H1" />
+      <Atom charge="  0.0872" name="HC12" type="rbf-H1" />
+      <Atom charge="  0.0872" name="HC11" type="rbf-H1" />
+      <Atom charge="  0.3485" name="HN3" type="rbf-HN" />
+      <Atom charge="  0.1580" name="HC9" type="rbf-HA" />
+      <Atom charge="  0.1630" name="HC6" type="rbf-HA" />
+      <Bond atomName1="N1" atomName2="C2" />
+      <Bond atomName1="N1" atomName2="C10" />
+      <Bond atomName1="C2" atomName2="O2" />
+      <Bond atomName1="C2" atomName2="N3" />
+      <Bond atomName1="N3" atomName2="C4" />
+      <Bond atomName1="C4" atomName2="O4" />
+      <Bond atomName1="C4" atomName2="C4A" />
+      <Bond atomName1="C4A" atomName2="N5" />
+      <Bond atomName1="C4A" atomName2="C10" />
+      <Bond atomName1="N5" atomName2="C5A" />
+      <Bond atomName1="C5A" atomName2="C6" />
+      <Bond atomName1="C5A" atomName2="C9A" />
+      <Bond atomName1="C6" atomName2="C7" />
+      <Bond atomName1="C7" atomName2="C7M" />
+      <Bond atomName1="C7" atomName2="C8" />
+      <Bond atomName1="C8" atomName2="C8M" />
+      <Bond atomName1="C8" atomName2="C9" />
+      <Bond atomName1="C9" atomName2="C9A" />
+      <Bond atomName1="C9A" atomName2="N10" />
+      <Bond atomName1="N10" atomName2="C10" />
+      <Bond atomName1="N10" atomName2="C1'" />
+      <Bond atomName1="C1'" atomName2="C2'" />
+      <Bond atomName1="C2'" atomName2="O2'" />
+      <Bond atomName1="C2'" atomName2="C3'" />
+      <Bond atomName1="C3'" atomName2="O3'" />
+      <Bond atomName1="C3'" atomName2="C4'" />
+      <Bond atomName1="C4'" atomName2="O4'" />
+      <Bond atomName1="C4'" atomName2="C5'" />
+      <Bond atomName1="C5'" atomName2="O5'" />
+      <Bond atomName1="N3" atomName2="HN3" />
+      <Bond atomName1="C6" atomName2="HC6" />
+      <Bond atomName1="C7M" atomName2="HC73" />
+      <Bond atomName1="C7M" atomName2="HC72" />
+      <Bond atomName1="C7M" atomName2="HC71" />
+      <Bond atomName1="C8M" atomName2="HC83" />
+      <Bond atomName1="C8M" atomName2="HC82" />
+      <Bond atomName1="C8M" atomName2="HC81" />
+      <Bond atomName1="C9" atomName2="HC9" />
+      <Bond atomName1="C1'" atomName2="HC12" />
+      <Bond atomName1="C1'" atomName2="HC11" />
+      <Bond atomName1="C2'" atomName2="HC2'" />
+      <Bond atomName1="O2'" atomName2="HO2'" />
+      <Bond atomName1="C3'" atomName2="HC3'" />
+      <Bond atomName1="O3'" atomName2="HO3'" />
+      <Bond atomName1="C4'" atomName2="HC4'" />
+      <Bond atomName1="O4'" atomName2="HO4'" />
+      <Bond atomName1="C5'" atomName2="HC52" />
+      <Bond atomName1="C5'" atomName2="HC51" />
+      <Bond atomName1="O5'" atomName2="HO5'" />
+    </Residue>
+  </Residues>
+  <HarmonicBondForce>
+    <Bond k="348861.920000" length="0.138670" type1="rbf-C" type2="rbf-NC" />
+    <Bond k="439654.720000" length="0.131720" type1="rbf-CD" type2="rbf-NC" />
+    <Bond k="533627.360000" length="0.121830" type1="rbf-C" type2="rbf-O" />
+    <Bond k="357815.680000" length="0.137890" type1="rbf-C" type2="rbf-N" />
+    <Bond k="310452.800000" length="0.146760" type1="rbf-C" type2="rbf-CD" />
+    <Bond k="351288.640000" length="0.142780" type1="rbf-CD" type2="rbf-CD" />
+    <Bond k="391371.360000" length="0.135170" type1="rbf-CA" type2="rbf-NC" />
+    <Bond k="385848.480000" length="0.139840" type1="rbf-CA" type2="rbf-CA" />
+    <Bond k="268612.800000" length="0.151560" type1="rbf-C3" type2="rbf-CA" />
+    <Bond k="351874.400000" length="0.138400" type1="rbf-CA" type2="rbf-NA" />
+    <Bond k="356309.440000" length="0.138020" type1="rbf-CD" type2="rbf-NA" />
+    <Bond k="274219.360000" length="0.146290" type1="rbf-C3" type2="rbf-NA" />
+    <Bond k="251793.120000" length="0.153750" type1="rbf-C3" type2="rbf-C3" />
+    <Bond k="265014.560000" length="0.142330" type1="rbf-C3" type2="rbf-OH" />
+    <Bond k="337397.760000" length="0.101290" type1="rbf-HN" type2="rbf-N" />
+    <Bond k="289365.440000" length="0.108600" type1="rbf-CA" type2="rbf-HA" />
+    <Bond k="276646.080000" length="0.109690" type1="rbf-C3" type2="rbf-HC" />
+    <Bond k="276646.080000" length="0.109690" type1="rbf-C3" type2="rbf-H1" />
+    <Bond k="310787.520000" length="0.097300" type1="rbf-HO" type2="rbf-OH" />
+  </HarmonicBondForce>
+  <HarmonicAngleForce>
+    <Angle angle="2.149897" k="618.395200" type1="rbf-NC" type2="rbf-C" type3="rbf-O" />
+    <Angle angle="2.043956" k="599.148800" type1="rbf-N" type2="rbf-C" type3="rbf-NC" />
+    <Angle angle="1.964543" k="599.148800" type1="rbf-CD" type2="rbf-CD" type3="rbf-NC" />
+    <Angle angle="1.958609" k="626.763200" type1="rbf-NA" type2="rbf-CD" type3="rbf-NC" />
+    <Angle angle="2.102948" k="558.145600" type1="rbf-C" type2="rbf-NC" type3="rbf-CD" />
+    <Angle angle="2.217965" k="533.041600" type1="rbf-C" type2="rbf-N" type3="rbf-C" />
+    <Angle angle="2.147629" k="620.905600" type1="rbf-N" type2="rbf-C" type3="rbf-O" />
+    <Angle angle="1.966987" k="578.228800" type1="rbf-CD" type2="rbf-C" type3="rbf-N" />
+    <Angle angle="2.127208" k="565.676800" type1="rbf-C" type2="rbf-CD" type3="rbf-NC" />
+    <Angle angle="2.141345" k="532.204800" type1="rbf-C" type2="rbf-CD" type3="rbf-CD" />
+    <Angle angle="2.162987" k="578.228800" type1="rbf-CD" type2="rbf-C" type3="rbf-O" />
+    <Angle angle="1.830502" k="606.680000" type1="rbf-CA" type2="rbf-NC" type3="rbf-CD" />
+    <Angle angle="2.055475" k="574.044800" type1="rbf-CD" type2="rbf-CD" type3="rbf-NA" />
+    <Angle angle="2.089509" k="581.576000" type1="rbf-CA" type2="rbf-CA" type3="rbf-NC" />
+    <Angle angle="2.094745" k="557.308800" type1="rbf-CA" type2="rbf-CA" type3="rbf-CA" />
+    <Angle angle="2.065424" k="578.228800" type1="rbf-CA" type2="rbf-CA" type3="rbf-NA" />
+    <Angle angle="2.107835" k="531.368000" type1="rbf-C3" type2="rbf-CA" type3="rbf-CA" />
+    <Angle angle="1.974841" k="564.003200" type1="rbf-CA" type2="rbf-NA" type3="rbf-CD" />
+    <Angle angle="2.170492" k="521.326400" type1="rbf-C3" type2="rbf-NA" type3="rbf-CA" />
+    <Angle angle="1.970128" k="548.104000" type1="rbf-C3" type2="rbf-C3" type3="rbf-NA" />
+    <Angle angle="2.207144" k="517.979200" type1="rbf-C3" type2="rbf-NA" type3="rbf-CD" />
+    <Angle angle="1.923179" k="564.840000" type1="rbf-C3" type2="rbf-C3" type3="rbf-OH" />
+    <Angle angle="1.946217" k="526.347200" type1="rbf-C3" type2="rbf-C3" type3="rbf-C3" />
+    <Angle angle="2.051635" k="404.174400" type1="rbf-C" type2="rbf-N" type3="rbf-HN" />
+    <Angle angle="2.092302" k="403.337600" type1="rbf-CA" type2="rbf-CA" type3="rbf-HA" />
+    <Angle angle="1.928066" k="391.622400" type1="rbf-CA" type2="rbf-C3" type3="rbf-HC" />
+    <Angle angle="1.898570" k="416.726400" type1="rbf-H1" type2="rbf-C3" type3="rbf-NA" />
+    <Angle angle="1.912184" k="388.275200" type1="rbf-C3" type2="rbf-C3" type3="rbf-H1" />
+    <Angle angle="1.872041" k="396.643200" type1="rbf-C3" type2="rbf-OH" type3="rbf-HO" />
+    <Angle angle="1.924401" k="425.931200" type1="rbf-H1" type2="rbf-C3" type3="rbf-OH" />
+    <Angle angle="1.877626" k="329.699200" type1="rbf-HC" type2="rbf-C3" type3="rbf-HC" />
+    <Angle angle="1.892985" k="328.025600" type1="rbf-H1" type2="rbf-C3" type3="rbf-H1" />
+  </HarmonicAngleForce>
+  <PeriodicTorsionForce>
+    <Proper k1="10.460000" periodicity1="2" phase1="3.141594" type1="rbf-NC" type2="rbf-C" type3="rbf-N" type4="rbf-HN" />
+    <Proper k1="8.368000" periodicity1="1" phase1="0.000000" type1="rbf-O" type2="rbf-C" type3="rbf-N" type4="rbf-HN" />
+    <Proper k1="15.167000" periodicity1="2" phase1="3.141594" type1="rbf-NC" type2="rbf-CA" type3="rbf-CA" type4="rbf-HA" />
+    <Proper k1="0.000000" periodicity1="2" phase1="0.000000" type1="rbf-CA" type2="rbf-CA" type3="rbf-C3" type4="rbf-HC" />
+    <Proper k1="0.650844" periodicity1="3" phase1="0.000000" type1="rbf-NA" type2="rbf-C3" type3="rbf-C3" type4="rbf-H1" />
+    <Proper k1="1.046000" periodicity1="1" phase1="0.000000" type1="rbf-C3" type2="rbf-C3" type3="rbf-OH" type4="rbf-HO" />
+    <Proper k1="0.697333" periodicity1="3" phase1="0.000000" type1="rbf-HO" type2="rbf-OH" type3="rbf-C3" type4="rbf-H1" />
+    <Proper k1="16.736000" periodicity1="2" phase1="3.141594" type1="rbf-NC" type2="rbf-CD" type3="rbf-CD" type4="rbf-NC" />
+    <Proper k1="7.112800" periodicity1="2" phase1="3.141594" type1="rbf-NC" type2="rbf-CD" type3="rbf-NA" type4="rbf-CA" />
+    <Proper k1="19.874000" periodicity1="2" phase1="3.141594" type1="rbf-C" type2="rbf-NC" type3="rbf-CD" type4="rbf-CD" />
+    <Proper k1="12.029000" periodicity1="2" phase1="3.141594" type1="rbf-N" type2="rbf-C" type3="rbf-CD" type4="rbf-NC" />
+    <Proper k1="20.083200" periodicity1="2" phase1="3.141594" type1="rbf-CD" type2="rbf-NC" type3="rbf-CA" type4="rbf-CA" />
+    <Proper k1="1.255200" periodicity1="2" phase1="3.141594" type1="rbf-CA" type2="rbf-CA" type3="rbf-NA" type4="rbf-C3" />
+    <Proper k1="0.836800" periodicity1="1" phase1="3.141594" type1="rbf-C3" type2="rbf-C3" type3="rbf-C3" type4="rbf-C3" />
+    <Proper k1="4.916200" periodicity1="2" phase1="0.000000" type1="rbf-OH" type2="rbf-C3" type3="rbf-C3" type4="rbf-OH" />
+    <Improper k1="10.460000" periodicity1="2" phase1="3.141594" type1="rbf-O" type2="rbf-C" type3="rbf-N" type4="rbf-HN" />
+    <Improper k1="0.669440" periodicity1="3" phase1="0.000000" type1="rbf-C3" type2="rbf-C3" type3="rbf-OH" type4="rbf-HO" />
+    <Improper k1="0.000000" periodicity1="3" phase1="0.000000" type1="rbf-OH" type2="rbf-C3" type3="rbf-C3" type4="rbf-H1" />
+    <Improper k1="4.602400" periodicity1="2" phase1="3.141594" type1="rbf-C" type2="rbf-C" type3="rbf-N" type4="rbf-HN" />
+    <Improper k1="16.736000" periodicity1="2" phase1="3.141594" type1="rbf-NC" type2="rbf-CD" type3="rbf-CD" type4="rbf-C" />
+    <Improper k1="12.029000" periodicity1="2" phase1="3.141594" type1="rbf-N" type2="rbf-C" type3="rbf-CD" type4="rbf-CD" />
+    <Improper k1="7.112800" periodicity1="2" phase1="3.141594" type1="rbf-CD" type2="rbf-CD" type3="rbf-NA" type4="rbf-CA" />
+    <Improper k1="15.167000" periodicity1="2" phase1="3.141594" type1="rbf-NC" type2="rbf-CA" type3="rbf-CA" type4="rbf-NA" />
+    <Improper k1="1.255200" periodicity1="2" phase1="3.141594" type1="rbf-CA" type2="rbf-CA" type3="rbf-NA" type4="rbf-CD" />
+    <Improper k1="1.046000" periodicity1="2" phase1="3.141594" type1="rbf-C3" type2="rbf-C3" type3="rbf-C3" type4="rbf-C3" />
+    <Improper k1="0.753120" periodicity1="3" phase1="0.000000" type1="rbf-C3" type2="rbf-C3" type3="rbf-C3" type4="rbf-C3" />
+    <Improper k1="0.602496" periodicity1="3" phase1="0.000000" type1="rbf-OH" type2="rbf-C3" type3="rbf-C3" type4="rbf-OH" />
+    <Improper k1="43.932000" periodicity1="2" phase1="3.141594" type1="rbf-N" type2="rbf-NC" type3="rbf-C" type4="rbf-O" />
+  </PeriodicTorsionForce>
+  <NonbondedForce coulomb14scale="0.8333333333333334" lj14scale="0.5">
+    <UseAttributeFromResidue name="charge" />
+    <Atom epsilon="0.711280" sigma="0.325000" type="rbf-NC" />
+    <Atom epsilon="0.359824" sigma="0.339967" type="rbf-C" />
+    <Atom epsilon="0.878640" sigma="0.295992" type="rbf-O" />
+    <Atom epsilon="0.711280" sigma="0.325000" type="rbf-N" />
+    <Atom epsilon="0.359824" sigma="0.339967" type="rbf-CD" />
+    <Atom epsilon="0.359824" sigma="0.339967" type="rbf-CA" />
+    <Atom epsilon="0.457730" sigma="0.339967" type="rbf-C3" />
+    <Atom epsilon="0.711280" sigma="0.325000" type="rbf-NA" />
+    <Atom epsilon="0.880314" sigma="0.306647" type="rbf-OH" />
+    <Atom epsilon="0.000000" sigma="0.089090" type="rbf-HO" />
+    <Atom epsilon="0.065689" sigma="0.264953" type="rbf-HC" />
+    <Atom epsilon="0.065689" sigma="0.247135" type="rbf-H1" />
+    <Atom epsilon="0.065689" sigma="0.106908" type="rbf-HN" />
+    <Atom epsilon="0.062760" sigma="0.259964" type="rbf-HA" />
+  </NonbondedForce>
+</ForceField>

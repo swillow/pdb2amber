@@ -1,0 +1,223 @@
+<ForceField>
+  <Info>
+    <DateGenerated>2019-06-23</DateGenerated>
+  </Info>
+  <AtomTypes>
+    <Type class="C3" element="C" mass="12.0100" name="rib-C3" />
+    <Type class="CA" element="C" mass="12.0100" name="rib-CA" />
+    <Type class="NA" element="N" mass="14.0100" name="rib-NA" />
+    <Type class="CC" element="C" mass="12.0100" name="rib-CC" />
+    <Type class="ND" element="N" mass="14.0100" name="rib-ND" />
+    <Type class="C" element="C" mass="12.0100" name="rib-C" />
+    <Type class="O" element="O" mass="16.0000" name="rib-O" />
+    <Type class="N" element="N" mass="14.0100" name="rib-N" />
+    <Type class="HN" element="H" mass="1.0080" name="rib-HN" />
+    <Type class="HO" element="H" mass="1.0080" name="rib-HO" />
+    <Type class="OH" element="O" mass="16.0000" name="rib-OH" />
+    <Type class="HA" element="H" mass="1.0080" name="rib-HA" />
+    <Type class="HC" element="H" mass="1.0080" name="rib-HC" />
+    <Type class="H1" element="H" mass="1.0080" name="rib-H1" />
+  </AtomTypes>
+  <Residues>
+    <Residue name="RIB">
+      <Atom charge=" -0.0528" name="C1" type="rib-C3" />
+      <Atom charge=" -0.1093" name="C2" type="rib-CA" />
+      <Atom charge=" -0.1023" name="C3" type="rib-CA" />
+      <Atom charge="  0.2896" name="C4" type="rib-CA" />
+      <Atom charge=" -0.0046" name="C5" type="rib-CA" />
+      <Atom charge=" -0.1840" name="C6" type="rib-CA" />
+      <Atom charge=" -0.0063" name="C7" type="rib-CA" />
+      <Atom charge=" -0.0668" name="C8" type="rib-C3" />
+      <Atom charge=" -0.0951" name="N1" type="rib-NA" />
+      <Atom charge="  0.0944" name="C9" type="rib-CC" />
+      <Atom charge=" -0.4324" name="N2" type="rib-ND" />
+      <Atom charge="  0.8529" name="C10" type="rib-C" />
+      <Atom charge=" -0.5885" name="O1" type="rib-O" />
+      <Atom charge=" -0.6145" name="N3" type="rib-N" />
+      <Atom charge="  0.6110" name="C11" type="rib-C" />
+      <Atom charge=" -0.5705" name="O2" type="rib-O" />
+      <Atom charge="  0.3048" name="C12" type="rib-CC" />
+      <Atom charge=" -0.5150" name="N4" type="rib-ND" />
+      <Atom charge="  0.3485" name="H1" type="rib-HN" />
+      <Atom charge="  0.4260" name="HN" type="rib-HO" />
+      <Atom charge=" -0.0117" name="C13" type="rib-C3" />
+      <Atom charge="  0.1041" name="C14" type="rib-C3" />
+      <Atom charge="  0.0721" name="C15" type="rib-C3" />
+      <Atom charge="  0.0751" name="C16" type="rib-C3" />
+      <Atom charge="  0.0944" name="C17" type="rib-C3" />
+      <Atom charge=" -0.5998" name="O3" type="rib-OH" />
+      <Atom charge="  0.4070" name="H2" type="rib-HO" />
+      <Atom charge=" -0.6058" name="O4" type="rib-OH" />
+      <Atom charge="  0.4250" name="H3" type="rib-HO" />
+      <Atom charge=" -0.5858" name="O5" type="rib-OH" />
+      <Atom charge="  0.4060" name="H4" type="rib-HO" />
+      <Atom charge=" -0.5798" name="O6" type="rib-OH" />
+      <Atom charge="  0.1630" name="H5" type="rib-HA" />
+      <Atom charge="  0.1670" name="H6" type="rib-HA" />
+      <Atom charge="  0.0497" name="H7" type="rib-HC" />
+      <Atom charge="  0.0497" name="H8" type="rib-HC" />
+      <Atom charge="  0.0497" name="H9" type="rib-HC" />
+      <Atom charge="  0.0557" name="H10" type="rib-HC" />
+      <Atom charge="  0.0557" name="H11" type="rib-HC" />
+      <Atom charge="  0.0557" name="H12" type="rib-HC" />
+      <Atom charge="  0.0737" name="H13" type="rib-H1" />
+      <Atom charge="  0.0877" name="H14" type="rib-H1" />
+      <Atom charge="  0.0707" name="H15" type="rib-H1" />
+      <Atom charge="  0.0707" name="H16" type="rib-H1" />
+      <Atom charge="  0.0842" name="H17" type="rib-H1" />
+      <Atom charge="  0.0842" name="H18" type="rib-H1" />
+      <Atom charge="  0.0947" name="H19" type="rib-H1" />
+      <Bond atomName1="C1" atomName2="C2" />
+      <Bond atomName1="C2" atomName2="C3" />
+      <Bond atomName1="C2" atomName2="C7" />
+      <Bond atomName1="C3" atomName2="C4" />
+      <Bond atomName1="C4" atomName2="C5" />
+      <Bond atomName1="C4" atomName2="N4" />
+      <Bond atomName1="C5" atomName2="C6" />
+      <Bond atomName1="C5" atomName2="N1" />
+      <Bond atomName1="C6" atomName2="C7" />
+      <Bond atomName1="C7" atomName2="C8" />
+      <Bond atomName1="N1" atomName2="C9" />
+      <Bond atomName1="N1" atomName2="C13" />
+      <Bond atomName1="C9" atomName2="N2" />
+      <Bond atomName1="C9" atomName2="C12" />
+      <Bond atomName1="N2" atomName2="C10" />
+      <Bond atomName1="C10" atomName2="O1" />
+      <Bond atomName1="C10" atomName2="N3" />
+      <Bond atomName1="N3" atomName2="C11" />
+      <Bond atomName1="C11" atomName2="O2" />
+      <Bond atomName1="C11" atomName2="C12" />
+      <Bond atomName1="C12" atomName2="N4" />
+      <Bond atomName1="C13" atomName2="C14" />
+      <Bond atomName1="C14" atomName2="C15" />
+      <Bond atomName1="C14" atomName2="O6" />
+      <Bond atomName1="C15" atomName2="C16" />
+      <Bond atomName1="C15" atomName2="O5" />
+      <Bond atomName1="C16" atomName2="C17" />
+      <Bond atomName1="C16" atomName2="O4" />
+      <Bond atomName1="C17" atomName2="O3" />
+      <Bond atomName1="C1" atomName2="H7" />
+      <Bond atomName1="C1" atomName2="H8" />
+      <Bond atomName1="C1" atomName2="H9" />
+      <Bond atomName1="C3" atomName2="H5" />
+      <Bond atomName1="C6" atomName2="H6" />
+      <Bond atomName1="C8" atomName2="H10" />
+      <Bond atomName1="C8" atomName2="H11" />
+      <Bond atomName1="C8" atomName2="H12" />
+      <Bond atomName1="N3" atomName2="H1" />
+      <Bond atomName1="HN" atomName2="O6" />
+      <Bond atomName1="C13" atomName2="H17" />
+      <Bond atomName1="C13" atomName2="H18" />
+      <Bond atomName1="C14" atomName2="H19" />
+      <Bond atomName1="C15" atomName2="H14" />
+      <Bond atomName1="C16" atomName2="H13" />
+      <Bond atomName1="C17" atomName2="H15" />
+      <Bond atomName1="C17" atomName2="H16" />
+      <Bond atomName1="O3" atomName2="H2" />
+      <Bond atomName1="O4" atomName2="H3" />
+      <Bond atomName1="O5" atomName2="H4" />
+    </Residue>
+  </Residues>
+  <HarmonicBondForce>
+    <Bond k="268612.800000" length="0.151560" type1="rib-C3" type2="rib-CA" />
+    <Bond k="385848.480000" length="0.139840" type1="rib-CA" type2="rib-CA" />
+    <Bond k="391371.360000" length="0.135170" type1="rib-CA" type2="rib-ND" />
+    <Bond k="351874.400000" length="0.138400" type1="rib-CA" type2="rib-NA" />
+    <Bond k="356309.440000" length="0.138020" type1="rib-CC" type2="rib-NA" />
+    <Bond k="274219.360000" length="0.146290" type1="rib-C3" type2="rib-NA" />
+    <Bond k="439654.720000" length="0.131720" type1="rib-CC" type2="rib-ND" />
+    <Bond k="351288.640000" length="0.142780" type1="rib-CC" type2="rib-CC" />
+    <Bond k="348861.920000" length="0.138670" type1="rib-C" type2="rib-ND" />
+    <Bond k="533627.360000" length="0.121830" type1="rib-C" type2="rib-O" />
+    <Bond k="357815.680000" length="0.137890" type1="rib-C" type2="rib-N" />
+    <Bond k="310452.800000" length="0.146760" type1="rib-C" type2="rib-CC" />
+    <Bond k="251793.120000" length="0.153750" type1="rib-C3" type2="rib-C3" />
+    <Bond k="265014.560000" length="0.142330" type1="rib-C3" type2="rib-OH" />
+    <Bond k="276646.080000" length="0.109690" type1="rib-C3" type2="rib-HC" />
+    <Bond k="289365.440000" length="0.108600" type1="rib-CA" type2="rib-HA" />
+    <Bond k="337397.760000" length="0.101290" type1="rib-HN" type2="rib-N" />
+    <Bond k="310787.520000" length="0.097300" type1="rib-HO" type2="rib-OH" />
+    <Bond k="276646.080000" length="0.109690" type1="rib-C3" type2="rib-H1" />
+  </HarmonicBondForce>
+  <HarmonicAngleForce>
+    <Angle angle="2.107835" k="531.368000" type1="rib-C3" type2="rib-CA" type3="rib-CA" />
+    <Angle angle="2.094745" k="557.308800" type1="rib-CA" type2="rib-CA" type3="rib-CA" />
+    <Angle angle="2.089509" k="581.576000" type1="rib-CA" type2="rib-CA" type3="rib-ND" />
+    <Angle angle="2.065424" k="578.228800" type1="rib-CA" type2="rib-CA" type3="rib-NA" />
+    <Angle angle="1.830502" k="606.680000" type1="rib-CA" type2="rib-ND" type3="rib-CC" />
+    <Angle angle="1.974841" k="564.003200" type1="rib-CA" type2="rib-NA" type3="rib-CC" />
+    <Angle angle="2.170492" k="521.326400" type1="rib-C3" type2="rib-NA" type3="rib-CA" />
+    <Angle angle="1.958609" k="626.763200" type1="rib-NA" type2="rib-CC" type3="rib-ND" />
+    <Angle angle="2.055475" k="574.044800" type1="rib-CC" type2="rib-CC" type3="rib-NA" />
+    <Angle angle="1.970128" k="548.104000" type1="rib-C3" type2="rib-C3" type3="rib-NA" />
+    <Angle angle="2.207144" k="517.979200" type1="rib-C3" type2="rib-NA" type3="rib-CC" />
+    <Angle angle="2.102948" k="558.145600" type1="rib-C" type2="rib-ND" type3="rib-CC" />
+    <Angle angle="2.141345" k="532.204800" type1="rib-C" type2="rib-CC" type3="rib-CC" />
+    <Angle angle="1.964543" k="599.148800" type1="rib-CC" type2="rib-CC" type3="rib-ND" />
+    <Angle angle="2.149897" k="618.395200" type1="rib-ND" type2="rib-C" type3="rib-O" />
+    <Angle angle="2.043956" k="599.148800" type1="rib-N" type2="rib-C" type3="rib-ND" />
+    <Angle angle="2.217965" k="533.041600" type1="rib-C" type2="rib-N" type3="rib-C" />
+    <Angle angle="2.147629" k="620.905600" type1="rib-N" type2="rib-C" type3="rib-O" />
+    <Angle angle="1.966987" k="578.228800" type1="rib-CC" type2="rib-C" type3="rib-N" />
+    <Angle angle="2.127208" k="565.676800" type1="rib-C" type2="rib-CC" type3="rib-ND" />
+    <Angle angle="2.162987" k="578.228800" type1="rib-CC" type2="rib-C" type3="rib-O" />
+    <Angle angle="1.946217" k="526.347200" type1="rib-C3" type2="rib-C3" type3="rib-C3" />
+    <Angle angle="1.923179" k="564.840000" type1="rib-C3" type2="rib-C3" type3="rib-OH" />
+    <Angle angle="1.928066" k="391.622400" type1="rib-CA" type2="rib-C3" type3="rib-HC" />
+    <Angle angle="2.092302" k="403.337600" type1="rib-CA" type2="rib-CA" type3="rib-HA" />
+    <Angle angle="1.898570" k="416.726400" type1="rib-H1" type2="rib-C3" type3="rib-NA" />
+    <Angle angle="2.051635" k="404.174400" type1="rib-C" type2="rib-N" type3="rib-HN" />
+    <Angle angle="1.872041" k="396.643200" type1="rib-C3" type2="rib-OH" type3="rib-HO" />
+    <Angle angle="1.912184" k="388.275200" type1="rib-C3" type2="rib-C3" type3="rib-H1" />
+    <Angle angle="1.924401" k="425.931200" type1="rib-H1" type2="rib-C3" type3="rib-OH" />
+    <Angle angle="1.877626" k="329.699200" type1="rib-HC" type2="rib-C3" type3="rib-HC" />
+    <Angle angle="1.892985" k="328.025600" type1="rib-H1" type2="rib-C3" type3="rib-H1" />
+  </HarmonicAngleForce>
+  <PeriodicTorsionForce>
+    <Proper k1="15.167000" periodicity1="2" phase1="3.141594" type1="rib-C3" type2="rib-CA" type3="rib-CA" type4="rib-HA" />
+    <Proper k1="0.000000" periodicity1="2" phase1="0.000000" type1="rib-CA" type2="rib-CA" type3="rib-C3" type4="rib-HC" />
+    <Proper k1="0.650844" periodicity1="3" phase1="0.000000" type1="rib-NA" type2="rib-C3" type3="rib-C3" type4="rib-H1" />
+    <Proper k1="10.460000" periodicity1="2" phase1="3.141594" type1="rib-ND" type2="rib-C" type3="rib-N" type4="rib-HN" />
+    <Proper k1="8.368000" periodicity1="1" phase1="0.000000" type1="rib-O" type2="rib-C" type3="rib-N" type4="rib-HN" />
+    <Proper k1="1.046000" periodicity1="1" phase1="0.000000" type1="rib-HO" type2="rib-OH" type3="rib-C3" type4="rib-C3" />
+    <Proper k1="0.697333" periodicity1="3" phase1="0.000000" type1="rib-HO" type2="rib-OH" type3="rib-C3" type4="rib-H1" />
+    <Proper k1="20.083200" periodicity1="2" phase1="3.141594" type1="rib-CA" type2="rib-CA" type3="rib-ND" type4="rib-CC" />
+    <Proper k1="1.255200" periodicity1="2" phase1="3.141594" type1="rib-CA" type2="rib-CA" type3="rib-NA" type4="rib-CC" />
+    <Proper k1="19.874000" periodicity1="2" phase1="3.141594" type1="rib-CA" type2="rib-ND" type3="rib-CC" type4="rib-C" />
+    <Proper k1="7.112800" periodicity1="2" phase1="3.141594" type1="rib-CA" type2="rib-NA" type3="rib-CC" type4="rib-ND" />
+    <Proper k1="16.736000" periodicity1="2" phase1="3.141594" type1="rib-NA" type2="rib-CC" type3="rib-CC" type4="rib-C" />
+    <Proper k1="12.029000" periodicity1="2" phase1="3.141594" type1="rib-CC" type2="rib-CC" type3="rib-C" type4="rib-O" />
+    <Proper k1="0.836800" periodicity1="1" phase1="3.141594" type1="rib-C3" type2="rib-C3" type3="rib-C3" type4="rib-C3" />
+    <Proper k1="4.916200" periodicity1="2" phase1="0.000000" type1="rib-OH" type2="rib-C3" type3="rib-C3" type4="rib-OH" />
+    <Improper k1="10.460000" periodicity1="2" phase1="3.141594" type1="rib-O" type2="rib-C" type3="rib-N" type4="rib-HN" />
+    <Improper k1="0.669440" periodicity1="3" phase1="0.000000" type1="rib-HO" type2="rib-OH" type3="rib-C3" type4="rib-C3" />
+    <Improper k1="0.000000" periodicity1="3" phase1="0.000000" type1="rib-OH" type2="rib-C3" type3="rib-C3" type4="rib-H1" />
+    <Improper k1="4.602400" periodicity1="2" phase1="3.141594" type1="rib-CA" type2="rib-CA" type3="rib-CA" type4="rib-HA" />
+    <Improper k1="15.167000" periodicity1="2" phase1="3.141594" type1="rib-CA" type2="rib-CA" type3="rib-CA" type4="rib-CA" />
+    <Improper k1="19.874000" periodicity1="2" phase1="3.141594" type1="rib-CA" type2="rib-ND" type3="rib-CC" type4="rib-CC" />
+    <Improper k1="7.112800" periodicity1="2" phase1="3.141594" type1="rib-CA" type2="rib-NA" type3="rib-CC" type4="rib-CC" />
+    <Improper k1="16.736000" periodicity1="2" phase1="3.141594" type1="rib-NA" type2="rib-CC" type3="rib-CC" type4="rib-ND" />
+    <Improper k1="12.029000" periodicity1="2" phase1="3.141594" type1="rib-CC" type2="rib-CC" type3="rib-C" type4="rib-N" />
+    <Improper k1="1.046000" periodicity1="2" phase1="3.141594" type1="rib-C3" type2="rib-C3" type3="rib-C3" type4="rib-C3" />
+    <Improper k1="0.753120" periodicity1="3" phase1="0.000000" type1="rib-C3" type2="rib-C3" type3="rib-C3" type4="rib-C3" />
+    <Improper k1="0.602496" periodicity1="3" phase1="0.000000" type1="rib-OH" type2="rib-C3" type3="rib-C3" type4="rib-OH" />
+    <Improper k1="43.932000" periodicity1="2" phase1="3.141594" type1="rib-N" type2="rib-ND" type3="rib-C" type4="rib-O" />
+  </PeriodicTorsionForce>
+  <NonbondedForce coulomb14scale="0.8333333333333334" lj14scale="0.5">
+    <UseAttributeFromResidue name="charge" />
+    <Atom epsilon="0.457730" sigma="0.339967" type="rib-C3" />
+    <Atom epsilon="0.359824" sigma="0.339967" type="rib-CA" />
+    <Atom epsilon="0.711280" sigma="0.325000" type="rib-NA" />
+    <Atom epsilon="0.359824" sigma="0.339967" type="rib-CC" />
+    <Atom epsilon="0.711280" sigma="0.325000" type="rib-ND" />
+    <Atom epsilon="0.359824" sigma="0.339967" type="rib-C" />
+    <Atom epsilon="0.878640" sigma="0.295992" type="rib-O" />
+    <Atom epsilon="0.711280" sigma="0.325000" type="rib-N" />
+    <Atom epsilon="0.065689" sigma="0.106908" type="rib-HN" />
+    <Atom epsilon="0.000000" sigma="0.089090" type="rib-HO" />
+    <Atom epsilon="0.880314" sigma="0.306647" type="rib-OH" />
+    <Atom epsilon="0.062760" sigma="0.259964" type="rib-HA" />
+    <Atom epsilon="0.065689" sigma="0.264953" type="rib-HC" />
+    <Atom epsilon="0.065689" sigma="0.247135" type="rib-H1" />
+  </NonbondedForce>
+</ForceField>

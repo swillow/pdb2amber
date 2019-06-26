@@ -1,0 +1,271 @@
+<ForceField>
+  <Info>
+    <DateGenerated>2019-06-23</DateGenerated>
+  </Info>
+  <AtomTypes>
+    <Type class="NC" element="N" mass="14.0100" name="fmn-NC" />
+    <Type class="C" element="C" mass="12.0100" name="fmn-C" />
+    <Type class="O" element="O" mass="16.0000" name="fmn-O" />
+    <Type class="N" element="N" mass="14.0100" name="fmn-N" />
+    <Type class="CD" element="C" mass="12.0100" name="fmn-CD" />
+    <Type class="CA" element="C" mass="12.0100" name="fmn-CA" />
+    <Type class="C3" element="C" mass="12.0100" name="fmn-C3" />
+    <Type class="NA" element="N" mass="14.0100" name="fmn-NA" />
+    <Type class="OH" element="O" mass="16.0000" name="fmn-OH" />
+    <Type class="OS" element="O" mass="16.0000" name="fmn-OS" />
+    <Type class="P5" element="P" mass="30.9700" name="fmn-P5" />
+    <Type class="HN" element="H" mass="1.0080" name="fmn-HN" />
+    <Type class="HA" element="H" mass="1.0080" name="fmn-HA" />
+    <Type class="HC" element="H" mass="1.0080" name="fmn-HC" />
+    <Type class="H1" element="H" mass="1.0080" name="fmn-H1" />
+    <Type class="HO" element="H" mass="1.0080" name="fmn-HO" />
+  </AtomTypes>
+  <Residues>
+    <Residue name="FMN">
+      <Atom charge=" -0.3974" name="N1" type="fmn-NC" />
+      <Atom charge="  0.8539" name="C2" type="fmn-C" />
+      <Atom charge=" -0.5825" name="O2" type="fmn-O" />
+      <Atom charge=" -0.6175" name="N3" type="fmn-N" />
+      <Atom charge="  0.6130" name="C4" type="fmn-C" />
+      <Atom charge=" -0.5945" name="O4" type="fmn-O" />
+      <Atom charge="  0.3018" name="C4A" type="fmn-CD" />
+      <Atom charge=" -0.5270" name="N5" type="fmn-NC" />
+      <Atom charge="  0.2806" name="C5A" type="fmn-CA" />
+      <Atom charge=" -0.1053" name="C6" type="fmn-CA" />
+      <Atom charge=" -0.1243" name="C7" type="fmn-CA" />
+      <Atom charge=" -0.0458" name="C7M" type="fmn-C3" />
+      <Atom charge=" -0.0123" name="C8" type="fmn-CA" />
+      <Atom charge=" -0.0638" name="C8M" type="fmn-C3" />
+      <Atom charge=" -0.1880" name="C9" type="fmn-CA" />
+      <Atom charge="  0.0154" name="C9A" type="fmn-CA" />
+      <Atom charge=" -0.0841" name="N10" type="fmn-NA" />
+      <Atom charge="  0.0904" name="C10" type="fmn-CD" />
+      <Atom charge=" -0.0087" name="C1'" type="fmn-C3" />
+      <Atom charge="  0.0991" name="C2'" type="fmn-C3" />
+      <Atom charge=" -0.5858" name="O2'" type="fmn-OH" />
+      <Atom charge="  0.0821" name="C3'" type="fmn-C3" />
+      <Atom charge=" -0.6328" name="O3'" type="fmn-OH" />
+      <Atom charge="  0.1151" name="C4'" type="fmn-C3" />
+      <Atom charge=" -0.6328" name="O4'" type="fmn-OH" />
+      <Atom charge="  0.1414" name="C5'" type="fmn-C3" />
+      <Atom charge=" -0.5692" name="O5'" type="fmn-OS" />
+      <Atom charge="  1.4348" name="P" type="fmn-P5" />
+      <Atom charge=" -0.8245" name="O2P" type="fmn-O" />
+      <Atom charge=" -0.8245" name="O3P" type="fmn-O" />
+      <Atom charge=" -0.5822" name="O4P" type="fmn-OS" />
+      <Atom charge=" -0.1601" name="CA" type="fmn-C3" />
+      <Atom charge="  0.2141" name="CB" type="fmn-C3" />
+      <Atom charge=" -0.1601" name="CG2" type="fmn-C3" />
+      <Atom charge="  0.3415" name="H" type="fmn-HN" />
+      <Atom charge="  0.1530" name="H1" type="fmn-HA" />
+      <Atom charge="  0.0424" name="H2" type="fmn-HC" />
+      <Atom charge="  0.0424" name="H3" type="fmn-HC" />
+      <Atom charge="  0.0424" name="H4" type="fmn-HC" />
+      <Atom charge="  0.0517" name="H5" type="fmn-HC" />
+      <Atom charge="  0.0517" name="H6" type="fmn-HC" />
+      <Atom charge="  0.0517" name="H7" type="fmn-HC" />
+      <Atom charge="  0.1730" name="H8" type="fmn-HA" />
+      <Atom charge="  0.0892" name="H9" type="fmn-H1" />
+      <Atom charge="  0.0892" name="H10" type="fmn-H1" />
+      <Atom charge="  0.1477" name="H11" type="fmn-H1" />
+      <Atom charge="  0.3950" name="H12" type="fmn-HO" />
+      <Atom charge="  0.0947" name="H13" type="fmn-H1" />
+      <Atom charge="  0.4060" name="H14" type="fmn-HO" />
+      <Atom charge="  0.0537" name="H15" type="fmn-H1" />
+      <Atom charge="  0.4460" name="H16" type="fmn-HO" />
+      <Atom charge="  0.0532" name="H17" type="fmn-H1" />
+      <Atom charge="  0.0532" name="H18" type="fmn-H1" />
+      <Atom charge="  0.0470" name="H" type="fmn-HC" />
+      <Atom charge="  0.0470" name="H19" type="fmn-HC" />
+      <Atom charge="  0.0470" name="H20" type="fmn-HC" />
+      <Atom charge="  0.0207" name="H21" type="fmn-H1" />
+      <Atom charge="  0.0470" name="H22" type="fmn-HC" />
+      <Atom charge="  0.0470" name="H23" type="fmn-HC" />
+      <Atom charge="  0.0470" name="H24" type="fmn-HC" />
+      <Bond atomName1="N1" atomName2="C2" />
+      <Bond atomName1="N1" atomName2="C10" />
+      <Bond atomName1="C2" atomName2="O2" />
+      <Bond atomName1="C2" atomName2="N3" />
+      <Bond atomName1="N3" atomName2="C4" />
+      <Bond atomName1="C4" atomName2="O4" />
+      <Bond atomName1="C4" atomName2="C4A" />
+      <Bond atomName1="C4A" atomName2="N5" />
+      <Bond atomName1="C4A" atomName2="C10" />
+      <Bond atomName1="N5" atomName2="C5A" />
+      <Bond atomName1="C5A" atomName2="C6" />
+      <Bond atomName1="C5A" atomName2="C9A" />
+      <Bond atomName1="C6" atomName2="C7" />
+      <Bond atomName1="C7" atomName2="C7M" />
+      <Bond atomName1="C7" atomName2="C8" />
+      <Bond atomName1="C8" atomName2="C8M" />
+      <Bond atomName1="C8" atomName2="C9" />
+      <Bond atomName1="C9" atomName2="C9A" />
+      <Bond atomName1="C9A" atomName2="N10" />
+      <Bond atomName1="N10" atomName2="C10" />
+      <Bond atomName1="N10" atomName2="C1'" />
+      <Bond atomName1="C1'" atomName2="C2'" />
+      <Bond atomName1="C2'" atomName2="O2'" />
+      <Bond atomName1="C2'" atomName2="C3'" />
+      <Bond atomName1="C3'" atomName2="O3'" />
+      <Bond atomName1="C3'" atomName2="C4'" />
+      <Bond atomName1="C4'" atomName2="O4'" />
+      <Bond atomName1="C4'" atomName2="C5'" />
+      <Bond atomName1="C5'" atomName2="O5'" />
+      <Bond atomName1="O5'" atomName2="P" />
+      <Bond atomName1="P" atomName2="O2P" />
+      <Bond atomName1="P" atomName2="O3P" />
+      <Bond atomName1="P" atomName2="O4P" />
+      <Bond atomName1="O4P" atomName2="CB" />
+      <Bond atomName1="CA" atomName2="CB" />
+      <Bond atomName1="CB" atomName2="CG2" />
+      <Bond atomName1="N3" atomName2="H" />
+      <Bond atomName1="C6" atomName2="H1" />
+      <Bond atomName1="C7M" atomName2="H2" />
+      <Bond atomName1="C7M" atomName2="H3" />
+      <Bond atomName1="C7M" atomName2="H4" />
+      <Bond atomName1="C8M" atomName2="H5" />
+      <Bond atomName1="C8M" atomName2="H6" />
+      <Bond atomName1="C8M" atomName2="H7" />
+      <Bond atomName1="C9" atomName2="H8" />
+      <Bond atomName1="C1'" atomName2="H9" />
+      <Bond atomName1="C1'" atomName2="H10" />
+      <Bond atomName1="C2'" atomName2="H11" />
+      <Bond atomName1="O2'" atomName2="H12" />
+      <Bond atomName1="C3'" atomName2="H13" />
+      <Bond atomName1="O3'" atomName2="H14" />
+      <Bond atomName1="C4'" atomName2="H15" />
+      <Bond atomName1="O4'" atomName2="H16" />
+      <Bond atomName1="C5'" atomName2="H17" />
+      <Bond atomName1="C5'" atomName2="H18" />
+      <Bond atomName1="CA" atomName2="H" />
+      <Bond atomName1="CA" atomName2="H19" />
+      <Bond atomName1="CA" atomName2="H20" />
+      <Bond atomName1="CB" atomName2="H21" />
+      <Bond atomName1="CG2" atomName2="H22" />
+      <Bond atomName1="CG2" atomName2="H23" />
+      <Bond atomName1="CG2" atomName2="H24" />
+    </Residue>
+  </Residues>
+  <HarmonicBondForce>
+    <Bond k="348861.920000" length="0.138670" type1="fmn-C" type2="fmn-NC" />
+    <Bond k="439654.720000" length="0.131720" type1="fmn-CD" type2="fmn-NC" />
+    <Bond k="533627.360000" length="0.121830" type1="fmn-C" type2="fmn-O" />
+    <Bond k="357815.680000" length="0.137890" type1="fmn-C" type2="fmn-N" />
+    <Bond k="310452.800000" length="0.146760" type1="fmn-C" type2="fmn-CD" />
+    <Bond k="351288.640000" length="0.142780" type1="fmn-CD" type2="fmn-CD" />
+    <Bond k="391371.360000" length="0.135170" type1="fmn-CA" type2="fmn-NC" />
+    <Bond k="385848.480000" length="0.139840" type1="fmn-CA" type2="fmn-CA" />
+    <Bond k="268612.800000" length="0.151560" type1="fmn-C3" type2="fmn-CA" />
+    <Bond k="351874.400000" length="0.138400" type1="fmn-CA" type2="fmn-NA" />
+    <Bond k="356309.440000" length="0.138020" type1="fmn-CD" type2="fmn-NA" />
+    <Bond k="274219.360000" length="0.146290" type1="fmn-C3" type2="fmn-NA" />
+    <Bond k="251793.120000" length="0.153750" type1="fmn-C3" type2="fmn-C3" />
+    <Bond k="265014.560000" length="0.142330" type1="fmn-C3" type2="fmn-OH" />
+    <Bond k="258236.480000" length="0.143160" type1="fmn-C3" type2="fmn-OS" />
+    <Bond k="276646.080000" length="0.161470" type1="fmn-OS" type2="fmn-P5" />
+    <Bond k="401245.600000" length="0.148660" type1="fmn-O" type2="fmn-P5" />
+    <Bond k="337397.760000" length="0.101290" type1="fmn-HN" type2="fmn-N" />
+    <Bond k="289365.440000" length="0.108600" type1="fmn-CA" type2="fmn-HA" />
+    <Bond k="276646.080000" length="0.109690" type1="fmn-C3" type2="fmn-HC" />
+    <Bond k="276646.080000" length="0.109690" type1="fmn-C3" type2="fmn-H1" />
+    <Bond k="310787.520000" length="0.097300" type1="fmn-HO" type2="fmn-OH" />
+  </HarmonicBondForce>
+  <HarmonicAngleForce>
+    <Angle angle="2.149897" k="618.395200" type1="fmn-NC" type2="fmn-C" type3="fmn-O" />
+    <Angle angle="2.043956" k="599.148800" type1="fmn-N" type2="fmn-C" type3="fmn-NC" />
+    <Angle angle="1.964543" k="599.148800" type1="fmn-CD" type2="fmn-CD" type3="fmn-NC" />
+    <Angle angle="1.958609" k="626.763200" type1="fmn-NA" type2="fmn-CD" type3="fmn-NC" />
+    <Angle angle="2.102948" k="558.145600" type1="fmn-C" type2="fmn-NC" type3="fmn-CD" />
+    <Angle angle="2.217965" k="533.041600" type1="fmn-C" type2="fmn-N" type3="fmn-C" />
+    <Angle angle="2.147629" k="620.905600" type1="fmn-N" type2="fmn-C" type3="fmn-O" />
+    <Angle angle="1.966987" k="578.228800" type1="fmn-CD" type2="fmn-C" type3="fmn-N" />
+    <Angle angle="2.127208" k="565.676800" type1="fmn-C" type2="fmn-CD" type3="fmn-NC" />
+    <Angle angle="2.141345" k="532.204800" type1="fmn-C" type2="fmn-CD" type3="fmn-CD" />
+    <Angle angle="2.162987" k="578.228800" type1="fmn-CD" type2="fmn-C" type3="fmn-O" />
+    <Angle angle="1.830502" k="606.680000" type1="fmn-CA" type2="fmn-NC" type3="fmn-CD" />
+    <Angle angle="2.055475" k="574.044800" type1="fmn-CD" type2="fmn-CD" type3="fmn-NA" />
+    <Angle angle="2.089509" k="581.576000" type1="fmn-CA" type2="fmn-CA" type3="fmn-NC" />
+    <Angle angle="2.094745" k="557.308800" type1="fmn-CA" type2="fmn-CA" type3="fmn-CA" />
+    <Angle angle="2.065424" k="578.228800" type1="fmn-CA" type2="fmn-CA" type3="fmn-NA" />
+    <Angle angle="2.107835" k="531.368000" type1="fmn-C3" type2="fmn-CA" type3="fmn-CA" />
+    <Angle angle="1.974841" k="564.003200" type1="fmn-CA" type2="fmn-NA" type3="fmn-CD" />
+    <Angle angle="2.170492" k="521.326400" type1="fmn-C3" type2="fmn-NA" type3="fmn-CA" />
+    <Angle angle="1.970128" k="548.104000" type1="fmn-C3" type2="fmn-C3" type3="fmn-NA" />
+    <Angle angle="2.207144" k="517.979200" type1="fmn-C3" type2="fmn-NA" type3="fmn-CD" />
+    <Angle angle="1.923179" k="564.840000" type1="fmn-C3" type2="fmn-C3" type3="fmn-OH" />
+    <Angle angle="1.946217" k="526.347200" type1="fmn-C3" type2="fmn-C3" type3="fmn-C3" />
+    <Angle angle="1.884433" k="569.024000" type1="fmn-C3" type2="fmn-C3" type3="fmn-OS" />
+    <Angle angle="2.086367" k="650.193600" type1="fmn-C3" type2="fmn-OS" type3="fmn-P5" />
+    <Angle angle="2.015158" k="367.355200" type1="fmn-O" type2="fmn-P5" type3="fmn-OS" />
+    <Angle angle="1.777444" k="376.560000" type1="fmn-OS" type2="fmn-P5" type3="fmn-OS" />
+    <Angle angle="2.021092" k="383.254400" type1="fmn-O" type2="fmn-P5" type3="fmn-O" />
+    <Angle angle="2.051635" k="404.174400" type1="fmn-C" type2="fmn-N" type3="fmn-HN" />
+    <Angle angle="2.092302" k="403.337600" type1="fmn-CA" type2="fmn-CA" type3="fmn-HA" />
+    <Angle angle="1.928066" k="391.622400" type1="fmn-CA" type2="fmn-C3" type3="fmn-HC" />
+    <Angle angle="1.898570" k="416.726400" type1="fmn-H1" type2="fmn-C3" type3="fmn-NA" />
+    <Angle angle="1.912184" k="388.275200" type1="fmn-C3" type2="fmn-C3" type3="fmn-H1" />
+    <Angle angle="1.872041" k="396.643200" type1="fmn-C3" type2="fmn-OH" type3="fmn-HO" />
+    <Angle angle="1.924401" k="425.931200" type1="fmn-H1" type2="fmn-C3" type3="fmn-OH" />
+    <Angle angle="1.916023" k="425.094400" type1="fmn-H1" type2="fmn-C3" type3="fmn-OS" />
+    <Angle angle="1.916372" k="387.438400" type1="fmn-C3" type2="fmn-C3" type3="fmn-HC" />
+    <Angle angle="1.877626" k="329.699200" type1="fmn-HC" type2="fmn-C3" type3="fmn-HC" />
+    <Angle angle="1.892985" k="328.025600" type1="fmn-H1" type2="fmn-C3" type3="fmn-H1" />
+  </HarmonicAngleForce>
+  <PeriodicTorsionForce>
+    <Proper k1="10.460000" periodicity1="2" phase1="3.141594" type1="fmn-NC" type2="fmn-C" type3="fmn-N" type4="fmn-HN" />
+    <Proper k1="8.368000" periodicity1="1" phase1="0.000000" type1="fmn-O" type2="fmn-C" type3="fmn-N" type4="fmn-HN" />
+    <Proper k1="15.167000" periodicity1="2" phase1="3.141594" type1="fmn-NC" type2="fmn-CA" type3="fmn-CA" type4="fmn-HA" />
+    <Proper k1="0.000000" periodicity1="2" phase1="0.000000" type1="fmn-CA" type2="fmn-CA" type3="fmn-C3" type4="fmn-HC" />
+    <Proper k1="0.650844" periodicity1="3" phase1="0.000000" type1="fmn-NA" type2="fmn-C3" type3="fmn-C3" type4="fmn-H1" />
+    <Proper k1="1.046000" periodicity1="1" phase1="0.000000" type1="fmn-C3" type2="fmn-C3" type3="fmn-OH" type4="fmn-HO" />
+    <Proper k1="1.603867" periodicity1="3" phase1="0.000000" type1="fmn-P5" type2="fmn-OS" type3="fmn-C3" type4="fmn-H1" />
+    <Proper k1="0.669440" periodicity1="3" phase1="0.000000" type1="fmn-C3" type2="fmn-C3" type3="fmn-C3" type4="fmn-HC" />
+    <Proper k1="0.697333" periodicity1="3" phase1="0.000000" type1="fmn-H1" type2="fmn-C3" type3="fmn-OH" type4="fmn-HO" />
+    <Proper k1="16.736000" periodicity1="2" phase1="3.141594" type1="fmn-NC" type2="fmn-CD" type3="fmn-CD" type4="fmn-NC" />
+    <Proper k1="7.112800" periodicity1="2" phase1="3.141594" type1="fmn-NC" type2="fmn-CD" type3="fmn-NA" type4="fmn-CA" />
+    <Proper k1="19.874000" periodicity1="2" phase1="3.141594" type1="fmn-C" type2="fmn-NC" type3="fmn-CD" type4="fmn-CD" />
+    <Proper k1="12.029000" periodicity1="2" phase1="3.141594" type1="fmn-N" type2="fmn-C" type3="fmn-CD" type4="fmn-NC" />
+    <Proper k1="20.083200" periodicity1="2" phase1="3.141594" type1="fmn-CD" type2="fmn-NC" type3="fmn-CA" type4="fmn-CA" />
+    <Proper k1="1.255200" periodicity1="2" phase1="3.141594" type1="fmn-CA" type2="fmn-CA" type3="fmn-NA" type4="fmn-C3" />
+    <Proper k1="0.836800" periodicity1="1" phase1="3.141594" type1="fmn-C3" type2="fmn-C3" type3="fmn-C3" type4="fmn-C3" />
+    <Proper k1="4.916200" periodicity1="2" phase1="0.000000" type1="fmn-OH" type2="fmn-C3" type3="fmn-C3" type4="fmn-OH" />
+    <Proper k1="16.526800" periodicity1="1" phase1="3.141594" type1="fmn-C3" type2="fmn-C3" type3="fmn-OS" type4="fmn-P5" />
+    <Proper k1="3.347200" periodicity1="2" phase1="0.000000" type1="fmn-C3" type2="fmn-OS" type3="fmn-P5" type4="fmn-O" />
+    <Proper k1="5.020800" periodicity1="2" phase1="0.000000" type1="fmn-C3" type2="fmn-OS" type3="fmn-P5" type4="fmn-OS" />
+    <Improper k1="10.460000" periodicity1="2" phase1="3.141594" type1="fmn-O" type2="fmn-C" type3="fmn-N" type4="fmn-HN" />
+    <Improper k1="0.669440" periodicity1="3" phase1="0.000000" type1="fmn-C3" type2="fmn-C3" type3="fmn-OH" type4="fmn-HO" />
+    <Improper k1="0.000000" periodicity1="3" phase1="0.000000" type1="fmn-OH" type2="fmn-C3" type3="fmn-C3" type4="fmn-H1" />
+    <Improper k1="4.602400" periodicity1="2" phase1="3.141594" type1="fmn-C" type2="fmn-C" type3="fmn-N" type4="fmn-HN" />
+    <Improper k1="16.736000" periodicity1="2" phase1="3.141594" type1="fmn-NC" type2="fmn-CD" type3="fmn-CD" type4="fmn-C" />
+    <Improper k1="12.029000" periodicity1="2" phase1="3.141594" type1="fmn-N" type2="fmn-C" type3="fmn-CD" type4="fmn-CD" />
+    <Improper k1="7.112800" periodicity1="2" phase1="3.141594" type1="fmn-CD" type2="fmn-CD" type3="fmn-NA" type4="fmn-CA" />
+    <Improper k1="15.167000" periodicity1="2" phase1="3.141594" type1="fmn-NC" type2="fmn-CA" type3="fmn-CA" type4="fmn-NA" />
+    <Improper k1="1.255200" periodicity1="2" phase1="3.141594" type1="fmn-CA" type2="fmn-CA" type3="fmn-NA" type4="fmn-CD" />
+    <Improper k1="1.046000" periodicity1="2" phase1="3.141594" type1="fmn-C3" type2="fmn-C3" type3="fmn-C3" type4="fmn-C3" />
+    <Improper k1="0.753120" periodicity1="3" phase1="0.000000" type1="fmn-C3" type2="fmn-C3" type3="fmn-C3" type4="fmn-C3" />
+    <Improper k1="0.602496" periodicity1="3" phase1="0.000000" type1="fmn-OH" type2="fmn-C3" type3="fmn-C3" type4="fmn-OH" />
+    <Improper k1="1.603867" periodicity1="3" phase1="0.000000" type1="fmn-C3" type2="fmn-C3" type3="fmn-OS" type4="fmn-P5" />
+    <Improper k1="2.301200" periodicity1="3" phase1="0.000000" type1="fmn-C3" type2="fmn-OS" type3="fmn-P5" type4="fmn-O" />
+    <Improper k1="1.046000" periodicity1="3" phase1="0.000000" type1="fmn-C3" type2="fmn-OS" type3="fmn-P5" type4="fmn-OS" />
+    <Improper k1="43.932000" periodicity1="2" phase1="3.141594" type1="fmn-N" type2="fmn-NC" type3="fmn-C" type4="fmn-O" />
+  </PeriodicTorsionForce>
+  <NonbondedForce coulomb14scale="0.8333333333333334" lj14scale="0.5">
+    <UseAttributeFromResidue name="charge" />
+    <Atom epsilon="0.711280" sigma="0.325000" type="fmn-NC" />
+    <Atom epsilon="0.359824" sigma="0.339967" type="fmn-C" />
+    <Atom epsilon="0.878640" sigma="0.295992" type="fmn-O" />
+    <Atom epsilon="0.711280" sigma="0.325000" type="fmn-N" />
+    <Atom epsilon="0.359824" sigma="0.339967" type="fmn-CD" />
+    <Atom epsilon="0.359824" sigma="0.339967" type="fmn-CA" />
+    <Atom epsilon="0.457730" sigma="0.339967" type="fmn-C3" />
+    <Atom epsilon="0.711280" sigma="0.325000" type="fmn-NA" />
+    <Atom epsilon="0.880314" sigma="0.306647" type="fmn-OH" />
+    <Atom epsilon="0.711280" sigma="0.300001" type="fmn-OS" />
+    <Atom epsilon="0.836800" sigma="0.374177" type="fmn-P5" />
+    <Atom epsilon="0.065689" sigma="0.106908" type="fmn-HN" />
+    <Atom epsilon="0.062760" sigma="0.259964" type="fmn-HA" />
+    <Atom epsilon="0.065689" sigma="0.264953" type="fmn-HC" />
+    <Atom epsilon="0.065689" sigma="0.247135" type="fmn-H1" />
+    <Atom epsilon="0.000000" sigma="0.089090" type="fmn-HO" />
+  </NonbondedForce>
+</ForceField>
