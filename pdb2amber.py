@@ -2,7 +2,7 @@ import os
 import itertools
 import sys
 import math
-import numpy
+import numpy as np
 import xml.etree.ElementTree as etree
 from copy import copy
 from collections import defaultdict
@@ -11,6 +11,7 @@ from datetime import date
 from simtk.openmm import *
 from simtk.openmm.app import *
 from simtk.openmm.app.internal import amber_file_parser
+from simtk.openmm.app.internal.unitcell import computeLengthsAndAngles
 
 import simtk.unit as units
 from simtk.openmm.app import element as elem
@@ -20,7 +21,7 @@ import sys, getopt
 from _pdbfile import *
 from _prmtop import *
 from _forcefield import *
-
+from _inpcrd import *
 
        
 class MyTorsion (object):
@@ -102,9 +103,9 @@ def get_improper_typeID(improper_database, type1, type2, type3, type4):
     return None
 
 
-def pdb2amber (pdb_fname, prmtop_fname, ff_fnames):
+def pdb2amber (pdb_fname, prmtop_fname, inpcrd_fname, ff_fnames):
 
-    pdb = PDBFile(pdb_fname)
+    pdb   = MyPDBFile(pdb_fname)
     my_ff = MyForceFields (ff_fnames)
 
     _atomType  = {}
@@ -120,12 +121,21 @@ def pdb2amber (pdb_fname, prmtop_fname, ff_fnames):
 
     prm = PrmTop()
 
-    # for debuging
+    vectors = pdb.topology.getPeriodicBoxVectors()
+    if vectors is not None:
+        prm.is_box = 1
+        a, b, c, alpha, beta, gamma = computeLengthsAndAngles(vectors)
+        # radian-->degree, nm --> A
+        prm.box_info = [ beta*180.0/np.pi, a*10.0, b*10.0, c*10.0] 
+        
+    if inpcrd_fname != '':
+        print_inpcrd (inpcrd_fname,
+                      pdb.positions.value_in_unit (units.angstroms))
+    #for debuging
     #prm_amber = amber_file_parser.PrmtopLoader('receptor.prmtop')
     
     # Gather Atom Info
     for atom in _atoms:
-#        print atom.name, atom.index
         _excludedAtomWith.append([])
         atName = atom.name
         atElem = atom.element
@@ -134,8 +144,10 @@ def pdb2amber (pdb_fname, prmtop_fname, ff_fnames):
 
     # Find the Residue Template maching each Residue
     unmatchedResidues = []
-    at_type_list = []
+    at_type_list  = []
     max_res_natom = 0
+    is_solvent    = ["DPPE", "DPP", "HOH", "WAT"]
+    
     for chain in pdb.topology.chains():
         nres = chain._residues[0];
         cres = chain._residues[-1];
@@ -145,24 +157,26 @@ def pdb2amber (pdb_fname, prmtop_fname, ff_fnames):
 
             resName = res.name
 
-#            if resName in PDBFile._residueNameReplacements:
-#                resName = PDBFile._residueNameReplacements[resName]
+
+                
+#            if resName in MyPDBFile._residueNameReplacements:
+#                resName = MyPDBFile._residueNameReplacements[resName]
                 
             atomReplacements = {}
             if nres == res: 
                 res.name = "N"+resName
                 if res.name not in my_ff._residues:
                     res.name = resName
-                atomReplacements = PDBFile._atomNameReplacements["Protein"]
+                atomReplacements = MyPDBFile._atomNameReplacements["Protein"]
                 
             if cres == res:
                 res.name = "C"+resName
                 if res.name not in my_ff._residues:
                     res.name = resName
-                atomReplacements = PDBFile._atomNameReplacements["Protein"]
+                atomReplacements = MyPDBFile._atomNameReplacements["Protein"]
                 
-            if resName in PDBFile._atomNameReplacements:
-                ff_res_atomNameRepl = PDBFile._atomNameReplacements[resName]
+            if resName in MyPDBFile._atomNameReplacements:
+                ff_res_atomNameRepl = MyPDBFile._atomNameReplacements[resName]
                 for ff_atName in ff_res_atomNameRepl:
                     atomReplacements[ff_atName] = ff_res_atomNameRepl[ff_atName]
             else: 
@@ -180,7 +194,14 @@ def pdb2amber (pdb_fname, prmtop_fname, ff_fnames):
                     print ("%-5s"%res.name + "has %d"%natom + " but Forcefield has %d"%natom_ff)
                     
                 prm.res_ptr_list.append (atoms[0].index+1)
-
+                
+                if resName in is_solvent:
+                    if prm.sol_ptr[1] == 1:
+                        prm.sol_ptr[0] = len(prm.res_name_list) - 1
+                        prm.atoms_per_molecule.append (atoms[0].index)
+                    prm.sol_ptr[1] += 1
+                    prm.atoms_per_molecule.append(natom)
+                    
                 for ii in range (natom):
                     atName = atoms[ii].name
                     imatch = -1
@@ -327,7 +348,7 @@ def pdb2amber (pdb_fname, prmtop_fname, ff_fnames):
             types1 = my_ff._harmonicBonds[jj].types1
             types2 = my_ff._harmonicBonds[jj].types2
             if (type1 == types1 and type2 == types2):
-                bond_k  = my_ff._harmonicBonds[jj].k
+                bond_k      = my_ff._harmonicBonds[jj].k
                 bond_length = my_ff._harmonicBonds[jj].length
                 break
         prm.bond_k_list.append(bond_k)
@@ -445,7 +466,7 @@ def pdb2amber (pdb_fname, prmtop_fname, ff_fnames):
             types3 = my_ff._harmonicAngles[jj].types3
 
             if type1 == types1 and type2 == types2 and type3 == types3:
-                ang_k  = my_ff._harmonicAngles[jj].k
+                ang_k      = my_ff._harmonicAngles[jj].k
                 ang_length = my_ff._harmonicAngles[jj].angle
                 break
         prm.angle_k_list.append(ang_k)
@@ -496,8 +517,9 @@ def pdb2amber (pdb_fname, prmtop_fname, ff_fnames):
         typeID = get_proper_typeID (my_ff._propers, type1, type2, type3, type4)
 
         if typeID == None:
-            print 'Error ', type1, ' ', type2, ' ', type3, ' ', type4
-            
+            print 'Error: No defined Proper Torsion ', type1, ' ', type2, ' ', type3, ' ', type4
+            continue
+        
         iatElem = _atoms[iatom].element
         latElem = _atoms[latom].element
 
@@ -663,25 +685,34 @@ def pdb2amber (pdb_fname, prmtop_fname, ff_fnames):
 if __name__ == "__main__":
 
     pdb_fname = ''
+    inpcrd_fname = ''
     prmtop_fname = ''
     argv = sys.argv[1:]
     
-    opts, args = getopt.getopt (argv, "h:i:o:", ["help=","ifile=", "ofile="])
+    opts, args = getopt.getopt (argv, "hi:o:c:", ["help=","ifile=", "ofile=","cfile="])
 
     if (len(opts) == 0):
-        print ("pdb2amber.py -i <pdbfile.pdb> -o <prmtopfile.prmtop>")
+        print ("pdb2amber.py -i <pdbfile.pdb> -o <prmtopfile.prmtop> -c <inpcrdfile.inpcrd>")
         sys.exit(2)
         
     
     for opt, arg in opts:
         if opt in ("-h", "--help"):
-            print ("pdb2amber.py -i <pdbfile.pdb> -o <prmtopfile.prmtop>")
+            print ("pdb2amber.py -i <pdbfile.pdb> -o <prmtopfile.prmtop> -c <inpcrdfile.inpcrd>")
             sys.exit(1)
         elif opt in ("-i", "--ifile"):
             pdb_fname = arg;
         elif opt in ("-o", "--ofile"):
             prmtop_fname = arg;
+        elif opt in ("-c", "--cfile"):
+            inpcrd_fname = arg;
             
-    ff_fnames = ['./data/protein.ff14SB.xml','./data/tip3pfb.xml'] 
-    
-    pdb2amber (pdb_fname, prmtop_fname, ff_fnames)
+    ff_fnames = ['./data/protein.ff14SB.xml',\
+            './data/lipid17.xml', \
+            './data/fad.ff.xml', \
+            './data/heme.ff.xml', \
+            './data/uq2.ff.xml', \
+            './data/ironsulfur.ff.xml', \
+            './data/tip3pfb.xml'] 
+
+    pdb2amber (pdb_fname, prmtop_fname, inpcrd_fname, ff_fnames)

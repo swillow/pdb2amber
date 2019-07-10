@@ -44,14 +44,14 @@ from simtk.openmm.app.internal.unitcell import computeLengthsAndAngles
 #from simtk.openmm.app import Topology
 from simtk.unit import nanometers, angstroms, is_quantity, norm, Quantity, dot
 from simtk.openmm.app import element as elem
-from _topology import Topology
+from _topology import MyTopology
 
 try:
     import numpy
 except ImportError:
     pass
 
-class PDBFile(object):
+class MyPDBFile(object):
     """PDBFile parses a Protein Data Bank (PDB) file and constructs a Topology and a set of atom positions from it.
 
     This class also provides methods for creating PDB files.  To write a file containing a single model, call
@@ -80,7 +80,7 @@ class PDBFile(object):
         metalElements = ['Al','As','Ba','Ca','Cd','Ce','Co','Cs','Cu','Dy','Fe','Gd','Hg','Ho','In','Ir','K','Li','Mg',
         'Mn','Mo','Na','Ni','Pb','Pd','Pt','Rb','Rh','Sm','Sr','Te','Tl','V','W','Yb','Zn']
         
-        top = Topology()
+        top = MyTopology()
         ## The Topology read from the PDB file
         self.topology = top
 
@@ -97,7 +97,7 @@ class PDBFile(object):
             pdb = PdbStructure(inputfile, load_all_models=True, extraParticleIdentifier=extraParticleIdentifier)
             if own_handle:
                 inputfile.close()
-        PDBFile._loadNameReplacementTables()
+        MyPDBFile._loadNameReplacementTables()
 
         # Build the topology
 
@@ -106,11 +106,11 @@ class PDBFile(object):
             c = top.addChain(chain.chain_id)
             for residue in chain.iter_residues():
                 resName = residue.get_name()
-                if resName in PDBFile._residueNameReplacements:
-                    resName = PDBFile._residueNameReplacements[resName]
+                if resName in MyPDBFile._residueNameReplacements:
+                    resName = MyPDBFile._residueNameReplacements[resName]
                 r = top.addResidue(resName, c, str(residue.number), residue.insertion_code)
-                if resName in PDBFile._atomNameReplacements:
-                    atomReplacements = PDBFile._atomNameReplacements[resName]
+                if resName in MyPDBFile._atomNameReplacements:
+                    atomReplacements = MyPDBFile._atomNameReplacements[resName]
                 else:
                     atomReplacements = {}
                 for atom in residue.iter_atoms():
@@ -164,8 +164,21 @@ class PDBFile(object):
         self.topology.setPeriodicBoxVectors(pdb.get_periodic_box_vectors())
         self.topology.createStandardBonds()
         self.topology.createDisulfideBonds(self.positions)
+        self.topology.createIronSulfurBonds(self.positions)
+        print ("done IronSulfer")
+        resName1  = ['FAD', 'FA1', 'FES']
+        atomName1 = ['C8M',        'FE1', 'FE2']
+        resName2  = ['HIS', 'HI5', 'ASP']   
+        atomName2 = ['NE2',        'OD1']
+        self.topology.createUserDefined  (self.positions,\
+                                          resName1, atomName1,\
+                                          resName2, atomName2)
+        print ("done UserDefined")
+
+        
         self._numpyPositions = None
 
+        
         # Add bonds based on CONECT records. Bonds between metals of elements specified in metalElements and residues in standardResidues are not added.
 
         connectBonds = []
@@ -176,9 +189,9 @@ class PDBFile(object):
                     if atomByNumber[i].element is not None and atomByNumber[j].element is not None:
                         if atomByNumber[i].element.symbol not in metalElements and atomByNumber[j].element.symbol not in metalElements:
                             connectBonds.append((atomByNumber[i], atomByNumber[j])) 
-                        elif atomByNumber[i].element.symbol in metalElements and atomByNumber[j].residue.name not in PDBFile._standardResidues:
+                        elif atomByNumber[i].element.symbol in metalElements and atomByNumber[j].residue.name not in MyPDBFile._standardResidues:
                             connectBonds.append((atomByNumber[i], atomByNumber[j])) 
-                        elif atomByNumber[j].element.symbol in metalElements and atomByNumber[i].residue.name not in PDBFile._standardResidues:
+                        elif atomByNumber[j].element.symbol in metalElements and atomByNumber[i].residue.name not in MyPDBFile._standardResidues:
                             connectBonds.append((atomByNumber[i], atomByNumber[j]))     
                     else:
                         connectBonds.append((atomByNumber[i], atomByNumber[j]))         
@@ -221,7 +234,7 @@ class PDBFile(object):
     def _loadNameReplacementTables():
         """Load the list of atom and residue name replacements."""
         xml_file_name = './data/pdbNames.xml'
-        if len(PDBFile._residueNameReplacements) == 0:
+        if len(MyPDBFile._residueNameReplacements) == 0:
             tree = etree.parse(xml_file_name)
             allResidues = {}
             proteinResidues = {}
@@ -229,11 +242,11 @@ class PDBFile(object):
             for residue in tree.getroot().findall('Residue'):
                 name = residue.attrib['name']
                 if name == 'All':
-                    PDBFile._parseResidueAtoms(residue, allResidues)
+                    MyPDBFile._parseResidueAtoms(residue, allResidues)
                 elif name == 'Protein':
-                    PDBFile._parseResidueAtoms(residue, proteinResidues)
+                    MyPDBFile._parseResidueAtoms(residue, proteinResidues)
                 elif name == 'Nucleic':
-                    PDBFile._parseResidueAtoms(residue, nucleicAcidResidues)
+                    MyPDBFile._parseResidueAtoms(residue, nucleicAcidResidues)
             for atom in allResidues:
                 proteinResidues[atom] = allResidues[atom]
                 nucleicAcidResidues[atom] = allResidues[atom]
@@ -241,7 +254,7 @@ class PDBFile(object):
                 name = residue.attrib['name']
                 for id in residue.attrib:
                     if id == 'name' or id.startswith('alt'):
-                        PDBFile._residueNameReplacements[residue.attrib[id]] = name
+                        MyPDBFile._residueNameReplacements[residue.attrib[id]] = name
                 if 'type' not in residue.attrib:
                     atoms = copy(allResidues)
                 elif residue.attrib['type'] == 'Protein':
@@ -250,8 +263,8 @@ class PDBFile(object):
                     atoms = copy(nucleicAcidResidues)
                 else:
                     atoms = copy(allResidues)
-                PDBFile._parseResidueAtoms(residue, atoms)
-                PDBFile._atomNameReplacements[name] = atoms
+                MyPDBFile._parseResidueAtoms(residue, atoms)
+                MyPDBFile._atomNameReplacements[name] = atoms
 
     @staticmethod
     def _parseResidueAtoms(residue, map):
@@ -280,9 +293,9 @@ class PDBFile(object):
         extraParticleIdentifier : string=' '
             String to write in the element column of the ATOM records for atoms whose element is None (extra particles)
         """
-        PDBFile.writeHeader(topology, file)
-        PDBFile.writeModel(topology, positions, file, keepIds=keepIds, extraParticleIdentifier=extraParticleIdentifier)
-        PDBFile.writeFooter(topology, file)
+        MyPDBFile.writeHeader(topology, file)
+        MyPDBFile.writeModel(topology, positions, file, keepIds=keepIds, extraParticleIdentifier=extraParticleIdentifier)
+        MyPDBFile.writeFooter(topology, file)
 
     @staticmethod
     def writeHeader(topology, file=sys.stdout):
@@ -336,7 +349,7 @@ class PDBFile(object):
             raise ValueError('Particle position is NaN')
         if any(math.isinf(norm(pos)) for pos in positions):
             raise ValueError('Particle position is infinite')
-        nonHeterogens = PDBFile._standardResidues[:]
+        nonHeterogens = MyPDBFile._standardResidues[:]
         nonHeterogens.remove('HOH')
         atomIndex = 1
         posIndex = 0
@@ -404,7 +417,7 @@ class PDBFile(object):
 
         conectBonds = []
         for atom1, atom2 in topology.bonds():
-            if atom1.residue.name not in PDBFile._standardResidues or atom2.residue.name not in PDBFile._standardResidues:
+            if atom1.residue.name not in MyPDBFile._standardResidues or atom2.residue.name not in MyPDBFile._standardResidues:
                 conectBonds.append((atom1, atom2))
             elif atom1.name == 'SG' and atom2.name == 'SG' and atom1.residue.name == 'CYS' and atom2.residue.name == 'CYS':
                 conectBonds.append((atom1, atom2))

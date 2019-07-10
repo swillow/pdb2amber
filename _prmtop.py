@@ -2,7 +2,15 @@ import sys
 import numpy as np
 from decimal import Decimal
 
-
+def print_solvent_pointers  (data, fout):
+    key_words = 'SOLVENT_POINTERS'
+    str_flag   = '%-80s'%('%FLAG '+key_words)+'\n'
+    str_format = '%-80s'%('%FORMAT(3I8)')+'\n'
+    fout.write (str_flag)
+    fout.write (str_format)
+    line = '%8d%8d%8d'%(data[0], data[1], data[2]) + '\n'
+    fout.write (line)
+    
 def print_string_radius_set (fout):
     key_words = 'RADIUS_SET'
     str_flag   = '%-80s'%('%FLAG '+key_words)+'\n'
@@ -139,7 +147,11 @@ class PrmTop (object):
         self.num_excluded_atoms  = []
         self.excluded_atoms_list = []
 
-        self.box_info = 0
+        self.is_box   = 0
+        self.box_info = []
+        self.sol_ptr  = [0, 1, 2] # The last residue number of the solute, total number of molecules, the first solvent "molecule"
+        self.atoms_per_molecule = []
+        
         self.max_res_natom = 100
         
     def write_pointers(self, key_words, fout):
@@ -179,7 +191,7 @@ class PrmTop (object):
         data.append(0) # MBPER
         data.append(0) # MGPER
         data.append(0) # MDPER
-        data.append(self.box_info) # IFBXO: 1 if standard periodic box
+        data.append(self.is_box) # IFBXO: 1 if standard periodic box
         data.append(self.max_res_natom) # 
         data.append(0) # ifcap : CAP option
         data.append(0) # numextra
@@ -263,12 +275,17 @@ class PrmTop (object):
         for ii in range(len(self.atomic_number_list)):
             data.append('BLA')
         print_string_data('TREE_CHAIN_CLASSIFICATION', data, fout)
-            
+        
         data = []
         for ii in range(len(self.atomic_number_list)):
             data.append(0)
         print_integer_data('JOIN_ARRAY', data, fout)
         print_integer_data('IROTAT', data, fout)
+        
+        if self.is_box == 1:
+            print_solvent_pointers (self.sol_ptr, fout)
+            print_integer_data('ATOMS_PER_MOLECULE', self.atoms_per_molecule, fout)
+            print_double_data('BOX_DIMENSIONS', self.box_info, fout)
             
         print_string_radius_set(fout)
         
@@ -310,6 +327,8 @@ class PrmTop (object):
                 data.append(0.96)
 
         print_double_data('SCREEN', data, fout)
+        
+            
         data = [1]
         print_integer_data('IPOL', data, fout)
         

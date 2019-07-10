@@ -50,7 +50,7 @@ class ResidueData (object):
     def __init__ (self, res_name):
 
         self.name  = res_name
-        self.atoms = []
+        self.atoms = []  # AtomData
         self.atomIndices = {}
         self.bonds = []
         self.externalBonds = []
@@ -148,8 +148,8 @@ class MyForceFields (object):
         trees = []
 
         for xml_file_name in file_names:
-           tree = etree.parse (xml_file_name)
-           trees.append(tree)
+            tree = etree.parse (xml_file_name)
+            trees.append(tree)
 
         # Load the atom types
         for tree in trees:
@@ -180,7 +180,6 @@ class MyForceFields (object):
                 for residue in element.findall('Residue'):
                     resName     = residue.attrib['name']
                     resData     = ResidueData (resName)
-                    
                     for ia, atom in enumerate (residue.findall('Atom')):
                         atomName = atom.attrib['name']
                         typeName = atom.attrib['type']
@@ -258,6 +257,7 @@ class MyForceFields (object):
                             types.append('X') #self._atomClasses[''])
                         elif typeName not in self._atomTypes:
                             types.append(None)
+                            print 'Proper ', typeName
                         else:
                             types.append(typeName)
                             
@@ -329,6 +329,7 @@ class MyForceFields (object):
                             types.append('X')#self._atomClasses[''])
                         elif typeName not in self._atomTypes:
                             types.append(None)
+                            print 'ImProper ', typeName
                         else:
                             types.append(typeName)
                     

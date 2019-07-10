@@ -1,0 +1,239 @@
+<ForceField>
+  <Info>
+    <DateGenerated>2019-06-29</DateGenerated>
+  </Info>
+  <AtomTypes>
+    <Type class="C" element="C" mass="12.0100" name="uq2-C" />
+    <Type class="CC" element="C" mass="12.0100" name="uq2-CC" />
+    <Type class="CD" element="C" mass="12.0100" name="uq2-CD" />
+    <Type class="C3" element="C" mass="12.0100" name="uq2-C3" />
+    <Type class="C2" element="C" mass="12.0100" name="uq2-C2" />
+    <Type class="O" element="O" mass="16.0000" name="uq2-O" />
+    <Type class="OS" element="O" mass="16.0000" name="uq2-OS" />
+    <Type class="HC" element="H" mass="1.0080" name="uq2-HC" />
+    <Type class="H1" element="H" mass="1.0080" name="uq2-H1" />
+    <Type class="HA" element="H" mass="1.0080" name="uq2-HA" />
+  </AtomTypes>
+  <Residues>
+    <Residue name="UQ2">
+      <Atom charge="  0.5695" name="C1" type="uq2-C" />
+      <Atom charge=" -0.0931" name="C2" type="uq2-CC" />
+      <Atom charge="  0.0579" name="C3" type="uq2-CD" />
+      <Atom charge="  0.5665" name="C4" type="uq2-C" />
+      <Atom charge=" -0.1354" name="C5" type="uq2-CC" />
+      <Atom charge=" -0.1264" name="C6" type="uq2-CD" />
+      <Atom charge="  0.1057" name="CM2" type="uq2-C3" />
+      <Atom charge="  0.1157" name="CM3" type="uq2-C3" />
+      <Atom charge=" -0.0679" name="CM5" type="uq2-C3" />
+      <Atom charge=" -0.0160" name="C7" type="uq2-C3" />
+      <Atom charge=" -0.1792" name="C8" type="uq2-C2" />
+      <Atom charge=" -0.1094" name="C9" type="uq2-C2" />
+      <Atom charge=" -0.0639" name="C10" type="uq2-C3" />
+      <Atom charge=" -0.0402" name="C11" type="uq2-C3" />
+      <Atom charge=" -0.0422" name="C12" type="uq2-C3" />
+      <Atom charge=" -0.1802" name="C13" type="uq2-C2" />
+      <Atom charge=" -0.1214" name="C14" type="uq2-C2" />
+      <Atom charge=" -0.0589" name="C15" type="uq2-C3" />
+      <Atom charge=" -0.0589" name="C16" type="uq2-C3" />
+      <Atom charge=" -0.5091" name="O1" type="uq2-O" />
+      <Atom charge=" -0.3309" name="O2" type="uq2-OS" />
+      <Atom charge=" -0.2919" name="O3" type="uq2-OS" />
+      <Atom charge=" -0.4661" name="O4" type="uq2-O" />
+      <Atom charge="  0.0627" name="H5M3" type="uq2-HC" />
+      <Atom charge="  0.0627" name="H5M2" type="uq2-HC" />
+      <Atom charge="  0.0627" name="H5M1" type="uq2-HC" />
+      <Atom charge="  0.0554" name="H3M3" type="uq2-H1" />
+      <Atom charge="  0.0554" name="H3M2" type="uq2-H1" />
+      <Atom charge="  0.0554" name="H3M1" type="uq2-H1" />
+      <Atom charge="  0.0494" name="H2M3" type="uq2-H1" />
+      <Atom charge="  0.0494" name="H2M2" type="uq2-H1" />
+      <Atom charge="  0.0494" name="H2M1" type="uq2-H1" />
+      <Atom charge="  0.0410" name="H163" type="uq2-HC" />
+      <Atom charge="  0.0410" name="H162" type="uq2-HC" />
+      <Atom charge="  0.0410" name="H161" type="uq2-HC" />
+      <Atom charge="  0.0410" name="H153" type="uq2-HC" />
+      <Atom charge="  0.0410" name="H152" type="uq2-HC" />
+      <Atom charge="  0.0410" name="H151" type="uq2-HC" />
+      <Atom charge="  0.0517" name="H122" type="uq2-HC" />
+      <Atom charge="  0.0517" name="H121" type="uq2-HC" />
+      <Atom charge="  0.0477" name="H112" type="uq2-HC" />
+      <Atom charge="  0.0477" name="H111" type="uq2-HC" />
+      <Atom charge="  0.0444" name="H103" type="uq2-HC" />
+      <Atom charge="  0.0444" name="H102" type="uq2-HC" />
+      <Atom charge="  0.0444" name="H101" type="uq2-HC" />
+      <Atom charge="  0.1290" name="H8" type="uq2-HA" />
+      <Atom charge="  0.0732" name="H72" type="uq2-HC" />
+      <Atom charge="  0.0732" name="H71" type="uq2-HC" />
+      <Atom charge="  0.1210" name="H13" type="uq2-HA" />
+      <Bond atomName1="C1" atomName2="C2" />
+      <Bond atomName1="C1" atomName2="C6" />
+      <Bond atomName1="C1" atomName2="O1" />
+      <Bond atomName1="C2" atomName2="C3" />
+      <Bond atomName1="C2" atomName2="O2" />
+      <Bond atomName1="C3" atomName2="C4" />
+      <Bond atomName1="C3" atomName2="O3" />
+      <Bond atomName1="C4" atomName2="C5" />
+      <Bond atomName1="C4" atomName2="O4" />
+      <Bond atomName1="C5" atomName2="C6" />
+      <Bond atomName1="C5" atomName2="CM5" />
+      <Bond atomName1="C6" atomName2="C7" />
+      <Bond atomName1="CM2" atomName2="O2" />
+      <Bond atomName1="CM3" atomName2="O3" />
+      <Bond atomName1="C7" atomName2="C8" />
+      <Bond atomName1="C8" atomName2="C9" />
+      <Bond atomName1="C9" atomName2="C10" />
+      <Bond atomName1="C9" atomName2="C11" />
+      <Bond atomName1="C11" atomName2="C12" />
+      <Bond atomName1="C12" atomName2="C13" />
+      <Bond atomName1="C13" atomName2="C14" />
+      <Bond atomName1="C14" atomName2="C15" />
+      <Bond atomName1="C14" atomName2="C16" />
+      <Bond atomName1="CM2" atomName2="H2M3" />
+      <Bond atomName1="CM2" atomName2="H2M2" />
+      <Bond atomName1="CM2" atomName2="H2M1" />
+      <Bond atomName1="CM3" atomName2="H3M3" />
+      <Bond atomName1="CM3" atomName2="H3M2" />
+      <Bond atomName1="CM3" atomName2="H3M1" />
+      <Bond atomName1="CM5" atomName2="H5M3" />
+      <Bond atomName1="CM5" atomName2="H5M2" />
+      <Bond atomName1="CM5" atomName2="H5M1" />
+      <Bond atomName1="C7" atomName2="H72" />
+      <Bond atomName1="C7" atomName2="H71" />
+      <Bond atomName1="C8" atomName2="H8" />
+      <Bond atomName1="C10" atomName2="H103" />
+      <Bond atomName1="C10" atomName2="H102" />
+      <Bond atomName1="C10" atomName2="H101" />
+      <Bond atomName1="C11" atomName2="H112" />
+      <Bond atomName1="C11" atomName2="H111" />
+      <Bond atomName1="C12" atomName2="H122" />
+      <Bond atomName1="C12" atomName2="H121" />
+      <Bond atomName1="C13" atomName2="H13" />
+      <Bond atomName1="C15" atomName2="H153" />
+      <Bond atomName1="C15" atomName2="H152" />
+      <Bond atomName1="C15" atomName2="H151" />
+      <Bond atomName1="C16" atomName2="H163" />
+      <Bond atomName1="C16" atomName2="H162" />
+      <Bond atomName1="C16" atomName2="H161" />
+    </Residue>
+  </Residues>
+  <HarmonicBondForce>
+    <Bond k="247190.720000" length="0.146800" type1="uq2-C" type2="uq2-CC" />
+    <Bond k="247190.720000" length="0.146800" type1="uq2-C" type2="uq2-CD" />
+    <Bond k="546095.680000" length="0.121800" type1="uq2-C" type2="uq2-O" />
+    <Bond k="348192.480000" length="0.137300" type1="uq2-CC" type2="uq2-CD" />
+    <Bond k="307858.720000" length="0.136200" type1="uq2-CC" type2="uq2-OS" />
+    <Bond k="307858.720000" length="0.136200" type1="uq2-CD" type2="uq2-OS" />
+    <Bond k="219743.680000" length="0.150200" type1="uq2-C3" type2="uq2-CC" />
+    <Bond k="219743.680000" length="0.150200" type1="uq2-C3" type2="uq2-CD" />
+    <Bond k="238320.640000" length="0.143200" type1="uq2-C3" type2="uq2-OS" />
+    <Bond k="213886.080000" length="0.151000" type1="uq2-C2" type2="uq2-C3" />
+    <Bond k="403170.240000" length="0.133400" type1="uq2-C2" type2="uq2-C2" />
+    <Bond k="194556.000000" length="0.153800" type1="uq2-C3" type2="uq2-C3" />
+    <Bond k="314553.120000" length="0.109700" type1="uq2-C3" type2="uq2-H1" />
+    <Bond k="314553.120000" length="0.109700" type1="uq2-C3" type2="uq2-HC" />
+    <Bond k="328192.960000" length="0.108800" type1="uq2-C2" type2="uq2-HA" />
+  </HarmonicBondForce>
+  <HarmonicAngleForce>
+    <Angle angle="2.117958" k="562.329600" type1="uq2-C" type2="uq2-CC" type3="uq2-CD" />
+    <Angle angle="2.081481" k="712.116800" type1="uq2-C" type2="uq2-CC" type3="uq2-OS" />
+    <Angle angle="2.117958" k="562.329600" type1="uq2-C" type2="uq2-CD" type3="uq2-CC" />
+    <Angle angle="2.055301" k="547.267200" type1="uq2-C" type2="uq2-CD" type3="uq2-C3" />
+    <Angle angle="1.968558" k="565.676800" type1="uq2-CC" type2="uq2-C" type3="uq2-CD" />
+    <Angle angle="2.162987" k="725.505600" type1="uq2-CC" type2="uq2-C" type3="uq2-O" />
+    <Angle angle="2.099632" k="736.384000" type1="uq2-CC" type2="uq2-CD" type3="uq2-OS" />
+    <Angle angle="2.048494" k="555.635200" type1="uq2-C3" type2="uq2-OS" type3="uq2-CC" />
+    <Angle angle="2.099632" k="736.384000" type1="uq2-CD" type2="uq2-CC" type3="uq2-OS" />
+    <Angle angle="2.162987" k="725.505600" type1="uq2-CD" type2="uq2-C" type3="uq2-O" />
+    <Angle angle="2.048494" k="555.635200" type1="uq2-C3" type2="uq2-OS" type3="uq2-CD" />
+    <Angle angle="2.081481" k="712.116800" type1="uq2-C" type2="uq2-CD" type3="uq2-OS" />
+    <Angle angle="2.055301" k="547.267200" type1="uq2-C" type2="uq2-CC" type3="uq2-C3" />
+    <Angle angle="2.084797" k="558.982400" type1="uq2-C3" type2="uq2-CD" type3="uq2-CC" />
+    <Angle angle="2.084797" k="558.982400" type1="uq2-C3" type2="uq2-CC" type3="uq2-CD" />
+    <Angle angle="1.953199" k="553.124800" type1="uq2-C2" type2="uq2-C3" type3="uq2-CD" />
+    <Angle angle="2.157751" k="553.124800" type1="uq2-C2" type2="uq2-C2" type3="uq2-C3" />
+    <Angle angle="1.947090" k="548.104000" type1="uq2-C2" type2="uq2-C3" type3="uq2-C3" />
+    <Angle angle="2.018474" k="543.083200" type1="uq2-C3" type2="uq2-C2" type3="uq2-C3" />
+    <Angle angle="1.928415" k="399.153600" type1="uq2-CC" type2="uq2-C3" type3="uq2-HC" />
+    <Angle angle="1.928415" k="399.153600" type1="uq2-CD" type2="uq2-C3" type3="uq2-HC" />
+    <Angle angle="2.018998" k="388.275200" type1="uq2-C3" type2="uq2-C2" type3="uq2-HA" />
+    <Angle angle="1.926146" k="397.480000" type1="uq2-C2" type2="uq2-C3" type3="uq2-HC" />
+    <Angle angle="2.101901" k="421.747200" type1="uq2-C2" type2="uq2-C2" type3="uq2-HA" />
+    <Angle angle="1.916372" k="391.622400" type1="uq2-C3" type2="uq2-C3" type3="uq2-HC" />
+    <Angle angle="1.916023" k="522.163200" type1="uq2-H1" type2="uq2-C3" type3="uq2-OS" />
+    <Angle angle="1.877626" k="326.352000" type1="uq2-HC" type2="uq2-C3" type3="uq2-HC" />
+    <Angle angle="1.892985" k="324.678400" type1="uq2-H1" type2="uq2-C3" type3="uq2-H1" />
+  </HarmonicAngleForce>
+  <PeriodicTorsionForce>
+    <Proper k1="0.000000" periodicity1="3" phase1="0.0000000000000000" type1="uq2-C" type2="uq2-CD" type3="uq2-C3" type4="uq2-HC" />
+    <Proper k1="1.603867" periodicity1="3" phase1="0.0000000000000000" type1="uq2-CC" type2="uq2-OS" type3="uq2-C3" type4="uq2-H1" />
+    <Proper k1="1.603867" periodicity1="3" phase1="0.0000000000000000" type1="uq2-CD" type2="uq2-OS" type3="uq2-C3" type4="uq2-H1" />
+    <Proper k1="0.000000" periodicity1="3" phase1="0.0000000000000000" type1="uq2-C" type2="uq2-CC" type3="uq2-C3" type4="uq2-HC" />
+    <Proper k1="0.000000" periodicity1="3" phase1="0.0000000000000000" type1="uq2-CC" type2="uq2-CD" type3="uq2-C3" type4="uq2-HC" />
+    <Proper k1="0.000000" periodicity1="3" phase1="0.0000000000000000" type1="uq2-CD" type2="uq2-CC" type3="uq2-C3" type4="uq2-HC" />
+    <Proper k1="0.000000" periodicity1="2" phase1="0.0000000000000000" type1="uq2-CD" type2="uq2-C3" type3="uq2-C2" type4="uq2-HA" />
+    <Proper k1="6.150480" periodicity1="1" phase1="0.0000000000000000" type1="uq2-C2" type2="uq2-C2" type3="uq2-C3" type4="uq2-HC" />
+    <Proper k1="0.650844" periodicity1="3" phase1="0.0000000000000000" type1="uq2-C2" type2="uq2-C3" type3="uq2-C3" type4="uq2-HC" />
+    <Proper k1="27.823600" periodicity1="2" phase1="3.1415926535897931" type1="uq2-C3" type2="uq2-C2" type3="uq2-C2" type4="uq2-HA" />
+    <Proper k1="1.297040" periodicity1="2" phase1="0.0000000000000000" type1="uq2-C3" type2="uq2-C2" type3="uq2-C3" type4="uq2-HC" />
+    <Proper k1="0.000000" periodicity1="2" phase1="0.0000000000000000" type1="uq2-C3" type2="uq2-C3" type3="uq2-C2" type4="uq2-HA" />
+    <Proper k1="0.502080" periodicity1="3" phase1="0.0000000000000000" type1="uq2-HC" type2="uq2-C3" type3="uq2-C3" type4="uq2-HC" />
+    <Proper k1="0.000000" periodicity1="2" phase1="0.0000000000000000" type1="uq2-HC" type2="uq2-C3" type3="uq2-C2" type4="uq2-HA" />
+    <Proper k1="0.000000" periodicity1="2" phase1="0.0000000000000000" type1="uq2-HA" type2="uq2-C2" type3="uq2-C3" type4="uq2-HC" />
+    <Proper k1="16.736000" periodicity1="2" phase1="3.1415926535897931" type1="uq2-C" type2="uq2-CC" type3="uq2-CD" type4="uq2-C" />
+    <Proper k1="16.736000" periodicity1="2" phase1="3.1415926535897931" type1="uq2-C" type2="uq2-CC" type3="uq2-CD" type4="uq2-OS" />
+    <Proper k1="4.393200" periodicity1="2" phase1="3.1415926535897931" type1="uq2-C" type2="uq2-CC" type3="uq2-OS" type4="uq2-C3" />
+    <Proper k1="16.736000" periodicity1="2" phase1="3.1415926535897931" type1="uq2-C" type2="uq2-CD" type3="uq2-CC" type4="uq2-C" />
+    <Proper k1="16.736000" periodicity1="2" phase1="3.1415926535897931" type1="uq2-C" type2="uq2-CD" type3="uq2-CC" type4="uq2-C3" />
+    <Proper k1="0.000000" periodicity1="3" phase1="0.0000000000000000" type1="uq2-C" type2="uq2-CD" type3="uq2-C3" type4="uq2-C2" />
+    <Proper k1="12.029000" periodicity1="2" phase1="3.1415926535897931" type1="uq2-CC" type2="uq2-C" type3="uq2-CD" type4="uq2-CC" />
+    <Proper k1="12.029000" periodicity1="2" phase1="3.1415926535897931" type1="uq2-CC" type2="uq2-C" type3="uq2-CD" type4="uq2-C3" />
+    <Proper k1="12.029000" periodicity1="2" phase1="3.1415926535897931" type1="uq2-CC" type2="uq2-CD" type3="uq2-C" type4="uq2-CC" />
+    <Proper k1="12.029000" periodicity1="2" phase1="3.1415926535897931" type1="uq2-CC" type2="uq2-CD" type3="uq2-C" type4="uq2-O" />
+    <Proper k1="4.393200" periodicity1="2" phase1="3.1415926535897931" type1="uq2-CC" type2="uq2-CD" type3="uq2-OS" type4="uq2-C3" />
+    <Proper k1="12.029000" periodicity1="2" phase1="3.1415926535897931" type1="uq2-CD" type2="uq2-C" type3="uq2-CC" type4="uq2-CD" />
+    <Proper k1="12.029000" periodicity1="2" phase1="3.1415926535897931" type1="uq2-O" type2="uq2-C" type3="uq2-CC" type4="uq2-CD" />
+    <Proper k1="4.393200" periodicity1="2" phase1="3.1415926535897931" type1="uq2-CD" type2="uq2-CC" type3="uq2-OS" type4="uq2-C3" />
+    <Proper k1="12.029000" periodicity1="2" phase1="3.1415926535897931" type1="uq2-CD" type2="uq2-C" type3="uq2-CC" type4="uq2-C3" />
+    <Proper k1="16.736000" periodicity1="2" phase1="3.1415926535897931" type1="uq2-C" type2="uq2-CD" type3="uq2-CC" type4="uq2-OS" />
+    <Proper k1="4.393200" periodicity1="2" phase1="3.1415926535897931" type1="uq2-C" type2="uq2-CD" type3="uq2-OS" type4="uq2-C3" />
+    <Proper k1="16.736000" periodicity1="2" phase1="3.1415926535897931" type1="uq2-C" type2="uq2-CC" type3="uq2-CD" type4="uq2-C3" />
+    <Proper k1="12.029000" periodicity1="2" phase1="3.1415926535897931" type1="uq2-CC" type2="uq2-C" type3="uq2-CD" type4="uq2-OS" />
+    <Proper k1="12.029000" periodicity1="2" phase1="3.1415926535897931" type1="uq2-O" type2="uq2-C" type3="uq2-CD" type4="uq2-CC" />
+    <Proper k1="0.000000" periodicity1="3" phase1="0.0000000000000000" type1="uq2-CC" type2="uq2-CD" type3="uq2-C3" type4="uq2-C2" />
+    <Proper k1="12.029000" periodicity1="2" phase1="3.1415926535897931" type1="uq2-CD" type2="uq2-C" type3="uq2-CC" type4="uq2-OS" />
+    <Proper k1="12.029000" periodicity1="2" phase1="3.1415926535897931" type1="uq2-CD" type2="uq2-CC" type3="uq2-C" type4="uq2-O" />
+    <Proper k1="0.000000" periodicity1="2" phase1="0.0000000000000000" type1="uq2-CD" type2="uq2-C3" type3="uq2-C2" type4="uq2-C2" />
+    <Proper k1="12.029000" periodicity1="2" phase1="3.1415926535897931" type1="uq2-C3" type2="uq2-CC" type3="uq2-C" type4="uq2-O" />
+    <Proper k1="16.736000" periodicity1="2" phase1="3.1415926535897931" type1="uq2-C3" type2="uq2-CC" type3="uq2-CD" type4="uq2-C3" />
+    <Proper k1="12.029000" periodicity1="2" phase1="3.1415926535897931" type1="uq2-O" type2="uq2-C" type3="uq2-CD" type4="uq2-C3" />
+    <Proper k1="1.673600" periodicity1="1" phase1="3.1415926535897931" type1="uq2-C3" type2="uq2-C2" type3="uq2-C2" type4="uq2-C3" />
+    <Proper k1="0.000000" periodicity1="2" phase1="0.0000000000000000" type1="uq2-C2" type2="uq2-C2" type3="uq2-C3" type4="uq2-C3" />
+    <Proper k1="0.650844" periodicity1="3" phase1="0.0000000000000000" type1="uq2-C2" type2="uq2-C3" type3="uq2-C3" type4="uq2-C2" />
+    <Proper k1="0.000000" periodicity1="2" phase1="0.0000000000000000" type1="uq2-C3" type2="uq2-C2" type3="uq2-C3" type4="uq2-C3" />
+    <Proper k1="0.000000" periodicity1="2" phase1="0.0000000000000000" type1="uq2-C3" type2="uq2-C3" type3="uq2-C2" type4="uq2-C2" />
+    <Proper k1="12.029000" periodicity1="2" phase1="3.1415926535897931" type1="uq2-O" type2="uq2-C" type3="uq2-CC" type4="uq2-OS" />
+    <Proper k1="16.736000" periodicity1="2" phase1="3.1415926535897931" type1="uq2-OS" type2="uq2-CC" type3="uq2-CD" type4="uq2-OS" />
+    <Proper k1="12.029000" periodicity1="2" phase1="3.1415926535897931" type1="uq2-OS" type2="uq2-CD" type3="uq2-C" type4="uq2-O" />
+    <Improper k1="4.602400" periodicity1="2" phase1="3.1415926535897931" type1="uq2-C2" type2="uq2-C3" type3="uq2-C2" type4="uq2-HA" />
+    <Improper k1="43.932000" periodicity1="2" phase1="3.1415926535897931" type1="uq2-O" type2="uq2-C" type3="uq2-CD" type4="uq2-CC" />
+    <Improper k1="4.602400" periodicity1="2" phase1="3.1415926535897931" type1="uq2-C" type2="uq2-CD" type3="uq2-CC" type4="uq2-OS" />
+    <Improper k1="4.602400" periodicity1="2" phase1="3.1415926535897931" type1="uq2-C" type2="uq2-CC" type3="uq2-CD" type4="uq2-OS" />
+    <Improper k1="43.932000" periodicity1="2" phase1="3.1415926535897931" type1="uq2-CC" type2="uq2-CD" type3="uq2-C" type4="uq2-O" />
+    <Improper k1="4.602400" periodicity1="2" phase1="3.1415926535897931" type1="uq2-C" type2="uq2-C3" type3="uq2-CC" type4="uq2-CD" />
+    <Improper k1="4.602400" periodicity1="2" phase1="3.1415926535897931" type1="uq2-C" type2="uq2-C3" type3="uq2-CD" type4="uq2-CC" />
+    <Improper k1="4.602400" periodicity1="2" phase1="3.1415926535897931" type1="uq2-C2" type2="uq2-C3" type3="uq2-C2" type4="uq2-C3" />
+  </PeriodicTorsionForce>
+  <NonbondedForce coulomb14scale="0.8333333333333334" lj14scale="0.5">
+    <UseAttributeFromResidue name="charge" />
+    <Atom epsilon="0.4133792" sigma="0.3315212310028100" type="uq2-C" />
+    <Atom epsilon="0.4133792" sigma="0.3315212310028100" type="uq2-CC" />
+    <Atom epsilon="0.4133792" sigma="0.3315212310028100" type="uq2-CD" />
+    <Atom epsilon="0.4510352" sigma="0.3397709531257257" type="uq2-C3" />
+    <Atom epsilon="0.4133792" sigma="0.3315212310028100" type="uq2-C2" />
+    <Atom epsilon="0.6121192" sigma="0.3048120873800651" type="uq2-O" />
+    <Atom epsilon="0.3037584" sigma="0.3156097800335680" type="uq2-OS" />
+    <Atom epsilon="0.0870272" sigma="0.2600176998083396" type="uq2-HC" />
+    <Atom epsilon="0.0870272" sigma="0.2421997255202334" type="uq2-H1" />
+    <Atom epsilon="0.0673624" sigma="0.2625478522039127" type="uq2-HA" />
+  </NonbondedForce>
+</ForceField>
