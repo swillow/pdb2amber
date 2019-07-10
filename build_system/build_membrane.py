@@ -14,6 +14,16 @@ min_prt = [ 100,  100,  100]
 # yrange : -22 ~ 66 : 88
 # zrange : -80 ~ 56 : 136
 f_pdb = open ('membrane.pdb', 'w', 1)
+a_len = 120.0
+b_len = 120.0
+c_len = 150.0
+alpha = 90.0
+beta  = 90.0
+gamma = 90.0
+
+line_head = "CRYST1%9.3f%9.3f%9.3f%7.2f%7.2f%7.2f P 1           1 " % (
+    a_len, b_len, c_len, alpha, beta, gamma)
+f_pdb.write(line_head + '\n')
 
 heavy_atoms = []
 for line in l_prt[:-1]:
