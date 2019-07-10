@@ -14,4 +14,4 @@ I added the bonds of 'CYX' into './data/residues_new.xml'.
 _forcefield.py was made based on forcefield.py at (...)/site-packages/simtk/openmm/app.
 
 # Howto 
-python pdb2amber -i receptor.pdb -o receptor.prmtop
+python pdb2amber.py -i receptor.pdb -o receptor.prmtop
