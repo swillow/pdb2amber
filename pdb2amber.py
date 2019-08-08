@@ -114,7 +114,6 @@ def pdb2amber (pdb_fname, prmtop_fname, inpcrd_fname, ff_fnames):
     _angles    = []
     _propers   = []
     _impropers = []
-    _atomBonds = []
     _bondedToAtom = []
 
     _atoms = list(pdb.topology.atoms())
@@ -344,28 +343,30 @@ def pdb2amber (pdb_fname, prmtop_fname, inpcrd_fname, ff_fnames):
     for (type1, type2) in _type_list:
         bond_k      = 0.0
         bond_length = 0.0
+        l_found    = False 
         for jj in range (len(my_ff._harmonicBonds)):
             types1 = my_ff._harmonicBonds[jj].types1
             types2 = my_ff._harmonicBonds[jj].types2
             if (type1 == types1 and type2 == types2):
                 bond_k      = my_ff._harmonicBonds[jj].k
                 bond_length = my_ff._harmonicBonds[jj].length
+                l_found = True
                 break
+        if not l_found:
+            print 'Error: No defined Bond ', type1, ' ', type2
+            
         prm.bond_k_list.append(bond_k)
         prm.bond_length_list.append(bond_length)
 
     ###### 
     for ii in range(len(_atoms)):
         _bondedToAtom.append(set())
-        _atomBonds.append([])
 
     _bonds = sorted (_bonds)  # add willow
     for ii in range(len(_bonds)):
         bond = _bonds[ii]
         _bondedToAtom[bond.atom1].add(bond.atom2)
         _bondedToAtom[bond.atom2].add(bond.atom1)
-        _atomBonds[bond.atom1].append(ii) 
-        _atomBonds[bond.atom2].append(ii)
         if bond.atom2 not in _excludedAtomWith[bond.atom1]:
             if bond.atom1 not in _excludedAtomWith[bond.atom2]:
                 _excludedAtomWith[bond.atom1].append(bond.atom2)
@@ -459,6 +460,7 @@ def pdb2amber (pdb_fname, prmtop_fname, inpcrd_fname, ff_fnames):
     for (type1, type2, type3) in _type_list:
         ang_k      = 0.0
         ang_length = 0.0
+        l_found    = False 
 
         for jj in range (len (my_ff._harmonicAngles) ):
             types1 = my_ff._harmonicAngles[jj].types1
@@ -468,7 +470,11 @@ def pdb2amber (pdb_fname, prmtop_fname, inpcrd_fname, ff_fnames):
             if type1 == types1 and type2 == types2 and type3 == types3:
                 ang_k      = my_ff._harmonicAngles[jj].k
                 ang_length = my_ff._harmonicAngles[jj].angle
+                l_found    = True
                 break
+        if not l_found:
+            print 'Error: No defined Angle ', type1, ' ', type2, ' ', type3
+            
         prm.angle_k_list.append(ang_k)
         prm.angle_length_list.append(ang_length)
 
@@ -476,6 +482,7 @@ def pdb2amber (pdb_fname, prmtop_fname, inpcrd_fname, ff_fnames):
     # Make a list of all unique proper torsions
 
     uniquePropers = set()
+    
     for angle in _angles:
             
         for atom in _bondedToAtom[angle[0]]:

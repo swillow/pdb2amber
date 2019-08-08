@@ -375,7 +375,7 @@ class MyTopology(object):
                 pos2 = positions[sg2.index]
                 delta = [x-y for (x,y) in zip(pos1, pos2)]
                 distance = sqrt(delta[0]*delta[0] + delta[1]*delta[1] + delta[2]*delta[2])
-                if distance < 0.3*nanometers:
+                if distance < 0.23*nanometers:
                     self.addBond(sg1, sg2)
 
     def createIronSulfurBonds(self, positions):
@@ -433,20 +433,21 @@ class MyTopology(object):
                 
         for fe in fe_list:
             pos1 = positions[fe.index]
-            
+            print '---FE---  ', fe.residue.name, fe.index, pos1
+                
             for sg in cyx_sg_list:
                 pos2 = positions[sg.index]
 
                 delta = [ x1 - x2 for (x1, x2) in zip (pos1, pos2)]
                 distance = sqrt(delta[0]*delta[0] + delta[1]*delta[1] + delta[2]*delta[2])
+#                print 'SG ', sg.index, ' Distance ', distance
                 if distance < 0.3*nanometers:
                     print 'addBond ', fe.index, sg.index, distance
                     self.addBond(fe, sg)
 
         
     def createUserDefined (self, positions, resName1, atomName1, resName2, atomName2):
-
-        print 'createUserDefinedBond'
+        import sys
         atom1_list = []
         atom2_list = []
         for res in self.residues():
@@ -472,7 +473,7 @@ class MyTopology(object):
                 if distance < 0.3*nanometers:
                     print 'addBond ', atom1.index, atom2.index, distance
                     self.addBond(atom1, atom2)
-
+     
                     
         
 class Chain(object):

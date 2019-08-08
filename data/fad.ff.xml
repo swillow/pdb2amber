@@ -412,6 +412,18 @@
     <Bond k="331121.760000" length="0.108600" type1="fad-CA" type2="fad-HA" />
     <Bond k="314553.120000" length="0.109700" type1="fad-C3" type2="fad-HC" />
     <Bond k="329866.560000" length="0.108700" type1="fad-C2" type2="fad-H4" />
+    <Bond k="521242.720000" length="0.122500" type1="fad-CD" type2="fad-O" />
+    <Bond k="296059.840000" length="0.138100" type1="fad-CD" type2="fad-N" />
+    <Bond k="308862.880000" length="0.136900" type1="fad-CD" type2="fad-ND" />
+    <Bond k="348192.480000" length="0.137300" type1="fad-CC" type2="fad-CD" />
+    <Bond k="219743.680000" length="0.150200" type1="fad-C3" type2="fad-CD" />
+    <Bond k="366518.400000" length="0.135900" type1="fad-C2" type2="fad-CD" />
+    <Bond k="334803.680000" length="0.108400" type1="fad-CD" type2="fad-HA" />
+    <Bond k="308862.880000" length="0.136900" type1="fad-CC" type2="fad-NC" />
+    <Bond k="348192.480000" length="0.137300" type1="fad-CC" type2="fad-CD" />
+    <Bond k="284679.360000" length="0.142800" type1="fad-CC" type2="fad-CC" />
+    <Bond k="337648.800000" length="0.108200" type1="fad-CC" type2="fad-H5" />
+    <Bond k="334803.680000" length="0.108400" type1="fad-CC" type2="fad-HA" />
   </HarmonicBondForce>
   <HarmonicAngleForce>
     <Angle angle="1.926321" k="579.902400" type1="fad-C2" type2="protein-NB" type3="protein-CV" />
@@ -479,6 +491,39 @@
     <Angle angle="2.009224" k="330.536000" type1="fad-HN" type2="fad-NH" type3="fad-HN" />
     <Angle angle="1.892985" k="324.678400" type1="fad-H1" type2="fad-C3" type3="fad-H1" />
     <Angle angle="1.971699" k="524.673600" type1="fad-H4" type2="fad-C2" type3="fad-NA" />
+    <Angle angle="2.230183" k="614.010368" type1="fad-NC" type2="fad-CD" type3="fad-O" />
+    <Angle angle="2.146756" k="922.990400" type1="fad-N" type2="fad-CD" type3="fad-NC" />
+    <Angle angle="1.948661" k="762.324800" type1="fad-CD" type2="fad-CC" type3="fad-NC" />
+    <Angle angle="1.841149" k="618.395200" type1="fad-CC" type2="fad-NC" type3="fad-CD" />
+    <Angle angle="2.151468" k="557.308800" type1="fad-C" type2="fad-N" type3="fad-CD" />
+    <Angle angle="2.162464" k="613.851376" type1="fad-N" type2="fad-CD" type3="fad-O" />
+    <Angle angle="1.966987" k="728.852800" type1="fad-CD" type2="fad-C" type3="fad-N" />
+    <Angle angle="2.152341" k="698.728000" type1="fad-C" type2="fad-CD" type3="fad-ND" />
+    <Angle angle="2.117958" k="562.329600" type1="fad-C" type2="fad-CD" type3="fad-CC" />
+    <Angle angle="1.841149" k="618.395200" type1="fad-CC" type2="fad-ND" type3="fad-CD" />
+    <Angle angle="1.867329" k="775.713600" type1="fad-CD" type2="fad-CC" type3="fad-NA" />
+    <Angle angle="1.948661" k="762.324800" type1="fad-CC" type2="fad-CD" type3="fad-ND" />
+    <Angle angle="1.992992" k="588.270400" type1="fad-CC" type2="fad-CC" type3="fad-CD" />
+    <Angle angle="2.084797" k="558.982400" type1="fad-C3" type2="fad-CD" type3="fad-CC" />
+    <Angle angle="1.992992" k="588.270400" type1="fad-CC" type2="fad-CD" type3="fad-CD" />
+    <Angle angle="2.132619" k="571.534400" type1="fad-C2" type2="fad-CD" type3="fad-CD" />
+    <Angle angle="1.932080" k="586.596800" type1="fad-CD" type2="fad-CD" type3="fad-CD" />
+    <Angle angle="2.024059" k="558.145600" type1="fad-C3" type2="fad-CD" type3="fad-CD" />
+    <Angle angle="2.081481" k="404.174400" type1="fad-CD" type2="fad-N" type3="fad-HN" />
+    <Angle angle="2.125114" k="410.032000" type1="fad-CD" type2="fad-CC" type3="fad-HA" />
+    <Angle angle="1.928415" k="399.153600" type1="fad-CD" type2="fad-C3" type3="fad-HC" />
+    <Angle angle="2.091778" k="416.726400" type1="fad-CD" type2="fad-C2" type3="fad-H4" />
+    <Angle angle="2.113071" k="398.316800" type1="fad-CD" type2="fad-CD" type3="fad-HA" />
+    <Angle angle="2.125114" k="410.032000" type1="fad-CC" type2="fad-CD" type3="fad-HA" />
+    <Angle angle="2.128430" k="910.438400" type1="fad-NA" type2="fad-CC" type3="fad-NC" />
+    <Angle angle="1.964543" k="755.630400" type1="fad-CC" type2="fad-CC" type3="fad-ND" />
+    <Angle angle="2.055475" k="723.832000" type1="fad-CC" type2="fad-CC" type3="fad-NA" />
+    <Angle angle="1.932080" k="586.596800" type1="fad-CC" type2="fad-CC" type3="fad-CC" />
+    <Angle angle="1.918118" k="589.944000" type1="fad-CC" type2="fad-NA" type3="fad-CC" />
+    <Angle angle="2.113071" k="398.316800" type1="fad-CC" type2="fad-CC" type3="fad-HA" />
+    <Angle angle="2.140996" k="417.563200" type1="fad-C2" type2="fad-C2" type3="fad-H4" />
+    <Angle angle="1.971699" k="524.673600" type1="fad-H4" type2="fad-C2" type3="protein-NB" />
+    <Angle angle="2.091778" k="416.726400" type1="fad-CD" type2="fad-C2" type3="fad-H4" />
   </HarmonicAngleForce>
   <PeriodicTorsionForce>
     <Proper k1="27.823600" periodicity1="2" phase1="3.1415926535897931" type1="protein-NB" type2="fad-C2" type3="fad-CD" type4="fad-CD" />

@@ -679,6 +679,28 @@
   <Bond from="H3" to="N"/>
   <Bond from="HXT" to="OXT"/>
  </Residue>
+ <Residue name="LYN">
+      <Bond from="N" to="H"/>
+      <Bond from="N" to="CA"/>
+      <Bond from="CA" to="HA"/>
+      <Bond from="CA" to="CB"/>
+      <Bond from="CA" to="C"/>
+      <Bond from="CB" to="HB2"/>
+      <Bond from="CB" to="HB3"/>
+      <Bond from="CB" to="CG"/>
+      <Bond from="CG" to="HG2"/>
+      <Bond from="CG" to="HG3"/>
+      <Bond from="CG" to="CD"/>
+      <Bond from="CD" to="HD2"/>
+      <Bond from="CD" to="HD3"/>
+      <Bond from="CD" to="CE"/>
+      <Bond from="CE" to="HE2"/>
+      <Bond from="CE" to="HE3"/>
+      <Bond from="CE" to="NZ"/>
+      <Bond from="NZ" to="HZ2"/>
+      <Bond from="NZ" to="HZ3"/>
+      <Bond from="C" to="O"/>
+ </Residue>
  <Residue name="LYS">
   <Bond from="-C" to="N"/>
   <Bond from="C" to="CA"/>

@@ -317,6 +317,6 @@
     <Atom epsilon="0.4133792" sigma="0.3315212310028100" type="hem-C2" />
     <Atom epsilon="0.0673624" sigma="0.2625478522039127" type="hem-HA" />
     <Atom epsilon="0.0870272" sigma="0.2600176998083396" type="hem-HC" />
-    <Atom epsilon="0.0000000" sigma="0.1158168333582441" type="hem-FE" />
+    <Atom epsilon="0.03940482832" sigma="0.24107719312877582" type="hem-FE" />
   </NonbondedForce>
 </ForceField>

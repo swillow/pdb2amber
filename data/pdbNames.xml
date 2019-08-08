@@ -87,11 +87,16 @@
   <Atom name="HG22" alt1="2HG2"/>
   <Atom name="HG23" alt1="3HG2"/>
  </Residue>
- <Residue name="CYS" type="Protein" alt1="CYX">
+ <Residue name="CYS" type="Protein">
   <Atom name="SG" alt1="SG1"/>
   <Atom name="HB2" alt1="2HB"/>
   <Atom name="HB3" alt1="HB1" alt2="1HB" alt3="3HB"/>
   <Atom name="HG" alt1="HG1" alt2="HSG"/>
+ </Residue>
+ <Residue name="CYX" type="Protein">
+  <Atom name="SG" alt1="SG1"/>
+  <Atom name="HB2" alt1="2HB"/>
+  <Atom name="HB3" alt1="HB1" alt2="1HB" alt3="3HB"/>
  </Residue>
  <Residue name="PRO" type="Protein">
   <Atom name="HB2" alt1="2HB"/>
@@ -124,6 +129,13 @@
   <Atom name="HD2" alt1="HD"/>
   <Atom name="HE1" alt1="HE"/>
   <Atom name="HE2" alt1="HNE" alt2="HNE2"/>
+ </Residue>
+ <Residue name="HID" type="Protein"> 
+  <Atom name="HB2" alt1="2HB"/>
+  <Atom name="HB3" alt1="HB1" alt2="1HB" alt3="3HB"/>
+  <Atom name="HD1" alt1="HND" alt2="HND1"/>
+  <Atom name="HD2" alt1="HD"/>
+  <Atom name="HE1" alt1="HE"/>
  </Residue>
  <Residue name="ASP" type="Protein">
   <Atom name="HB2" alt1="2HB"/>
