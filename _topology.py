@@ -293,7 +293,7 @@ class MyTopology(object):
             for bond in residue.findall('Bond'):
                 bonds.append((bond.attrib['from'], bond.attrib['to']))
 
-    def createStandardBonds(self):
+    def createStandardBonds(self, positions):
         """Create bonds based on the atom and residue names for all standard residue types.
 
         Definitions for standard amino acids and nucleotides are built in.  You can call loadBondDefinitions() to load
@@ -338,7 +338,22 @@ class MyTopology(object):
                         else:
                             toResidue = i
                             toAtom = bond[1]
+
+                        l_add_Bond = False
                         if fromAtom in atomMaps[fromResidue] and toAtom in atomMaps[toResidue]:
+                            l_add_Bond = True
+                            
+                        if fromResidue != toResidue and l_add_Bond:
+                            atom1 = atomMaps[fromResidue][fromAtom]
+                            atom2 = atomMaps[toResidue][toAtom]
+                            pos1  = positions[atom1.index]
+                            pos2  = positions[atom2.index]
+                            delta = [x - y for (x,y) in zip (pos1, pos2)]
+                            distance = sqrt(delta[0]*delta[0] + delta[1]*delta[1] + delta[2]*delta[2])
+                            if distance > 0.20*nanometers:
+                                l_add_Bond = False
+                            
+                        if l_add_Bond:
                             self.addBond(atomMaps[fromResidue][fromAtom], atomMaps[toResidue][toAtom])
 
     def createDisulfideBonds(self, positions):
