@@ -3,6 +3,7 @@
     <DateGenerated>2018-03-02</DateGenerated>
     <Source Source="leaprc.protein.ff14SB" md5hash="2fbe80b999846068f2a1b6f3c50fcbb9" sourcePackage="AmberTools" sourcePackageVersion="17.6">leaprc.protein.ff14SB</Source>
     <Reference>Maier, J.A., Martinez, C., Kasavajhala, K., Wickstrom, L., Hauser, K.E., and Simmerling, C. (2015). ff14SB: Improving the Accuracy of Protein Side Chain and Backbone Parameters from ff99SB. J. Chem. Theory Comput. 11, 3696-3713.</Reference>
+    <Note> "OG1 THO IS CONNECTED TO P FMN" </Note>
   </Info>
   <AtomTypes>
     <Type class="C" element="C" mass="12.01" name="protein-C"/>
@@ -891,6 +892,35 @@
       <Bond atomName1="CB" atomName2="HB3"/>
       <Bond atomName1="CB" atomName2="OG"/>
       <Bond atomName1="OG" atomName2="HG"/>
+      <Bond atomName1="C" atomName2="O"/>
+      <ExternalBond atomName="N"/>
+      <ExternalBond atomName="C"/>
+    </Residue>
+    <Residue name="THO">
+      <Atom charge="-0.4157" name="N" type="protein-N"/>
+      <Atom charge="0.2719" name="H" type="protein-H"/>
+      <Atom charge="-0.0389" name="CA" type="protein-CX"/>
+      <Atom charge="0.1007" name="HA" type="protein-H1"/>
+      <Atom charge="0.3654" name="CB" type="protein-3C"/>
+      <Atom charge="0.0043" name="HB" type="protein-H1"/>
+      <Atom charge="-0.2438" name="CG2" type="protein-CT"/>
+      <Atom charge="0.0642" name="HG21" type="protein-HC"/>
+      <Atom charge="0.0642" name="HG22" type="protein-HC"/>
+      <Atom charge="0.0642" name="HG23" type="protein-HC"/>
+      <Atom charge="-0.6761" name="OG1" type="protein-OH"/>
+      <Atom charge="0.5973" name="C" type="protein-C"/>
+      <Atom charge="-0.5679" name="O" type="protein-O"/>
+      <Bond atomName1="N" atomName2="H"/>
+      <Bond atomName1="N" atomName2="CA"/>
+      <Bond atomName1="CA" atomName2="HA"/>
+      <Bond atomName1="CA" atomName2="CB"/>
+      <Bond atomName1="CA" atomName2="C"/>
+      <Bond atomName1="CB" atomName2="HB"/>
+      <Bond atomName1="CB" atomName2="CG2"/>
+      <Bond atomName1="CB" atomName2="OG1"/>
+      <Bond atomName1="CG2" atomName2="HG21"/>
+      <Bond atomName1="CG2" atomName2="HG22"/>
+      <Bond atomName1="CG2" atomName2="HG23"/>
       <Bond atomName1="C" atomName2="O"/>
       <ExternalBond atomName="N"/>
       <ExternalBond atomName="C"/>

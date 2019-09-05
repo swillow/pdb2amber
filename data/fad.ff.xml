@@ -668,6 +668,44 @@
     <Proper k1="16.526800" periodicity1="1" phase1="3.1415926535897931" type1="fad-C3" type2="fad-C3" type3="fad-OS" type4="fad-P5" />
     <Proper k1="0.083680" periodicity1="1" phase1="3.1415926535897931" type1="fad-OH" type2="fad-C3" type3="fad-C3" type4="fad-OS" />
     <Proper k1="3.347200" periodicity1="2" phase1="0.0000000000000000" type1="fad-C3" type2="fad-OS" type3="fad-P5" type4="fad-O" />
+    <Proper k1="0.000000" periodicity1="2" phase1="0.0000000000000000" type1="fad-CD" type2="fad-NA" type3="fad-C3" type4="fad-H1" />
+    <Proper k1="0.000000" periodicity1="2" phase1="0.0000000000000000" type1="fad-CD" type2="fad-NA" type3="fad-C3" type4="fad-C3" />
+    <Proper k1="15.167000" periodicity1="2" phase1="3.1415926535897931" type1="fad-NA" type2="fad-CA" type3="fad-CA" type4="fad-HA" />
+    <Proper k1="0.000000" periodicity1="2" phase1="0.0000000000000000" type1="fad-CA" type2="fad-NA" type3="fad-C3" type4="fad-H1" />
+    <Proper k1="15.167000" periodicity1="2" phase1="3.1415926535897931" type1="fad-CA" type2="fad-CA" type3="fad-CA" type4="fad-HA" />
+    <Proper k1="1.255200" periodicity1="2" phase1="3.1415926535897931" type1="fad-CA" type2="fad-CA" type3="fad-NA" type4="fad-CD" />
+    <Proper k1="0.000000" periodicity1="2" phase1="3.1415926535897931" type1="fad-CA" type2="fad-CA" type3="fad-C3" type4="fad-HC" />
+    <Proper k1="15.167000" periodicity1="2" phase1="3.1415926535897931" type1="fad-C3" type2="fad-CA" type3="fad-CA" type4="fad-HA" />
+    <Proper k1="15.167000" periodicity1="2" phase1="3.1415926535897931" type1="fad-C3" type2="fad-CA" type3="fad-CA" type4="fad-CA" />
+    <Proper k1="15.167000" periodicity1="2" phase1="3.1415926535897931" type1="fad-C3" type2="fad-CA" type3="fad-CA" type4="fad-C3" />
+    <Proper k1="19.874000" periodicity1="2" phase1="3.1415926535897931" type1="fad-CA" type2="fad-NC" type3="fad-CD" type4="fad-CD" />
+    <Proper k1="15.167000" periodicity1="2" phase1="3.1415926535897931" type1="fad-NC" type2="fad-CA" type3="fad-CA" type4="fad-NA" />
+    <Proper k1="15.167000" periodicity1="2" phase1="3.1415926535897931" type1="fad-NC" type2="fad-CA" type3="fad-CA" type4="fad-CA" />
+    <Proper k1="16.736000" periodicity1="2" phase1="3.1415926535897931" type1="fad-NC" type2="fad-CD" type3="fad-CD" type4="fad-NA" />
+    <Proper k1="15.167000" periodicity1="2" phase1="3.1415926535897931" type1="fad-NC" type2="fad-CA" type3="fad-CA" type4="fad-HA" />
+    <Proper k1="0.000000" periodicity1="2" phase1="0.0000000000000000" type1="fad-CA" type2="fad-CA" type3="fad-CA" type4="fad-CA" />
+    <Proper k1="7.112800" periodicity1="2" phase1="3.1415926535897931" type1="fad-NC" type2="fad-CD" type3="fad-NA" type4="fad-C3" />
+    <Proper k1="7.112800" periodicity1="2" phase1="3.1415926535897931" type1="fad-CD" type2="fad-CD" type3="fad-NA" type4="fad-CA" />
+    <Proper k1="20.083200" periodicity1="2" phase1="3.1415926535897931" type1="fad-CD" type2="fad-NC" type3="fad-CA" type4="fad-CA" />
+    <Proper k1="7.112800" periodicity1="2" phase1="3.1415926535897931" type1="fad-CD" type2="fad-CD" type3="fad-NA" type4="fad-C3" />
+    <Proper k1="12.029000" periodicity1="2" phase1="3.1415926535897931" type1="fad-O" type2="fad-C" type3="fad-CD" type4="fad-CD" />
+    <Proper k1="12.029000" periodicity1="2" phase1="3.1415926535897931" type1="fad-O" type2="fad-C" type3="fad-CD" type4="fad-NC" />
+    <Proper k1="16.736000" periodicity1="2" phase1="3.1415926535897931" type1="fad-C" type2="fad-CD" type3="fad-CD" type4="fad-NA" />
+    <Proper k1="19.874000" periodicity1="2" phase1="3.1415926535897931" type1="fad-C" type2="fad-CD" type3="fad-NC" type4="fad-CA" />
+    <Proper k1="12.029000" periodicity1="2" phase1="3.1415926535897931" type1="fad-N" type2="fad-C" type3="fad-CD" type4="fad-CD" />
+    <Proper k1="12.029000" periodicity1="2" phase1="3.1415926535897931" type1="fad-N" type2="fad-C" type3="fad-CD" type4="fad-NC" />
+    <Proper k1="16.736000" periodicity1="2" phase1="3.1415926535897931" type1="fad-N" type2="fad-C" type3="fad-NC" type4="fad-CD" />
+    <Proper k1="10.460000" periodicity1="2" phase1="3.1415926535897931" type1="fad-C" type2="fad-N" type3="fad-C" type4="fad-O" />
+    <Proper k1="10.460000" periodicity1="2" phase1="3.1415926535897931" type1="fad-O" type2="fad-C" type3="fad-N" type4="fad-C" />
+    <Proper k1="16.736000" periodicity1="2" phase1="3.1415926535897931" type1="fad-O" type2="fad-C" type3="fad-NC" type4="fad-CD" />
+    <Proper k1="10.460000" periodicity1="2" phase1="3.1415926535897931" type1="fad-C" type2="fad-N" type3="fad-C" type4="fad-CD" />
+    <Proper k1="19.874000" periodicity1="2" phase1="3.1415926535897931" type1="fad-C" type2="fad-NC" type3="fad-CD" type4="fad-NA" />
+    <Proper k1="19.874000" periodicity1="2" phase1="3.1415926535897931" type1="fad-C" type2="fad-NC" type3="fad-CD" type4="fad-CD" />
+    <Proper k1="7.112800" periodicity1="2" phase1="3.1415926535897931" type1="fad-NC" type2="fad-CD" type3="fad-NA" type4="fad-CA" />
+    <Proper k1="16.736000" periodicity1="2" phase1="3.1415926535897931" type1="fad-NC" type2="fad-CD" type3="fad-CD" type4="fad-NC" />
+    <Proper k1="16.736000" periodicity1="2" phase1="3.1415926535897931" type1="fad-NC" type2="fad-CD" type3="fad-CD" type4="fad-C" />
+    <Proper k1="10.460000" periodicity1="2" phase1="3.1415926535897931" type1="fad-NC" type2="fad-C" type3="fad-N" type4="fad-HN" />
+    <Proper k1="10.460000" periodicity1="2" phase1="3.1415926535897931" type1="fad-NC" type2="fad-C" type3="fad-N" type4="fad-C" />
     <Improper k1="4.602400" periodicity1="2" phase1="3.1415926535897931" type1="fad-C2" type2="fad-H4" type3="fad-C2" type4="fad-NA" />
     <Improper k1="4.602400" periodicity1="2" phase1="3.1415926535897931" type1="fad-H5" type2="fad-NA" type3="fad-CC" type4="fad-ND" />
     <Improper k1="4.602400" periodicity1="2" phase1="3.1415926535897931" type1="fad-CA" type2="fad-HN" type3="fad-NH" type4="fad-HN" />
