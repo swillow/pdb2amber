@@ -81,7 +81,7 @@ def xml_ff_residues (data, prm, ff_prefix):
     at_name = prm_atom_name[iat].upper()
     
     tot_chg += float(prm_atom_chg[iat])
-    at_chg  = "%8.4f"%float(prm_atom_chg[iat])
+    at_chg  = "%10.6f"%float(prm_atom_chg[iat])
     at_type = ff_prefix+"-"+prm_atom_type[iat].upper()
     
     ff_res_atom = ET.SubElement(ff_residue, 'Atom')
@@ -91,8 +91,8 @@ def xml_ff_residues (data, prm, ff_prefix):
 
         
   for ii in range (0, len(prm_bonds), 3):
-    ibnd = int(prm_bonds[ii])/3
-    jbnd = int(prm_bonds[ii+1])/3
+    ibnd = int(prm_bonds[ii])//3
+    jbnd = int(prm_bonds[ii+1])//3
     
     iatnm = prm_atom_name[ibnd]
     jatnm = prm_atom_name[jbnd]
@@ -118,8 +118,8 @@ def xml_ff_bond_force (data, prm, ff_prefix):
              + prm._raw_data["BONDS_INC_HYDROGEN"]
   typ_list = []
   for ii in range (0, len(raw_data), 3):
-    ibnd = int(raw_data[ii])/3
-    jbnd = int(raw_data[ii+1])/3
+    ibnd = int(raw_data[ii])//3
+    jbnd = int(raw_data[ii+1])//3
     ityp = int(raw_data[ii+2])-1
     r0   = "%10.6f"%(float(bnd_r0[ityp])*lengthConversionFactor)
     # amber (k (x-x0)^2) ---> openmm (0.5 k' (x-x0)^2) : k' = 2k 
@@ -153,9 +153,9 @@ def xml_ff_angle_force (data, prm, ff_prefix):
              + prm._raw_data["ANGLES_INC_HYDROGEN"]
   typ_list = []
   for ii in range (0, len(raw_data), 4):
-    iang = int(raw_data[ii])/3
-    jang = int(raw_data[ii+1])/3
-    kang = int(raw_data[ii+2])/3
+    iang = int(raw_data[ii])//3
+    jang = int(raw_data[ii+1])//3
+    kang = int(raw_data[ii+2])//3
     ityp = int(raw_data[ii+3])-1
     r0   = "%10.6f"%float(ang_r0[ityp])
     # amber (k (x-x0)^2) ---> openmm (0.5 k' (x-x0)^2) : k' = 2k 
@@ -193,10 +193,10 @@ def xml_ff_torsion_force (data, prm, ff_prefix):
   proper_typ_list = []
   
   for ii in range (0, len(raw_data), 5):
-    it = int(raw_data[ii])/3
-    jt = int(raw_data[ii+1])/3
-    kt = abs(int(raw_data[ii+2]))/3
-    lt = abs(int(raw_data[ii+3]))/3
+    it = int(raw_data[ii])//3
+    jt = int(raw_data[ii+1])//3
+    kt = abs(int(raw_data[ii+2]))//3
+    lt = abs(int(raw_data[ii+3]))//3
     ityp = int(raw_data[ii+4])-1
 
     fk0  = "%12.6f"%(float(forceConstant[ityp])*forceConstConversionFactor)
@@ -205,7 +205,7 @@ def xml_ff_torsion_force (data, prm, ff_prefix):
         ph0  = "%20.16f"%Decimal(np.pi)
     pn0  = "%2d"%int(0.5+float(periodicity[ityp]))
 
-    # BUG: Willow
+    
     if ( int(raw_data[ii+3]) > 0): # Proper
       typeID = 'PR_'
       typeID += prm_atom_type[it] + '_'
@@ -227,10 +227,10 @@ def xml_ff_torsion_force (data, prm, ff_prefix):
   improp_typ_list = []
   
   for ii in range (0, len(raw_data), 5):
-    it = int(raw_data[ii])/3
-    jt = int(raw_data[ii+1])/3
-    kt = abs(int(raw_data[ii+2]))/3
-    lt = abs(int(raw_data[ii+3]))/3
+    it = int(raw_data[ii])//3
+    jt = int(raw_data[ii+1])//3
+    kt = abs(int(raw_data[ii+2]))//3
+    lt = abs(int(raw_data[ii+3]))//3
     ityp = int(raw_data[ii+4])-1
     fk0  = "%12.6f"%(float(forceConstant[ityp])*forceConstConversionFactor)
     ph0  = "%20.16f"%Decimal(0.0)
@@ -355,7 +355,8 @@ if __name__ == "__main__":
 
   xml_indent(data)
 
-  mydata = ET.tostring(data)
-  myfile = open (xml_fname, "w")
-  myfile.write (mydata)
-  #print ET.tostring(data)
+  str_data = ET.tostring(data,method='xml').decode()
+  xml_file = open (xml_fname, "w")
+  xml_file.write (str_data)
+  #print (ET.tostring(data, encoding='unicode', method='xml'))
+  #print (ET.tostring(data, method='xml').decode())
