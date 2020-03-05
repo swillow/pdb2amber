@@ -87,6 +87,13 @@
   <Atom name="HG22" alt1="2HG2"/>
   <Atom name="HG23" alt1="3HG2"/>
  </Residue>
+ <Residue name="THO" type="Protein">
+  <Atom name="OG1" alt1="OG"/>
+  <Atom name="CG2" alt1="CG"/>
+  <Atom name="HG21" alt1="1HG2"/>
+  <Atom name="HG22" alt1="2HG2"/>
+  <Atom name="HG23" alt1="3HG2"/>
+ </Residue>
  <Residue name="CYS" type="Protein">
   <Atom name="SG" alt1="SG1"/>
   <Atom name="HB2" alt1="2HB"/>
@@ -94,6 +101,16 @@
   <Atom name="HG" alt1="HG1" alt2="HSG"/>
  </Residue>
  <Residue name="CYX" type="Protein">
+  <Atom name="SG" alt1="SG1"/>
+  <Atom name="HB2" alt1="2HB"/>
+  <Atom name="HB3" alt1="HB1" alt2="1HB" alt3="3HB"/>
+ </Residue>
+ <Residue name="CYG" type="Protein">
+  <Atom name="SG" alt1="SG1"/>
+  <Atom name="HB2" alt1="2HB"/>
+  <Atom name="HB3" alt1="HB1" alt2="1HB" alt3="3HB"/>
+ </Residue>
+ <Residue name="CYF" type="Protein">
   <Atom name="SG" alt1="SG1"/>
   <Atom name="HB2" alt1="2HB"/>
   <Atom name="HB3" alt1="HB1" alt2="1HB" alt3="3HB"/>
@@ -293,6 +310,8 @@
   <Atom name="H1" alt1="HW1"/>
   <Atom name="H2" alt1="HW2"/>
  </Residue>
- <Residue name="DPPE" alt1="DPP"/>
+ <Residue name="DPPE" alt1="DPP" type="Lipid"/>
+ <Residue name="NA" alt1="Na"/>
+ <Residue name="CL" alt1="Cl"/>
  <Residue name="HEM" alt1="HEME"/>
 </Residues>

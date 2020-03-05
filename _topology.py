@@ -396,7 +396,7 @@ class MyTopology(object):
     def createIronSulfurBonds(self, positions):
         import sys
         
-        print 'createIronSulfureBonds '
+        print ('createIronSulfureBonds ')
         
         def isCyx(res):
             names = [atom.name for atom in res._atoms]
@@ -405,10 +405,11 @@ class MyTopology(object):
         cyx_sg_list  = [] 
         for res in self.residues():
             is_cyx = False
-            if res.name == 'CYX':
+            if res.name in ['CYX', 'CYF', 'CYG']:
                 is_cyx = True
             elif res.name == 'CYS' and isCyx(res):
                 is_cyx = True
+            
 
             if is_cyx:    
                 atomNames = [ atom.name for atom in res._atoms ]
@@ -444,11 +445,15 @@ class MyTopology(object):
                 fe_list.append(fe)
                 fe  = res._atoms[atomNames.index('FE3')]
                 fe_list.append(fe)
-
+                
+            if res.name == 'FE':
+                atomNames = [ atom.name for atom in res._atoms ]
+                fe = res._atoms[atomNames.index('FE')]
+                fe_list.append (fe)
                 
         for fe in fe_list:
             pos1 = positions[fe.index]
-            print '---FE---  ', fe.residue.name, fe.index, pos1
+            print ('---FE---  ', fe.residue.name, fe.index, pos1)
                 
             for sg in cyx_sg_list:
                 pos2 = positions[sg.index]
@@ -456,8 +461,8 @@ class MyTopology(object):
                 delta = [ x1 - x2 for (x1, x2) in zip (pos1, pos2)]
                 distance = sqrt(delta[0]*delta[0] + delta[1]*delta[1] + delta[2]*delta[2])
 #                print 'SG ', sg.index, ' Distance ', distance
-                if distance < 0.3*nanometers:
-                    print 'addBond ', fe.index, sg.index, distance
+                if distance < 0.35*nanometers:
+                    print ('addBond ', fe.index, sg.index, distance)
                     self.addBond(fe, sg)
 
         
@@ -486,7 +491,7 @@ class MyTopology(object):
                 distance = sqrt(delta[0]*delta[0] + delta[1]*delta[1] + delta[2]*delta[2])
                 
                 if distance < 0.3*nanometers:
-                    print 'addBond ', atom1.index, atom2.index, distance
+                    print ('addBond ', atom1.index, atom2.index, distance)
                     self.addBond(atom1, atom2)
      
                     

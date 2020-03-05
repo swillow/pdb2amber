@@ -100,19 +100,20 @@
     <Angle angle="1.7976891295541593" k="573.208" type1="fe-FE2" type2="protein-O2" type3="protein-CO"/>
     <Angle angle="1.7976891295541593" k="144.7664" type1="protein-O2" type2="fe-FE2" type3="protein-S"/>
     <Angle angle="1.7976891295541593" k="144.7664" type1="fe-SB" type2="fe-FE2" type3="protein-O2"/>
+    <Angle angle="1.7976891295541593" k="573.208" type1="fe-FE1" type2="protein-S" type3="protein-2C"/>
   </HarmonicAngleForce>
   <PeriodicTorsionForce ordering="amber">
     <Proper k1="20.92" periodicity1="1" phase1="3.141592653589793" type1="fe-FE2" type2="fe-SB" type3="fe-FE2" type4="fe-SB"/>
     <Proper k1="00.00" periodicity1="1" phase1="3.141592653589793" type1="" type2="fe-SX" type3="fe-FE2" type4=""/>
     <Proper k1="20.92" periodicity1="1" phase1="0.00000" type1="fe-FE2" type2="fe-SB" type3="fe-FE2" type4="fe-SX"/>
-    <Proper k1="4.184" periodicity1="3" phase1="0.00000"           type1="protein-CT" type2="protein-S" type3="fe-FE2" type4="fe-SB"/>
+    <Proper k1="4.184" periodicity1="3" phase1="0.00000"           type1="protein-2C" type2="protein-S" type3="fe-FE2" type4="fe-SB"/>
     <Proper k1="1.58992" periodicity1="3" phase1="3.141592653589793" k2="4.8116" periodicity2="1" phase2="0.00000" type1="protein-S" type2="fe-FE2" type3="fe-SB" type4="fe-FE2"/>
-    <Proper k1="0.652704" periodicity1="3" phase1="0.00000"        type1="fe-FE2" type2="protein-S" type3="protein-CT" type4="protein-CT"/>
-    <Proper k1="0.652704" periodicity1="3" phase1="0.00000"        type1="fe-FE2" type2="protein-S" type3="protein-CT" type4="protein-HC"/>
-    <Proper k1="4.184" periodicity1="3" phase1="0.00000"           type1="protein-S" type2="fe-FE2" type3="protein-S" type4="protein-CT"/>
-    <Proper k1="0.652704" periodicity1="3" phase1="0.00000"        type1="fe-FE1" type2="protein-S" type3="protein-CT" type4="protein-CT"/>
-    <Proper k1="0.652704" periodicity1="3" phase1="0.00000"        type1="fe-FE1" type2="protein-S" type3="protein-CT" type4="protein-HC"/>
-    <Proper k1="4.184" periodicity1="3" phase1="0.00000"           type1="protein-S" type2="fe-FE1" type3="protein-S" type4="protein-CT"/>
+    <Proper k1="0.652704" periodicity1="3" phase1="0.00000"        type1="fe-FE2" type2="protein-S" type3="protein-2C" type4="protein-2C"/>
+    <Proper k1="0.652704" periodicity1="3" phase1="0.00000"        type1="fe-FE2" type2="protein-S" type3="protein-2C" type4="protein-HC"/>
+    <Proper k1="4.184" periodicity1="3" phase1="0.00000"           type1="protein-S" type2="fe-FE2" type3="protein-S" type4="protein-2C"/>
+    <Proper k1="0.652704" periodicity1="3" phase1="0.00000"        type1="fe-FE1" type2="protein-S" type3="protein-2C" type4="protein-2C"/>
+    <Proper k1="0.652704" periodicity1="3" phase1="0.00000"        type1="fe-FE1" type2="protein-S" type3="protein-2C" type4="protein-HC"/>
+    <Proper k1="4.184" periodicity1="3" phase1="0.00000"           type1="protein-S" type2="fe-FE1" type3="protein-S" type4="protein-2C"/>
     <Proper k1="0.000" periodicity1="1" phase1="0.00000"           type1="" type2="fe-FE2" type3="protein-O2" type4=""/>
     <Proper k1="0.000" periodicity1="1" phase1="0.00000"           type1="fe-FE2" type2="protein-O2" type3="protein-CO" type4="protein-O2"/>
     <Proper k1="0.000" periodicity1="1" phase1="0.00000"           type1="fe-FE2" type2="fe-SB" type3="fe-FE2" type4="protein-O2"/>

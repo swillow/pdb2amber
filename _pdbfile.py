@@ -162,14 +162,23 @@ class MyPDBFile(object):
         ## The atom positions read from the PDB file.  If the file contains multiple frames, these are the positions in the first frame.
         self.positions = self._positions[0]
         self.topology.setPeriodicBoxVectors(pdb.get_periodic_box_vectors())
-        self.topology.createStandardBonds()
+        self.topology.createStandardBonds(self.positions)
         self.topology.createDisulfideBonds(self.positions)
         self.topology.createIronSulfurBonds(self.positions)
         print ("done IronSulfer")
-        resName1  = ['FAD', 'FA1', 'FES']
-        atomName1 = ['C8M',        'FE1', 'FE2']
-        resName2  = ['HIS', 'HI5', 'ASP']   
-        atomName2 = ['NE2',        'OD1']
+        """
+        User defined bonded lists
+        """
+# Example1: SDH 
+#        resName1  = ['FAD', 'FA1', 'FES']
+#        atomName1 = ['C8M',        'FE1', 'FE2']
+#        resName2  = ['HIS', 'HI5', 'ASP']   
+#        atomName2 = ['NE2',        'OD1']
+# Example2: NQR
+        resName1  = ['FMN'] # B and C
+        atomName1 = ['P']
+        resName2  = ['THR', 'THO']  # 236 and 225
+        atomName2 = ['OG1']
         self.topology.createUserDefined  (self.positions,\
                                           resName1, atomName1,\
                                           resName2, atomName2)

@@ -245,6 +245,38 @@
   <Bond from="H3" to="N"/>
   <Bond from="HXT" to="OXT"/>
  </Residue>
+ <Residue name="CYG">
+  <Bond from="-C" to="N"/>
+  <Bond from="C" to="CA"/>
+  <Bond from="C" to="O"/>
+  <Bond from="C" to="OXT"/>
+  <Bond from="CA" to="CB"/>
+  <Bond from="CA" to="HA"/>
+  <Bond from="CA" to="N"/>
+  <Bond from="CB" to="HB2"/>
+  <Bond from="CB" to="HB3"/>
+  <Bond from="CB" to="SG"/>
+  <Bond from="H" to="N"/>
+  <Bond from="H2" to="N"/>
+  <Bond from="H3" to="N"/>
+  <Bond from="HXT" to="OXT"/>
+ </Residue>
+ <Residue name="CYF">
+  <Bond from="-C" to="N"/>
+  <Bond from="C" to="CA"/>
+  <Bond from="C" to="O"/>
+  <Bond from="C" to="OXT"/>
+  <Bond from="CA" to="CB"/>
+  <Bond from="CA" to="HA"/>
+  <Bond from="CA" to="N"/>
+  <Bond from="CB" to="HB2"/>
+  <Bond from="CB" to="HB3"/>
+  <Bond from="CB" to="SG"/>
+  <Bond from="H" to="N"/>
+  <Bond from="H2" to="N"/>
+  <Bond from="H3" to="N"/>
+  <Bond from="HXT" to="OXT"/>
+ </Residue>
  <Residue name="DA">
   <Bond from="-O3'" to="P"/>
   <Bond from="C1'" to="C2'"/>

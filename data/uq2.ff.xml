@@ -1,6 +1,6 @@
 <ForceField>
   <Info>
-    <DateGenerated>2019-06-29</DateGenerated>
+    <DateGenerated>2019-12-11</DateGenerated>
   </Info>
   <AtomTypes>
     <Type class="C" element="C" mass="12.0100" name="uq2-C" />
@@ -16,55 +16,55 @@
   </AtomTypes>
   <Residues>
     <Residue name="UQ2">
-      <Atom charge="  0.5695" name="C1" type="uq2-C" />
-      <Atom charge=" -0.0931" name="C2" type="uq2-CC" />
-      <Atom charge="  0.0579" name="C3" type="uq2-CD" />
-      <Atom charge="  0.5665" name="C4" type="uq2-C" />
-      <Atom charge=" -0.1354" name="C5" type="uq2-CC" />
-      <Atom charge=" -0.1264" name="C6" type="uq2-CD" />
-      <Atom charge="  0.1057" name="CM2" type="uq2-C3" />
-      <Atom charge="  0.1157" name="CM3" type="uq2-C3" />
-      <Atom charge=" -0.0679" name="CM5" type="uq2-C3" />
-      <Atom charge=" -0.0160" name="C7" type="uq2-C3" />
-      <Atom charge=" -0.1792" name="C8" type="uq2-C2" />
-      <Atom charge=" -0.1094" name="C9" type="uq2-C2" />
-      <Atom charge=" -0.0639" name="C10" type="uq2-C3" />
-      <Atom charge=" -0.0402" name="C11" type="uq2-C3" />
-      <Atom charge=" -0.0422" name="C12" type="uq2-C3" />
-      <Atom charge=" -0.1802" name="C13" type="uq2-C2" />
-      <Atom charge=" -0.1214" name="C14" type="uq2-C2" />
-      <Atom charge=" -0.0589" name="C15" type="uq2-C3" />
-      <Atom charge=" -0.0589" name="C16" type="uq2-C3" />
-      <Atom charge=" -0.5091" name="O1" type="uq2-O" />
-      <Atom charge=" -0.3309" name="O2" type="uq2-OS" />
-      <Atom charge=" -0.2919" name="O3" type="uq2-OS" />
-      <Atom charge=" -0.4661" name="O4" type="uq2-O" />
-      <Atom charge="  0.0627" name="H5M3" type="uq2-HC" />
-      <Atom charge="  0.0627" name="H5M2" type="uq2-HC" />
-      <Atom charge="  0.0627" name="H5M1" type="uq2-HC" />
-      <Atom charge="  0.0554" name="H3M3" type="uq2-H1" />
-      <Atom charge="  0.0554" name="H3M2" type="uq2-H1" />
-      <Atom charge="  0.0554" name="H3M1" type="uq2-H1" />
-      <Atom charge="  0.0494" name="H2M3" type="uq2-H1" />
-      <Atom charge="  0.0494" name="H2M2" type="uq2-H1" />
-      <Atom charge="  0.0494" name="H2M1" type="uq2-H1" />
-      <Atom charge="  0.0410" name="H163" type="uq2-HC" />
-      <Atom charge="  0.0410" name="H162" type="uq2-HC" />
-      <Atom charge="  0.0410" name="H161" type="uq2-HC" />
-      <Atom charge="  0.0410" name="H153" type="uq2-HC" />
-      <Atom charge="  0.0410" name="H152" type="uq2-HC" />
-      <Atom charge="  0.0410" name="H151" type="uq2-HC" />
-      <Atom charge="  0.0517" name="H122" type="uq2-HC" />
-      <Atom charge="  0.0517" name="H121" type="uq2-HC" />
-      <Atom charge="  0.0477" name="H112" type="uq2-HC" />
-      <Atom charge="  0.0477" name="H111" type="uq2-HC" />
-      <Atom charge="  0.0444" name="H103" type="uq2-HC" />
-      <Atom charge="  0.0444" name="H102" type="uq2-HC" />
-      <Atom charge="  0.0444" name="H101" type="uq2-HC" />
-      <Atom charge="  0.1290" name="H8" type="uq2-HA" />
-      <Atom charge="  0.0732" name="H72" type="uq2-HC" />
-      <Atom charge="  0.0732" name="H71" type="uq2-HC" />
-      <Atom charge="  0.1210" name="H13" type="uq2-HA" />
+      <Atom charge="  0.569500" name="C1" type="uq2-C" />
+      <Atom charge=" -0.093100" name="C2" type="uq2-CC" />
+      <Atom charge="  0.057900" name="C3" type="uq2-CD" />
+      <Atom charge="  0.566500" name="C4" type="uq2-C" />
+      <Atom charge=" -0.135400" name="C5" type="uq2-CC" />
+      <Atom charge=" -0.126400" name="C6" type="uq2-CD" />
+      <Atom charge="  0.105700" name="CM2" type="uq2-C3" />
+      <Atom charge="  0.115700" name="CM3" type="uq2-C3" />
+      <Atom charge=" -0.067900" name="CM5" type="uq2-C3" />
+      <Atom charge=" -0.016000" name="C7" type="uq2-C3" />
+      <Atom charge=" -0.179200" name="C8" type="uq2-C2" />
+      <Atom charge=" -0.109400" name="C9" type="uq2-C2" />
+      <Atom charge=" -0.063900" name="C10" type="uq2-C3" />
+      <Atom charge=" -0.040200" name="C11" type="uq2-C3" />
+      <Atom charge=" -0.042200" name="C12" type="uq2-C3" />
+      <Atom charge=" -0.180200" name="C13" type="uq2-C2" />
+      <Atom charge=" -0.121400" name="C14" type="uq2-C2" />
+      <Atom charge=" -0.058900" name="C15" type="uq2-C3" />
+      <Atom charge=" -0.058900" name="C16" type="uq2-C3" />
+      <Atom charge=" -0.509100" name="O1" type="uq2-O" />
+      <Atom charge=" -0.330900" name="O2" type="uq2-OS" />
+      <Atom charge=" -0.291900" name="O3" type="uq2-OS" />
+      <Atom charge=" -0.466100" name="O4" type="uq2-O" />
+      <Atom charge="  0.062700" name="H5M3" type="uq2-HC" />
+      <Atom charge="  0.062700" name="H5M2" type="uq2-HC" />
+      <Atom charge="  0.062700" name="H5M1" type="uq2-HC" />
+      <Atom charge="  0.055367" name="H3M3" type="uq2-H1" />
+      <Atom charge="  0.055367" name="H3M2" type="uq2-H1" />
+      <Atom charge="  0.055367" name="H3M1" type="uq2-H1" />
+      <Atom charge="  0.049367" name="H2M3" type="uq2-H1" />
+      <Atom charge="  0.049367" name="H2M2" type="uq2-H1" />
+      <Atom charge="  0.049367" name="H2M1" type="uq2-H1" />
+      <Atom charge="  0.041033" name="H163" type="uq2-HC" />
+      <Atom charge="  0.041033" name="H162" type="uq2-HC" />
+      <Atom charge="  0.041033" name="H161" type="uq2-HC" />
+      <Atom charge="  0.041033" name="H153" type="uq2-HC" />
+      <Atom charge="  0.041033" name="H152" type="uq2-HC" />
+      <Atom charge="  0.041033" name="H151" type="uq2-HC" />
+      <Atom charge="  0.051700" name="H122" type="uq2-HC" />
+      <Atom charge="  0.051700" name="H121" type="uq2-HC" />
+      <Atom charge="  0.047700" name="H112" type="uq2-HC" />
+      <Atom charge="  0.047700" name="H111" type="uq2-HC" />
+      <Atom charge="  0.044367" name="H103" type="uq2-HC" />
+      <Atom charge="  0.044367" name="H102" type="uq2-HC" />
+      <Atom charge="  0.044367" name="H101" type="uq2-HC" />
+      <Atom charge="  0.129000" name="H8" type="uq2-HA" />
+      <Atom charge="  0.073200" name="H72" type="uq2-HC" />
+      <Atom charge="  0.073200" name="H71" type="uq2-HC" />
+      <Atom charge="  0.121000" name="H13" type="uq2-HA" />
       <Bond atomName1="C1" atomName2="C2" />
       <Bond atomName1="C1" atomName2="C6" />
       <Bond atomName1="C1" atomName2="O1" />

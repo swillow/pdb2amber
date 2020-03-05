@@ -122,6 +122,7 @@
       <Bond atomName1="O4'" atomName2="H16" />
       <Bond atomName1="C5'" atomName2="H17" />
       <Bond atomName1="C5'" atomName2="H18" />
+      <ExternalBond atomName="P"/>
     </Residue>
   </Residues>
   <HarmonicBondForce>
