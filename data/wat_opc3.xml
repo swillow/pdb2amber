@@ -1,0 +1,44 @@
+<ForceField>
+ <Info>
+    <DateGenerated>2017-11-25</DateGenerated>
+  </Info>
+  <AtomTypes>
+  <Type name="tip4pew-Na+"       class="Na+" element="Na" mass="22.99" />
+  <Type name="tip4pew-Cl-"       class="Cl-" element="Cl" mass="35.45" />
+  <Type name="tip4pew-Ca2+"      class="Ca2+" element="Ca" mass="40.08" />
+  <Type name="opc3-O"    class="wO"   element="O"  mass="16.000"/>
+  <Type name="opc3-H"    class="wH"   element="H"  mass="1.0080"/>
+ </AtomTypes>
+ <Residues>
+    <Residue name="NA">
+      <Atom charge="1.0" name="NA" type="tip4pew-Na+"/>
+    </Residue>
+    <Residue name="CL">
+      <Atom charge="-1.0" name="CL" type="tip4pew-Cl-"/>
+    </Residue>
+    <Residue name="CA">
+      <Atom charge="2.0" name="CA" type="tip4pew-Ca2+"/>
+    </Residue>
+   <Residue name="HOH">
+   <Atom name="O"  type="opc3-O" charge="-0.8952"/>
+   <Atom name="H1" type="opc3-H" charge="0.4476"/>
+   <Atom name="H2" type="opc3-H" charge="0.4476"/>
+   <Bond atomName1="O" atomName2="H1"/>
+   <Bond atomName1="O" atomName2="H2"/>
+  </Residue>
+ </Residues>
+ <HarmonicBondForce>
+  <Bond type1="opc3-O" type2="opc3-H" length="0.09789" k="462750.4"/>
+ </HarmonicBondForce>
+ <HarmonicAngleForce>
+  <Angle type1="opc3-H" type2="opc3-O" type3="opc3-H" angle="1.9106119321581925" k="836.8"/>
+ </HarmonicAngleForce>
+ <NonbondedForce coulomb14scale="0.8333333333333334" lj14scale="0.5">
+ <UseAttributeFromResidue name="charge"/>
+  <Atom epsilon="0.7047424999999999" sigma="0.21844836568801118" type="tip4pew-Na+"/>
+  <Atom epsilon="0.048791716" sigma="0.49177609241346726" type="tip4pew-Cl-"/>
+  <Atom epsilon="0.46311578872000003" sigma="0.29524383519170844" type="tip4pew-Ca2+"/>
+  <Atom type="opc3-O" sigma="0.317427" epsilon="0.68369"/>
+  <Atom type="opc3-H" sigma="0.1" epsilon="0"/>
+ </NonbondedForce>
+</ForceField>

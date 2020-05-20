@@ -43,7 +43,7 @@ def print_inpcrd(fname, crd, vel=None, box=None, time=None):
     title = "default_name\n"
     fout.write(title)
     natom = len(crd)
-    if time is None:
+    if vel is None:
         line_natom = '%5d' % natom + '\n'
     else:
         line_natom = '%5d' % natom + '%15.7f' % time + '\n'
@@ -62,10 +62,6 @@ def print_inpcrd(fname, crd, vel=None, box=None, time=None):
         fout.write(line)
 
     # Print Box Information
-    if box is None:
-        fout.close()
-        return
-
     angle = 90.0
     line = ""
     line += '%12.7f' % box[0]

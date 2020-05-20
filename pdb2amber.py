@@ -126,8 +126,11 @@ def pdb2amber (pdb_fname, prmtop_fname, inpcrd_fname, ff_fnames):
         prm.box_info = [ beta*180.0/np.pi, a*10.0, b*10.0, c*10.0]
 
     if inpcrd_fname != '':
+        box = 10.0*np.array ([a, b, c])
+        vel = np.zeros ( (len(_atoms), 3) )
+        time_ps = 0.0
         print_inpcrd (inpcrd_fname,
-                      pdb.positions.value_in_unit (units.angstroms))
+                      pdb.positions.value_in_unit (units.angstroms), vel, box, time=time_ps)
     #for debuging
     #prm_amber = amber_file_parser.PrmtopLoader('receptor.prmtop')
 
@@ -754,8 +757,8 @@ if __name__ == "__main__":
             './data/uq2.ff.xml', \
             './data/ironsulfur.ff.xml', \
             './data/fmn.ff.xml', \
-            './data/tip3p.xml']
-#            './data/wat_opc3.xml']
+            './data/wat_opc3.xml']
+#            './data/tip3p.xml']
 #            './data/tip3pfb.xml']
 
     pdb2amber (pdb_fname, prmtop_fname, inpcrd_fname, ff_fnames)
