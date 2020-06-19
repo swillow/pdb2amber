@@ -753,7 +753,9 @@ if __name__ == "__main__":
     ff_fnames = ['./data/protein.ff14SB.xml',\
             './data/lipid17.xml', \
             './data/fad.ff.xml', \
+            './data/fad.ff.xml', \
             './data/heme.ff.xml', \
+            './data/rbf.ff.xml', \
             './data/uq2.ff.xml', \
             './data/ironsulfur.ff.xml', \
             './data/fmn.ff.xml', \
