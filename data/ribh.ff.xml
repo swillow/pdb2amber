@@ -1,0 +1,275 @@
+<ForceField>
+  <Info>
+    <DateGenerated>2020-11-20</DateGenerated>
+  </Info>
+  <AtomTypes>
+    <Type class="C3" element="C" mass="12.0100" name="ribh-C3" />
+    <Type class="CA" element="C" mass="12.0100" name="ribh-CA" />
+    <Type class="NA" element="N" mass="14.0100" name="ribh-NA" />
+    <Type class="CC" element="C" mass="12.0100" name="ribh-CC" />
+    <Type class="NC" element="N" mass="14.0100" name="ribh-NC" />
+    <Type class="CD" element="C" mass="12.0100" name="ribh-CD" />
+    <Type class="O" element="O" mass="16.0000" name="ribh-O" />
+    <Type class="N" element="N" mass="14.0100" name="ribh-N" />
+    <Type class="C" element="C" mass="12.0100" name="ribh-C" />
+    <Type class="HN" element="H" mass="1.0080" name="ribh-HN" />
+    <Type class="HO" element="H" mass="1.0080" name="ribh-HO" />
+    <Type class="OH" element="O" mass="16.0000" name="ribh-OH" />
+    <Type class="HA" element="H" mass="1.0080" name="ribh-HA" />
+    <Type class="HC" element="H" mass="1.0080" name="ribh-HC" />
+    <Type class="H1" element="H" mass="1.0080" name="ribh-H1" />
+  </AtomTypes>
+  <Residues>
+    <Residue name="RIB">
+      <Atom charge=" -0.055000" name="C1" type="ribh-C3" />
+      <Atom charge=" -0.065000" name="C2" type="ribh-CA" />
+      <Atom charge=" -0.135000" name="C3" type="ribh-CA" />
+      <Atom charge=" -0.065000" name="C4" type="ribh-CA" />
+      <Atom charge="  0.075000" name="C5" type="ribh-CA" />
+      <Atom charge=" -0.175000" name="C6" type="ribh-CA" />
+      <Atom charge=" -0.035000" name="C7" type="ribh-CA" />
+      <Atom charge=" -0.065000" name="C8" type="ribh-C3" />
+      <Atom charge=" -0.110000" name="N1" type="ribh-NA" />
+      <Atom charge="  0.325000" name="C9" type="ribh-CC" />
+      <Atom charge=" -0.450000" name="N2" type="ribh-NC" />
+      <Atom charge="  0.430000" name="C10" type="ribh-CD" />
+      <Atom charge=" -0.330000" name="O1" type="ribh-O" />
+      <Atom charge=" -0.590000" name="N3" type="ribh-N" />
+      <Atom charge="  0.720000" name="C11" type="ribh-C" />
+      <Atom charge=" -0.650000" name="O2" type="ribh-O" />
+      <Atom charge=" -0.240000" name="C12" type="ribh-CD" />
+      <Atom charge=" -0.045000" name="N4" type="ribh-NA" />
+      <Atom charge="  0.350000" name="H1" type="ribh-HN" />
+      <Atom charge="  0.455000" name="HN" type="ribh-HO" />
+      <Atom charge=" -0.005000" name="C13" type="ribh-C3" />
+      <Atom charge="  0.105000" name="C14" type="ribh-C3" />
+      <Atom charge="  0.100000" name="C15" type="ribh-C3" />
+      <Atom charge="  0.105000" name="C16" type="ribh-C3" />
+      <Atom charge="  0.120000" name="C17" type="ribh-C3" />
+      <Atom charge=" -0.615000" name="O3" type="ribh-OH" />
+      <Atom charge="  0.425000" name="H2" type="ribh-HO" />
+      <Atom charge=" -0.635000" name="O4" type="ribh-OH" />
+      <Atom charge="  0.440000" name="H3" type="ribh-HO" />
+      <Atom charge=" -0.590000" name="O5" type="ribh-OH" />
+      <Atom charge="  0.405000" name="H4" type="ribh-HO" />
+      <Atom charge=" -0.625000" name="O6" type="ribh-OH" />
+      <Atom charge="  0.150000" name="H5" type="ribh-HA" />
+      <Atom charge="  0.170000" name="H6" type="ribh-HA" />
+      <Atom charge="  0.050000" name="H7" type="ribh-HC" />
+      <Atom charge="  0.050000" name="H8" type="ribh-HC" />
+      <Atom charge="  0.050000" name="H9" type="ribh-HC" />
+      <Atom charge="  0.055000" name="H10" type="ribh-HC" />
+      <Atom charge="  0.055000" name="H11" type="ribh-HC" />
+      <Atom charge="  0.055000" name="H12" type="ribh-HC" />
+      <Atom charge="  0.050000" name="H13" type="ribh-H1" />
+      <Atom charge="  0.100000" name="H14" type="ribh-H1" />
+      <Atom charge="  0.050000" name="H15" type="ribh-H1" />
+      <Atom charge="  0.050000" name="H16" type="ribh-H1" />
+      <Atom charge="  0.085000" name="H17" type="ribh-H1" />
+      <Atom charge="  0.085000" name="H18" type="ribh-H1" />
+      <Atom charge="  0.070000" name="H19" type="ribh-H1" />
+      <Atom charge="  0.300000" name="H20" type="ribh-HN" />
+      <Bond atomName1="C1" atomName2="C2" />
+      <Bond atomName1="C2" atomName2="C3" />
+      <Bond atomName1="C2" atomName2="C7" />
+      <Bond atomName1="C3" atomName2="C4" />
+      <Bond atomName1="C4" atomName2="C5" />
+      <Bond atomName1="C4" atomName2="N4" />
+      <Bond atomName1="C5" atomName2="C6" />
+      <Bond atomName1="C5" atomName2="N1" />
+      <Bond atomName1="C6" atomName2="C7" />
+      <Bond atomName1="C7" atomName2="C8" />
+      <Bond atomName1="N1" atomName2="C9" />
+      <Bond atomName1="N1" atomName2="C13" />
+      <Bond atomName1="C9" atomName2="N2" />
+      <Bond atomName1="C9" atomName2="C12" />
+      <Bond atomName1="N2" atomName2="C10" />
+      <Bond atomName1="C10" atomName2="O1" />
+      <Bond atomName1="C10" atomName2="N3" />
+      <Bond atomName1="N3" atomName2="C11" />
+      <Bond atomName1="C11" atomName2="O2" />
+      <Bond atomName1="C11" atomName2="C12" />
+      <Bond atomName1="C12" atomName2="N4" />
+      <Bond atomName1="C13" atomName2="C14" />
+      <Bond atomName1="C14" atomName2="C15" />
+      <Bond atomName1="C14" atomName2="O6" />
+      <Bond atomName1="C15" atomName2="C16" />
+      <Bond atomName1="C15" atomName2="O5" />
+      <Bond atomName1="C16" atomName2="C17" />
+      <Bond atomName1="C16" atomName2="O4" />
+      <Bond atomName1="C17" atomName2="O3" />
+      <Bond atomName1="C1" atomName2="H7" />
+      <Bond atomName1="C1" atomName2="H8" />
+      <Bond atomName1="C1" atomName2="H9" />
+      <Bond atomName1="C3" atomName2="H5" />
+      <Bond atomName1="C6" atomName2="H6" />
+      <Bond atomName1="C8" atomName2="H10" />
+      <Bond atomName1="C8" atomName2="H11" />
+      <Bond atomName1="C8" atomName2="H12" />
+      <Bond atomName1="N3" atomName2="H1" />
+      <Bond atomName1="N4" atomName2="H20" />
+      <Bond atomName1="HN" atomName2="O6" />
+      <Bond atomName1="C13" atomName2="H17" />
+      <Bond atomName1="C13" atomName2="H18" />
+      <Bond atomName1="C14" atomName2="H19" />
+      <Bond atomName1="C15" atomName2="H14" />
+      <Bond atomName1="C16" atomName2="H13" />
+      <Bond atomName1="C17" atomName2="H15" />
+      <Bond atomName1="C17" atomName2="H16" />
+      <Bond atomName1="O3" atomName2="H2" />
+      <Bond atomName1="O4" atomName2="H3" />
+      <Bond atomName1="O5" atomName2="H4" />
+    </Residue>
+  </Residues>
+  <HarmonicBondForce>
+    <Bond k="268612.800000" length="0.151560" type1="ribh-C3" type2="ribh-CA" />
+    <Bond k="385848.480000" length="0.139840" type1="ribh-CA" type2="ribh-CA" />
+    <Bond k="351874.400000" length="0.138400" type1="ribh-CA" type2="ribh-NA" />
+    <Bond k="356309.440000" length="0.138020" type1="ribh-CC" type2="ribh-NA" />
+    <Bond k="274219.360000" length="0.146290" type1="ribh-C3" type2="ribh-NA" />
+    <Bond k="369112.480000" length="0.136940" type1="ribh-CC" type2="ribh-NC" />
+    <Bond k="419153.120000" length="0.137290" type1="ribh-CC" type2="ribh-CD" />
+    <Bond k="439654.720000" length="0.131720" type1="ribh-CD" type2="ribh-NC" />
+    <Bond k="521242.720000" length="0.122500" type1="ribh-CD" type2="ribh-O" />
+    <Bond k="355723.680000" length="0.138070" type1="ribh-CD" type2="ribh-N" />
+    <Bond k="357815.680000" length="0.137890" type1="ribh-C" type2="ribh-N" />
+    <Bond k="533627.360000" length="0.121830" type1="ribh-C" type2="ribh-O" />
+    <Bond k="310452.800000" length="0.146760" type1="ribh-C" type2="ribh-CD" />
+    <Bond k="356309.440000" length="0.138020" type1="ribh-CD" type2="ribh-NA" />
+    <Bond k="251793.120000" length="0.153750" type1="ribh-C3" type2="ribh-C3" />
+    <Bond k="265014.560000" length="0.142330" type1="ribh-C3" type2="ribh-OH" />
+    <Bond k="276646.080000" length="0.109690" type1="ribh-C3" type2="ribh-HC" />
+    <Bond k="289365.440000" length="0.108600" type1="ribh-CA" type2="ribh-HA" />
+    <Bond k="337397.760000" length="0.101290" type1="ribh-HN" type2="ribh-N" />
+    <Bond k="341749.120000" length="0.101000" type1="ribh-HN" type2="ribh-NA" />
+    <Bond k="310787.520000" length="0.097300" type1="ribh-HO" type2="ribh-OH" />
+    <Bond k="276646.080000" length="0.109690" type1="ribh-C3" type2="ribh-H1" />
+  </HarmonicBondForce>
+  <HarmonicAngleForce>
+    <Angle angle="2.107835" k="531.368000" type1="ribh-C3" type2="ribh-CA" type3="ribh-CA" />
+    <Angle angle="2.094745" k="557.308800" type1="ribh-CA" type2="ribh-CA" type3="ribh-CA" />
+    <Angle angle="2.065424" k="578.228800" type1="ribh-CA" type2="ribh-CA" type3="ribh-NA" />
+    <Angle angle="1.974841" k="564.003200" type1="ribh-CA" type2="ribh-NA" type3="ribh-CD" />
+    <Angle angle="1.974841" k="564.003200" type1="ribh-CA" type2="ribh-NA" type3="ribh-CC" />
+    <Angle angle="2.170492" k="521.326400" type1="ribh-C3" type2="ribh-NA" type3="ribh-CA" />
+    <Angle angle="2.128430" k="590.780800" type1="ribh-NA" type2="ribh-CC" type3="ribh-NC" />
+    <Angle angle="1.867329" k="614.211200" type1="ribh-CD" type2="ribh-CC" type3="ribh-NA" />
+    <Angle angle="1.970128" k="548.104000" type1="ribh-C3" type2="ribh-C3" type3="ribh-NA" />
+    <Angle angle="2.207144" k="517.979200" type1="ribh-C3" type2="ribh-NA" type3="ribh-CC" />
+    <Angle angle="1.841149" k="600.822400" type1="ribh-CC" type2="ribh-NC" type3="ribh-CD" />
+    <Angle angle="2.117958" k="544.756800" type1="ribh-C" type2="ribh-CD" type3="ribh-CC" />
+    <Angle angle="1.867329" k="614.211200" type1="ribh-CC" type2="ribh-CD" type3="ribh-NA" />
+    <Angle angle="1.948661" k="604.169600" type1="ribh-CD" type2="ribh-CC" type3="ribh-NC" />
+    <Angle angle="2.230183" k="614.010368" type1="ribh-NC" type2="ribh-CD" type3="ribh-O" />
+    <Angle angle="2.146756" k="598.312000" type1="ribh-N" type2="ribh-CD" type3="ribh-NC" />
+    <Angle angle="2.151468" k="541.409600" type1="ribh-C" type2="ribh-N" type3="ribh-CD" />
+    <Angle angle="2.162464" k="613.851376" type1="ribh-N" type2="ribh-CD" type3="ribh-O" />
+    <Angle angle="2.147629" k="620.905600" type1="ribh-N" type2="ribh-C" type3="ribh-O" />
+    <Angle angle="1.966987" k="578.228800" type1="ribh-CD" type2="ribh-C" type3="ribh-N" />
+    <Angle angle="2.151468" k="574.881600" type1="ribh-C" type2="ribh-CD" type3="ribh-NA" />
+    <Angle angle="2.162987" k="578.228800" type1="ribh-CD" type2="ribh-C" type3="ribh-O" />
+    <Angle angle="1.946217" k="526.347200" type1="ribh-C3" type2="ribh-C3" type3="ribh-C3" />
+    <Angle angle="1.923179" k="564.840000" type1="ribh-C3" type2="ribh-C3" type3="ribh-OH" />
+    <Angle angle="1.928066" k="391.622400" type1="ribh-CA" type2="ribh-C3" type3="ribh-HC" />
+    <Angle angle="2.092302" k="403.337600" type1="ribh-CA" type2="ribh-CA" type3="ribh-HA" />
+    <Angle angle="2.191087" k="389.948800" type1="ribh-CA" type2="ribh-NA" type3="ribh-HN" />
+    <Angle angle="1.898570" k="416.726400" type1="ribh-H1" type2="ribh-C3" type3="ribh-NA" />
+    <Angle angle="2.081481" k="400.827200" type1="ribh-CD" type2="ribh-N" type3="ribh-HN" />
+    <Angle angle="2.051635" k="404.174400" type1="ribh-C" type2="ribh-N" type3="ribh-HN" />
+    <Angle angle="2.190389" k="391.622400" type1="ribh-CD" type2="ribh-NA" type3="ribh-HN" />
+    <Angle angle="1.872041" k="396.643200" type1="ribh-C3" type2="ribh-OH" type3="ribh-HO" />
+    <Angle angle="1.912184" k="388.275200" type1="ribh-C3" type2="ribh-C3" type3="ribh-H1" />
+    <Angle angle="1.924401" k="425.931200" type1="ribh-H1" type2="ribh-C3" type3="ribh-OH" />
+    <Angle angle="1.877626" k="329.699200" type1="ribh-HC" type2="ribh-C3" type3="ribh-HC" />
+    <Angle angle="1.892985" k="328.025600" type1="ribh-H1" type2="ribh-C3" type3="ribh-H1" />
+  </HarmonicAngleForce>
+  <PeriodicTorsionForce>
+    <Proper k1="15.167000" periodicity1="2" phase1="3.1415926535897931" type1="ribh-C3" type2="ribh-CA" type3="ribh-CA" type4="ribh-HA" />
+    <Proper k1="15.167000" periodicity1="2" phase1="3.1415926535897931" type1="ribh-CA" type2="ribh-CA" type3="ribh-CA" type4="ribh-HA" />
+    <Proper k1="0.000000" periodicity1="2" phase1="0.0000000000000000" type1="ribh-CA" type2="ribh-CA" type3="ribh-C3" type4="ribh-HC" />
+    <Proper k1="0.000000" periodicity1="2" phase1="0.0000000000000000" type1="ribh-HC" type2="ribh-C3" type3="ribh-CA" type4="ribh-CA" />
+    <Proper k1="1.255200" periodicity1="2" phase1="3.1415926535897931" type1="ribh-CA" type2="ribh-CA" type3="ribh-NA" type4="ribh-HN" />
+    <Proper k1="0.000000" periodicity1="2" phase1="0.0000000000000000" type1="ribh-CA" type2="ribh-NA" type3="ribh-C3" type4="ribh-H1" />
+    <Proper k1="15.167000" periodicity1="2" phase1="3.1415926535897931" type1="ribh-NA" type2="ribh-CA" type3="ribh-CA" type4="ribh-HA" />
+    <Proper k1="0.650844" periodicity1="3" phase1="0.0000000000000000" type1="ribh-NA" type2="ribh-C3" type3="ribh-C3" type4="ribh-H1" />
+    <Proper k1="0.000000" periodicity1="2" phase1="0.0000000000000000" type1="ribh-CC" type2="ribh-NA" type3="ribh-C3" type4="ribh-H1" />
+    <Proper k1="7.112800" periodicity1="2" phase1="3.1415926535897931" type1="ribh-CC" type2="ribh-CD" type3="ribh-NA" type4="ribh-HN" />
+    <Proper k1="6.903600" periodicity1="2" phase1="3.1415926535897931" type1="ribh-NC" type2="ribh-CD" type3="ribh-N" type4="ribh-HN" />
+    <Proper k1="6.903600" periodicity1="2" phase1="3.1415926535897931" type1="ribh-O" type2="ribh-CD" type3="ribh-N" type4="ribh-HN" />
+    <Proper k1="7.112800" periodicity1="2" phase1="3.1415926535897931" type1="ribh-C" type2="ribh-CD" type3="ribh-NA" type4="ribh-HN" />
+    <Proper k1="8.368000" periodicity1="1" phase1="0.0000000000000000" type1="ribh-O" type2="ribh-C" type3="ribh-N" type4="ribh-HN" />
+    <Proper k1="10.460000" periodicity1="2" phase1="3.1415926535897931" type1="ribh-CD" type2="ribh-C" type3="ribh-N" type4="ribh-HN" />
+    <Proper k1="1.046000" periodicity1="1" phase1="0.0000000000000000" type1="ribh-HO" type2="ribh-OH" type3="ribh-C3" type4="ribh-C3" />
+    <Proper k1="0.697333" periodicity1="3" phase1="0.0000000000000000" type1="ribh-HO" type2="ribh-OH" type3="ribh-C3" type4="ribh-H1" />
+    <Proper k1="0.650844" periodicity1="3" phase1="0.0000000000000000" type1="ribh-C3" type2="ribh-C3" type3="ribh-C3" type4="ribh-H1" />
+    <Proper k1="1.046000" periodicity1="1" phase1="0.0000000000000000" type1="ribh-C3" type2="ribh-C3" type3="ribh-OH" type4="ribh-HO" />
+    <Proper k1="1.046000" periodicity1="1" phase1="0.0000000000000000" type1="ribh-OH" type2="ribh-C3" type3="ribh-C3" type4="ribh-H1" />
+    <Proper k1="0.650844" periodicity1="3" phase1="0.0000000000000000" type1="ribh-H1" type2="ribh-C3" type3="ribh-C3" type4="ribh-H1" />
+    <Proper k1="15.167000" periodicity1="2" phase1="3.1415926535897931" type1="ribh-C3" type2="ribh-CA" type3="ribh-CA" type4="ribh-CA" />
+    <Proper k1="15.167000" periodicity1="2" phase1="3.1415926535897931" type1="ribh-C3" type2="ribh-CA" type3="ribh-CA" type4="ribh-C3" />
+    <Proper k1="15.167000" periodicity1="2" phase1="3.1415926535897931" type1="ribh-CA" type2="ribh-CA" type3="ribh-CA" type4="ribh-CA" />
+    <Proper k1="15.167000" periodicity1="2" phase1="3.1415926535897931" type1="ribh-CA" type2="ribh-CA" type3="ribh-CA" type4="ribh-NA" />
+    <Proper k1="15.167000" periodicity1="2" phase1="3.1415926535897931" type1="ribh-CA" type2="ribh-CA" type3="ribh-CA" type4="ribh-C3" />
+    <Proper k1="1.255200" periodicity1="2" phase1="3.1415926535897931" type1="ribh-CA" type2="ribh-CA" type3="ribh-NA" type4="ribh-CD" />
+    <Proper k1="1.255200" periodicity1="2" phase1="3.1415926535897931" type1="ribh-CA" type2="ribh-CA" type3="ribh-NA" type4="ribh-CC" />
+    <Proper k1="1.255200" periodicity1="2" phase1="3.1415926535897931" type1="ribh-CA" type2="ribh-CA" type3="ribh-NA" type4="ribh-C3" />
+    <Proper k1="7.112800" periodicity1="2" phase1="3.1415926535897931" type1="ribh-CA" type2="ribh-NA" type3="ribh-CD" type4="ribh-CC" />
+    <Proper k1="7.112800" periodicity1="2" phase1="3.1415926535897931" type1="ribh-CA" type2="ribh-NA" type3="ribh-CD" type4="ribh-C" />
+    <Proper k1="7.112800" periodicity1="2" phase1="3.1415926535897931" type1="ribh-CA" type2="ribh-NA" type3="ribh-CC" type4="ribh-NC" />
+    <Proper k1="7.112800" periodicity1="2" phase1="3.1415926535897931" type1="ribh-CA" type2="ribh-NA" type3="ribh-CC" type4="ribh-CD" />
+    <Proper k1="0.000000" periodicity1="2" phase1="0.0000000000000000" type1="ribh-CA" type2="ribh-NA" type3="ribh-C3" type4="ribh-C3" />
+    <Proper k1="15.167000" periodicity1="2" phase1="3.1415926535897931" type1="ribh-NA" type2="ribh-CA" type3="ribh-CA" type4="ribh-NA" />
+    <Proper k1="19.874000" periodicity1="2" phase1="3.1415926535897931" type1="ribh-NA" type2="ribh-CC" type3="ribh-NC" type4="ribh-CD" />
+    <Proper k1="16.736000" periodicity1="2" phase1="3.1415926535897931" type1="ribh-NA" type2="ribh-CC" type3="ribh-CD" type4="ribh-C" />
+    <Proper k1="16.736000" periodicity1="2" phase1="3.1415926535897931" type1="ribh-NA" type2="ribh-CC" type3="ribh-CD" type4="ribh-NA" />
+    <Proper k1="0.650844" periodicity1="3" phase1="0.0000000000000000" type1="ribh-NA" type2="ribh-C3" type3="ribh-C3" type4="ribh-C3" />
+    <Proper k1="0.650844" periodicity1="3" phase1="0.0000000000000000" type1="ribh-NA" type2="ribh-C3" type3="ribh-C3" type4="ribh-OH" />
+    <Proper k1="0.000000" periodicity1="2" phase1="0.0000000000000000" type1="ribh-CC" type2="ribh-NA" type3="ribh-C3" type4="ribh-C3" />
+    <Proper k1="19.874000" periodicity1="2" phase1="3.1415926535897931" type1="ribh-CC" type2="ribh-NC" type3="ribh-CD" type4="ribh-O" />
+    <Proper k1="19.874000" periodicity1="2" phase1="3.1415926535897931" type1="ribh-CC" type2="ribh-NC" type3="ribh-CD" type4="ribh-N" />
+    <Proper k1="12.029000" periodicity1="2" phase1="3.1415926535897931" type1="ribh-CC" type2="ribh-CD" type3="ribh-C" type4="ribh-N" />
+    <Proper k1="12.029000" periodicity1="2" phase1="3.1415926535897931" type1="ribh-CC" type2="ribh-CD" type3="ribh-C" type4="ribh-O" />
+    <Proper k1="7.112800" periodicity1="2" phase1="3.1415926535897931" type1="ribh-NC" type2="ribh-CC" type3="ribh-NA" type4="ribh-C3" />
+    <Proper k1="16.736000" periodicity1="2" phase1="3.1415926535897931" type1="ribh-NC" type2="ribh-CC" type3="ribh-CD" type4="ribh-C" />
+    <Proper k1="16.736000" periodicity1="2" phase1="3.1415926535897931" type1="ribh-NC" type2="ribh-CC" type3="ribh-CD" type4="ribh-NA" />
+    <Proper k1="6.903600" periodicity1="2" phase1="3.1415926535897931" type1="ribh-NC" type2="ribh-CD" type3="ribh-N" type4="ribh-C" />
+    <Proper k1="19.874000" periodicity1="2" phase1="3.1415926535897931" type1="ribh-CD" type2="ribh-NC" type3="ribh-CC" type4="ribh-CD" />
+    <Proper k1="10.460000" periodicity1="2" phase1="3.1415926535897931" type1="ribh-CD" type2="ribh-N" type3="ribh-C" type4="ribh-O" />
+    <Proper k1="10.460000" periodicity1="2" phase1="3.1415926535897931" type1="ribh-CD" type2="ribh-N" type3="ribh-C" type4="ribh-CD" />
+    <Proper k1="6.903600" periodicity1="2" phase1="3.1415926535897931" type1="ribh-O" type2="ribh-CD" type3="ribh-N" type4="ribh-C" />
+    <Proper k1="12.029000" periodicity1="2" phase1="3.1415926535897931" type1="ribh-N" type2="ribh-C" type3="ribh-CD" type4="ribh-NA" />
+    <Proper k1="12.029000" periodicity1="2" phase1="3.1415926535897931" type1="ribh-O" type2="ribh-C" type3="ribh-CD" type4="ribh-NA" />
+    <Proper k1="7.112800" periodicity1="2" phase1="3.1415926535897931" type1="ribh-CD" type2="ribh-CC" type3="ribh-NA" type4="ribh-C3" />
+    <Proper k1="0.836800" periodicity1="1" phase1="3.1415926535897931" type1="ribh-C3" type2="ribh-C3" type3="ribh-C3" type4="ribh-C3" />
+    <Proper k1="0.650844" periodicity1="3" phase1="0.0000000000000000" type1="ribh-C3" type2="ribh-C3" type3="ribh-C3" type4="ribh-OH" />
+    <Proper k1="4.916200" periodicity1="2" phase1="0.0000000000000000" type1="ribh-OH" type2="ribh-C3" type3="ribh-C3" type4="ribh-OH" />
+    <Improper k1="4.602400" periodicity1="2" phase1="3.1415926535897931" type1="ribh-CA" type2="ribh-CA" type3="ribh-CA" type4="ribh-HA" />
+    <Improper k1="4.602400" periodicity1="2" phase1="3.1415926535897931" type1="ribh-C" type2="ribh-CD" type3="ribh-N" type4="ribh-HN" />
+    <Improper k1="4.602400" periodicity1="2" phase1="3.1415926535897931" type1="ribh-CA" type2="ribh-CD" type3="ribh-NA" type4="ribh-HN" />
+    <Improper k1="4.602400" periodicity1="2" phase1="3.1415926535897931" type1="ribh-C3" type2="ribh-CA" type3="ribh-CA" type4="ribh-CA" />
+    <Improper k1="4.602400" periodicity1="2" phase1="3.1415926535897931" type1="ribh-CA" type2="ribh-CA" type3="ribh-CA" type4="ribh-NA" />
+    <Improper k1="4.602400" periodicity1="2" phase1="3.1415926535897931" type1="ribh-C3" type2="ribh-CA" type3="ribh-NA" type4="ribh-CC" />
+    <Improper k1="4.602400" periodicity1="2" phase1="3.1415926535897931" type1="ribh-CD" type2="ribh-NA" type3="ribh-CC" type4="ribh-NC" />
+    <Improper k1="4.602400" periodicity1="2" phase1="3.1415926535897931" type1="ribh-N" type2="ribh-NC" type3="ribh-CD" type4="ribh-O" />
+    <Improper k1="43.932000" periodicity1="2" phase1="3.1415926535897931" type1="ribh-CD" type2="ribh-N" type3="ribh-C" type4="ribh-O" />
+    <Improper k1="4.602400" periodicity1="2" phase1="3.1415926535897931" type1="ribh-C" type2="ribh-CC" type3="ribh-CD" type4="ribh-NA" />
+  </PeriodicTorsionForce>
+  <NonbondedForce coulomb14scale="0.8333333333333334" lj14scale="0.5">
+    <UseAttributeFromResidue name="charge" />
+    <Atom epsilon="0.4577296" sigma="0.3399669508450741" type="ribh-C3" />
+    <Atom epsilon="0.3598240" sigma="0.3399669507944831" type="ribh-CA" />
+    <Atom epsilon="0.7112800" sigma="0.3249998524031036" type="ribh-NA" />
+    <Atom epsilon="0.3598240" sigma="0.3399669507944831" type="ribh-CC" />
+    <Atom epsilon="0.7112800" sigma="0.3249998524031036" type="ribh-NC" />
+    <Atom epsilon="0.3598240" sigma="0.3399669507944831" type="ribh-CD" />
+    <Atom epsilon="0.8786400" sigma="0.2959921901644687" type="ribh-O" />
+    <Atom epsilon="0.7112800" sigma="0.3249998524031036" type="ribh-N" />
+    <Atom epsilon="0.3598240" sigma="0.3399669507944831" type="ribh-C" />
+    <Atom epsilon="0.0656888" sigma="0.1069078461720523" type="ribh-HN" />
+    <Atom epsilon="0.0000000" sigma="0.0890898718140339" type="ribh-HO" />
+    <Atom epsilon="0.8803136" sigma="0.3066473387458142" type="ribh-OH" />
+    <Atom epsilon="0.0627600" sigma="0.2599642458735085" type="ribh-HA" />
+    <Atom epsilon="0.0656888" sigma="0.2649532787260222" type="ribh-HC" />
+    <Atom epsilon="0.0656888" sigma="0.2471353042642166" type="ribh-H1" />
+  </NonbondedForce>
+</ForceField>

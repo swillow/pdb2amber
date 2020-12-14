@@ -53,24 +53,22 @@ def print_inpcrd(fname, crd, vel=None, box=None, time=None):
         line = __get_line(crd, ii)
         fout.write(line)
 
-    if vel is None:
-        fout.close()
-        return
-
-    for ii in range(0, natom, 2):
-        line = __get_line(vel, ii)
-        fout.write(line)
+    if vel is not None:
+        for ii in range(0, natom, 2):
+            line = __get_line(vel, ii)
+            fout.write(line)
 
     # Print Box Information
-    angle = 90.0
-    line = ""
-    line += '%12.7f' % box[0]
-    line += '%12.7f' % box[1]
-    line += '%12.7f' % box[2]
-    line += '%12.7f' % angle
-    line += '%12.7f' % angle
-    line += '%12.7f' % angle
-    line += '\n'
-    fout.write(line)
+    if box is not None:
+        angle = 90.0
+        line = ""
+        line += '%12.7f' % box[0]
+        line += '%12.7f' % box[1]
+        line += '%12.7f' % box[2]
+        line += '%12.7f' % angle
+        line += '%12.7f' % angle
+        line += '%12.7f' % angle
+        line += '\n'
+        fout.write(line)
 
     fout.close()

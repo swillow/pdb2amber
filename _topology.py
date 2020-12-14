@@ -42,30 +42,46 @@ from copy import deepcopy
 
 # Enumerated values for bond type
 
+
 class Single(Singleton):
     def __repr__(self):
         return 'Single'
+
+
 Single = Single()
+
 
 class Double(Singleton):
     def __repr__(self):
         return 'Double'
+
+
 Double = Double()
+
 
 class Triple(Singleton):
     def __repr__(self):
         return 'Triple'
+
+
 Triple = Triple()
+
 
 class Aromatic(Singleton):
     def __repr__(self):
         return 'Aromatic'
+
+
 Aromatic = Aromatic()
+
 
 class Amide(Singleton):
     def __repr__(self):
         return 'Amide'
+
+
 Amide = Amide()
+
 
 class MyTopology(object):
     """Topology stores the topological information about a system.
@@ -95,7 +111,7 @@ class MyTopology(object):
         natom = self._numAtoms
         nbond = len(self._bonds)
         return '<%s; %d chains, %d residues, %d atoms, %d bonds>' % (
-                type(self).__name__, nchains, nres, natom, nbond)
+            type(self).__name__, nchains, nres, natom, nbond)
 
     def getNumAtoms(self):
         """Return the number of atoms in the Topology.
@@ -245,11 +261,14 @@ class MyTopology(object):
             if not is_quantity(vectors[0][0]):
                 vectors = vectors*nanometers
             if vectors[0][1] != 0*nanometers or vectors[0][2] != 0*nanometers:
-                raise ValueError("First periodic box vector must be parallel to x.");
+                raise ValueError(
+                    "First periodic box vector must be parallel to x.")
             if vectors[1][2] != 0*nanometers:
-                raise ValueError("Second periodic box vector must be in the x-y plane.");
+                raise ValueError(
+                    "Second periodic box vector must be in the x-y plane.")
             if vectors[0][0] <= 0*nanometers or vectors[1][1] <= 0*nanometers or vectors[2][2] <= 0*nanometers or vectors[0][0] < 2*abs(vectors[1][0]) or vectors[0][0] < 2*abs(vectors[2][0]) or vectors[1][1] < 2*abs(vectors[2][1]):
-                raise ValueError("Periodic box vectors must be in reduced form.");
+                raise ValueError(
+                    "Periodic box vectors must be in reduced form.")
         self._periodicBoxVectors = deepcopy(vectors)
 
     def getUnitCellDimensions(self):
@@ -274,7 +293,8 @@ class MyTopology(object):
         else:
             if is_quantity(dimensions):
                 dimensions = dimensions.value_in_unit(nanometers)
-            self._periodicBoxVectors = (Vec3(dimensions[0], 0, 0), Vec3(0, dimensions[1], 0), Vec3(0, 0, dimensions[2]))*nanometers
+            self._periodicBoxVectors = (Vec3(dimensions[0], 0, 0), Vec3(
+                0, dimensions[1], 0), Vec3(0, 0, dimensions[2]))*nanometers
 
     @staticmethod
     def loadBondDefinitions(file):
@@ -323,7 +343,7 @@ class MyTopology(object):
                         if bond[0].startswith('-') and i > 0:
                             fromResidue = i-1
                             fromAtom = bond[0][1:]
-                        elif bond[0].startswith('+') and i <len(chain._residues):
+                        elif bond[0].startswith('+') and i < len(chain._residues):
                             fromResidue = i+1
                             fromAtom = bond[0][1:]
                         else:
@@ -332,7 +352,7 @@ class MyTopology(object):
                         if bond[1].startswith('-') and i > 0:
                             toResidue = i-1
                             toAtom = bond[1][1:]
-                        elif bond[1].startswith('+') and i <len(chain._residues):
+                        elif bond[1].startswith('+') and i < len(chain._residues):
                             toResidue = i+1
                             toAtom = bond[1][1:]
                         else:
@@ -342,19 +362,21 @@ class MyTopology(object):
                         l_add_Bond = False
                         if fromAtom in atomMaps[fromResidue] and toAtom in atomMaps[toResidue]:
                             l_add_Bond = True
-                            
+
                         if fromResidue != toResidue and l_add_Bond:
                             atom1 = atomMaps[fromResidue][fromAtom]
                             atom2 = atomMaps[toResidue][toAtom]
-                            pos1  = positions[atom1.index]
-                            pos2  = positions[atom2.index]
-                            delta = [x - y for (x,y) in zip (pos1, pos2)]
-                            distance = sqrt(delta[0]*delta[0] + delta[1]*delta[1] + delta[2]*delta[2])
+                            pos1 = positions[atom1.index]
+                            pos2 = positions[atom2.index]
+                            delta = [x - y for (x, y) in zip(pos1, pos2)]
+                            distance = sqrt(
+                                delta[0]*delta[0] + delta[1]*delta[1] + delta[2]*delta[2])
                             if distance > 0.20*nanometers:
                                 l_add_Bond = False
-                            
+
                         if l_add_Bond:
-                            self.addBond(atomMaps[fromResidue][fromAtom], atomMaps[toResidue][toAtom])
+                            self.addBond(
+                                atomMaps[fromResidue][fromAtom], atomMaps[toResidue][toAtom])
 
     def createDisulfideBonds(self, positions):
         """Identify disulfide bonds based on proximity and add them to the
@@ -376,135 +398,153 @@ class MyTopology(object):
                 is_cyx = True
             elif res.name == 'CYS' and isCyx(res):
                 is_cyx = True
-                
-            if is_cyx:    
-                atomNames = [ atom.name for atom in res._atoms ]
-                sg   = res._atoms[atomNames.index('SG')]
+
+            if is_cyx:
+                atomNames = [atom.name for atom in res._atoms]
+                sg = res._atoms[atomNames.index('SG')]
                 cyx_sg_list.append(sg)
-                
+
         for i in range(len(cyx_sg_list)):
             sg1 = cyx_sg_list[i]
             pos1 = positions[sg1.index]
             for j in range(i):
                 sg2 = cyx_sg_list[j]
                 pos2 = positions[sg2.index]
-                delta = [x-y for (x,y) in zip(pos1, pos2)]
-                distance = sqrt(delta[0]*delta[0] + delta[1]*delta[1] + delta[2]*delta[2])
+                delta = [x-y for (x, y) in zip(pos1, pos2)]
+                distance = sqrt(delta[0]*delta[0] + delta[1]
+                                * delta[1] + delta[2]*delta[2])
                 if distance < 0.23*nanometers:
                     self.addBond(sg1, sg2)
 
     def createIronSulfurBonds(self, positions):
         import sys
-        
-        print ('createIronSulfureBonds ')
-        
+
+        print('createIronSulfureBonds ')
+
         def isCyx(res):
             names = [atom.name for atom in res._atoms]
             return 'SG' in names and 'HG' not in names
 
-        cyx_sg_list  = [] 
+        cyx_sg_list = []
         for res in self.residues():
             is_cyx = False
-            if res.name in ['CYX', 'CYF', 'CYG']:
+            if res.name in ['CYX', 'CYF', 'CYG', 'CY4', 'CY3']:
                 is_cyx = True
             elif res.name == 'CYS' and isCyx(res):
                 is_cyx = True
-            
 
-            if is_cyx:    
-                atomNames = [ atom.name for atom in res._atoms ]
-                sg   = res._atoms[atomNames.index('SG')]
+            if is_cyx:
+                atomNames = [atom.name for atom in res._atoms]
+                sg = res._atoms[atomNames.index('SG')]
                 cyx_sg_list.append(sg)
 
-                
-        fe_list        = [] 
-        for res in self.residues(): 
-            if res.name == 'FES':
-                atomNames = [ atom.name for atom in res._atoms ]
-                fe  = res._atoms[atomNames.index('FE1')]
+        fe_list = []
+        for res in self.residues():
+            if res.name in ['FES', 'FET']:
+                atomNames = [atom.name for atom in res._atoms]
+                fe = res._atoms[atomNames.index('FE1')]
                 fe_list.append(fe)
-                fe  = res._atoms[atomNames.index('FE2')]
+                fe = res._atoms[atomNames.index('FE2')]
                 fe_list.append(fe)
-                
+
             if res.name == 'SF4':
-                atomNames = [ atom.name for atom in res._atoms ]
-                fe  = res._atoms[atomNames.index('FE1')]
+                atomNames = [atom.name for atom in res._atoms]
+                fe = res._atoms[atomNames.index('FE1')]
                 fe_list.append(fe)
-                fe  = res._atoms[atomNames.index('FE2')]
+                fe = res._atoms[atomNames.index('FE2')]
                 fe_list.append(fe)
-                fe  = res._atoms[atomNames.index('FE3')]
+                fe = res._atoms[atomNames.index('FE3')]
                 fe_list.append(fe)
-                fe  = res._atoms[atomNames.index('FE4')]
+                fe = res._atoms[atomNames.index('FE4')]
                 fe_list.append(fe)
-                
+
             if res.name == 'F3S':
-                atomNames = [ atom.name for atom in res._atoms ]
-                fe  = res._atoms[atomNames.index('FE1')]
+                atomNames = [atom.name for atom in res._atoms]
+                fe = res._atoms[atomNames.index('FE1')]
                 fe_list.append(fe)
-                fe  = res._atoms[atomNames.index('FE2')]
+                fe = res._atoms[atomNames.index('FE3')]
                 fe_list.append(fe)
-                fe  = res._atoms[atomNames.index('FE3')]
+                fe = res._atoms[atomNames.index('FE4')]
                 fe_list.append(fe)
-                
+
             if res.name == 'FE':
-                atomNames = [ atom.name for atom in res._atoms ]
+                atomNames = [atom.name for atom in res._atoms]
                 fe = res._atoms[atomNames.index('FE')]
-                fe_list.append (fe)
-                
+                fe_list.append(fe)
+
         for fe in fe_list:
             pos1 = positions[fe.index]
-            print ('---FE---  ', fe.residue.name, fe.index, pos1)
-                
+            print('---FE---  ', fe.residue.name, fe.index, pos1)
+
             for sg in cyx_sg_list:
                 pos2 = positions[sg.index]
 
-                delta = [ x1 - x2 for (x1, x2) in zip (pos1, pos2)]
-                distance = sqrt(delta[0]*delta[0] + delta[1]*delta[1] + delta[2]*delta[2])
+                delta = [x1 - x2 for (x1, x2) in zip(pos1, pos2)]
+                distance = sqrt(delta[0]*delta[0] + delta[1]
+                                * delta[1] + delta[2]*delta[2])
 #                print 'SG ', sg.index, ' Distance ', distance
-                if distance < 0.35*nanometers:
-                    print ('addBond ', fe.index, sg.index, distance)
+                if distance < 0.3*nanometers:
+                    print('addBond ', fe.index, sg.index, distance)
                     self.addBond(fe, sg)
 
-        
-    def createUserDefined (self, positions, resName1, atomName1, resName2, atomName2):
+    # resName1, atomName1, resName2, atomName2):
+    def createUserDefined(self, positions, link_residues):
         import sys
+
+        res1_atoms = {}
+        res2_atoms = {}
+
+        for res1, res2 in link_residues:
+            atomName, resName = res1.split()
+            if resName not in res1_atoms:
+                res1_atoms[resName] = []
+            if atomName not in res1_atoms[resName]:
+                res1_atoms[resName].append(atomName)
+
+            atomName, resName = res2.split()
+            if resName not in res2_atoms:
+                res2_atoms[resName] = []
+            if atomName not in res2_atoms[resName]:
+                res2_atoms[resName].append(atomName)
+
         atom1_list = []
         atom2_list = []
         for res in self.residues():
-            if res.name in resName1:
+            if res.name in res1_atoms:
                 for atom1 in res._atoms:
-                    if atom1.name in atomName1:
-                        atom1_list.append (atom1)
-            if res.name in resName2:
+                    if atom1.name in res1_atoms[res.name]:
+                        atom1_list.append(atom1)
+
+            if res.name in res2_atoms:
                 for atom2 in res._atoms:
-                    if atom2.name in atomName2:
-                        atom2_list.append (atom2)
-                
+                    if atom2.name in res2_atoms[res.name]:
+                        atom2_list.append(atom2)
 
         for atom1 in atom1_list:
             pos1 = positions[atom1.index]
-            
+
             for atom2 in atom2_list:
                 pos2 = positions[atom2.index]
-                
-                delta = [ x1 - x2 for (x1, x2) in zip (pos1, pos2)]
-                distance = sqrt(delta[0]*delta[0] + delta[1]*delta[1] + delta[2]*delta[2])
-                
+
+                delta = [x1 - x2 for (x1, x2) in zip(pos1, pos2)]
+                distance = sqrt(delta[0]*delta[0] + delta[1]
+                                * delta[1] + delta[2]*delta[2])
+
                 if distance < 0.3*nanometers:
-                    print ('addBond ', atom1.index, atom2.index, distance)
+                    print('addBond ', atom1.index, atom2.index, distance)
                     self.addBond(atom1, atom2)
-     
-                    
-        
+
+
 class Chain(object):
     """A Chain object represents a chain within a Topology."""
+
     def __init__(self, index, topology, id):
         """Construct a new Chain.  You should call addChain() on the Topology instead of calling this directly."""
-        ## The index of the Chain within its Topology
+        # The index of the Chain within its Topology
         self.index = index
-        ## The Topology this Chain belongs to
+        # The Topology this Chain belongs to
         self.topology = topology
-        ## A user defined identifier for this Chain
+        # A user defined identifier for this Chain
         self.id = id
         self._residues = []
 
@@ -524,19 +564,21 @@ class Chain(object):
     def __repr__(self):
         return "<Chain %d>" % self.index
 
+
 class Residue(object):
     """A Residue object represents a residue within a Topology."""
+
     def __init__(self, name, index, chain, id, insertionCode):
         """Construct a new Residue.  You should call addResidue() on the Topology instead of calling this directly."""
-        ## The name of the Residue
+        # The name of the Residue
         self.name = name
-        ## The index of the Residue within its Topology
+        # The index of the Residue within its Topology
         self.index = index
-        ## The Chain this Residue belongs to
+        # The Chain this Residue belongs to
         self.chain = chain
-        ## A user defined identifier for this Residue
+        # A user defined identifier for this Residue
         self.id = id
-        ## A user defined insertion code for this Residue
+        # A user defined insertion code for this Residue
         self.insertionCode = insertionCode
         self._atoms = []
 
@@ -546,15 +588,15 @@ class Residue(object):
 
     def bonds(self):
         """Iterate over all Bonds involving any atom in this residue."""
-        return ( bond for bond in self.chain.topology.bonds() if ((bond[0] in self._atoms) or (bond[1] in self._atoms)) )
+        return (bond for bond in self.chain.topology.bonds() if ((bond[0] in self._atoms) or (bond[1] in self._atoms)))
 
     def internal_bonds(self):
         """Iterate over all internal Bonds."""
-        return ( bond for bond in self.chain.topology.bonds() if ((bond[0] in self._atoms) and (bond[1] in self._atoms)) )
+        return (bond for bond in self.chain.topology.bonds() if ((bond[0] in self._atoms) and (bond[1] in self._atoms)))
 
     def external_bonds(self):
         """Iterate over all Bonds to external atoms."""
-        return ( bond for bond in self.chain.topology.bonds() if ((bond[0] in self._atoms) != (bond[1] in self._atoms)) )
+        return (bond for bond in self.chain.topology.bonds() if ((bond[0] in self._atoms) != (bond[1] in self._atoms)))
 
     def __len__(self):
         return len(self._atoms)
@@ -562,24 +604,26 @@ class Residue(object):
     def __repr__(self):
         return "<Residue %d (%s) of chain %d>" % (self.index, self.name, self.chain.index)
 
+
 class Atom(object):
     """An Atom object represents an atom within a Topology."""
 
     def __init__(self, name, element, index, residue, id):
         """Construct a new Atom.  You should call addAtom() on the Topology instead of calling this directly."""
-        ## The name of the Atom
+        # The name of the Atom
         self.name = name
-        ## That Atom's element
+        # That Atom's element
         self.element = element
-        ## The index of the Atom within its Topology
+        # The index of the Atom within its Topology
         self.index = index
-        ## The Residue this Atom belongs to
+        # The Residue this Atom belongs to
         self.residue = residue
-        ## A user defined identifier for this Atom
+        # A user defined identifier for this Atom
         self.id = id
 
     def __repr__(self):
         return "<Atom %d (%s) of chain %d residue %d (%s)>" % (self.index, self.name, self.residue.chain.index, self.residue.index, self.residue.name)
+
 
 class Bond(namedtuple('Bond', ['atom1', 'atom2'])):
     """A Bond object represents a bond between two Atoms within a Topology.

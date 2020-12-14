@@ -1,20 +1,13 @@
-import os
-import itertools
 import sys
 import numpy as np
-import xml.etree.ElementTree as etree
-from copy import copy
-from collections import defaultdict
-import simtk.openmm as mm
-#from datetime import date
 from simtk.openmm import *
 from simtk.openmm.app import *
-from simtk.openmm.app.internal import amber_file_parser
+
 from simtk.openmm.app.internal.unitcell import computeLengthsAndAngles
 
 import simtk.unit as units
 from simtk.openmm.app import element as elem
-import sys
+
 import getopt
 
 from _pdbfile import *
@@ -102,9 +95,9 @@ def get_improper_typeID(improper_database, type1, type2, type3, type4):
     return None
 
 
-def pdb2amber(pdb_fname, prmtop_fname, inpcrd_fname, ff_fnames):
+def pdb2amber(pdb_fname, prmtop_fname, inpcrd_fname, link_residues, ff_fnames):
 
-    pdb = MyPDBFile(pdb_fname)
+    pdb = MyPDBFile(pdb_fname, link_residues)
     my_ff = MyForceFields(ff_fnames)
 
     _atomType = {}
@@ -127,22 +120,19 @@ def pdb2amber(pdb_fname, prmtop_fname, inpcrd_fname, ff_fnames):
         prm.box_info = [beta*180.0/np.pi, a*10.0, b*10.0, c*10.0]
 
     if inpcrd_fname != '':
-        if prm.is_box == 1:
+        if vectors is not None:
             box = 10.0*np.array([a, b, c])
             vel = np.zeros((len(_atoms), 3))
             time_ps = 0.0
             print_inpcrd(inpcrd_fname,
-                         pdb.positions.value_in_unit(units.angstroms), vel, box, time=time_ps)
+                         pdb.positions.value_in_unit(units.angstroms), vel=None, box=box, time=time_ps)
         else:
-            print_inpcrd(
-                inpcrd_fname, pdb.positions.value_in_unit(units.angstroms))
-    # for debuging
-    #prm_amber = amber_file_parser.PrmtopLoader('receptor.prmtop')
+            print_inpcrd(inpcrd_fname,
+                         pdb.positions.value_in_unit(units.angstroms), vel=None, box=None)
 
     # Gather Atom Info
     for atom in _atoms:
         _excludedAtomWith.append([])
-        atName = atom.name
         atElem = atom.element
         prm.atom_name_list.append(atom.name)
         prm.atomic_number_list.append(atElem._atomic_number)
@@ -160,8 +150,24 @@ def pdb2amber(pdb_fname, prmtop_fname, inpcrd_fname, ff_fnames):
         for res in chain.residues():
             prm.res_name_list.append(res.name)
 
-            resName = res.name
+            if res.name in ['HIE', 'HIS']:
+                """
+                HIE: no HD1, yes HE2
+                HID: yes HD1, no HE2
+                HIP: yes HD1, yes HE2
+                """
+                atomNames = []
+                res.name = 'HIE'
+                for atom in res._atoms:
+                    atomNames.append(atom.name)
 
+                if 'HD1' in atomNames:
+                    if 'HE2' in atomNames:
+                        res.name = 'HIP'
+                    else:
+                        res.name = 'HID'
+
+            resName = res.name
 
 #            if resName in MyPDBFile._residueNameReplacements:
 #                resName = MyPDBFile._residueNameReplacements[resName]
@@ -207,6 +213,7 @@ def pdb2amber(pdb_fname, prmtop_fname, inpcrd_fname, ff_fnames):
                     prm.sol_ptr[1] += 1
                     prm.atoms_per_molecule.append(natom)
 
+                res_chg = 0.0
                 for ii in range(natom):
                     atName = atoms[ii].name
                     imatch = -1
@@ -240,9 +247,13 @@ def pdb2amber(pdb_fname, prmtop_fname, inpcrd_fname, ff_fnames):
                     mass = my_ff._atomTypes[typeName].mass
                     _atomType[atoms[ii]] = typeName
                     at_chg = float(ff_resData.atoms[imatch].at_chg)*18.2223
+                    res_chg += at_chg/18.2223
 
                     prm.chg_list.append(at_chg)
                     prm.mass_list.append(mass)
+
+                if res.name in ['OAA', 'UQ2', 'CDN']:
+                    print('res_chg', res.name, res_chg)
             else:
                 raise Exception("No Residue2 '%s'." % res.name)
 
@@ -262,7 +273,6 @@ def pdb2amber(pdb_fname, prmtop_fname, inpcrd_fname, ff_fnames):
                 break
         prm.atom_type_index_list.append(index)
         prm.amber_atom_type_list.append(atomClass)
-
     for ii in range(numTypes):
         for jj in range(numTypes):
             prm.nb_idx_list.append(0)
@@ -304,6 +314,10 @@ def pdb2amber(pdb_fname, prmtop_fname, inpcrd_fname, ff_fnames):
 
         type1 = _atomType[bond[0]]
         type2 = _atomType[bond[1]]
+
+        if iatom in [29983, 30043] or jatom in [29983, 30043]:
+            print('bond ', iatom, jatom)
+            print('Elem', iatElem, jatElem, type1, type2)
 
         itype = -1
         if type1 < type2:
@@ -701,7 +715,6 @@ def pdb2amber(pdb_fname, prmtop_fname, inpcrd_fname, ff_fnames):
             prm.proper_nH_list.append(-katom*3)
             prm.proper_nH_list.append(-latom*3)
             prm.proper_nH_list.append(itype)
-
     for ii in range(len(_excludedAtomWith)):
         excluded_atoms_list = sorted(_excludedAtomWith[ii])
         numExAtom = len(excluded_atoms_list)
@@ -713,7 +726,6 @@ def pdb2amber(pdb_fname, prmtop_fname, inpcrd_fname, ff_fnames):
             prm.num_excluded_atoms.append(numExAtom)
             for iatom in excluded_atoms_list:
                 prm.excluded_atoms_list.append(iatom+1)
-
     prm.write(prmtop_fname)
 
 
@@ -745,15 +757,17 @@ if __name__ == "__main__":
 
     ff_fnames = ['./data/protein.ff14SB.xml',
                  './data/lipid17.xml',
-                 './data/fad.ff.xml',
-                 './data/fad.ff.xml',
-                 './data/heme.ff.xml',
-                 './data/rbf.ff.xml',
-                 './data/uq2.ff.xml',
-                 './data/ironsulfur.ff.xml',
+                 './data/fadh.ff.xml',
+                 './data/ribh.ff.xml',
+                 './data/ironsulfur_reduced.ff.xml',
                  './data/fmn.ff.xml',
+                 './data/nadh.ff.xml',
                  './data/wat_opc3.xml']
 #            './data/tip3p.xml']
 #            './data/tip3pfb.xml']
+    link_residues = [('FE1 FES', 'SG CYF'),
+                     ('FE2 FES', 'SG CYF'),
+                     ('P   FMN', 'OG1 THO'),
+                     ('FE FE', 'SG  CYG')]
 
-    pdb2amber(pdb_fname, prmtop_fname, inpcrd_fname, ff_fnames)
+    pdb2amber(pdb_fname, prmtop_fname, inpcrd_fname, link_residues, ff_fnames)
