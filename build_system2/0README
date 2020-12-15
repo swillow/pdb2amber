@@ -1,0 +1,14 @@
+1) align_two_proteins.py
+"A protein structure will be translated and rotated to overlap (or superimpose) with a OPM protein."
+TODO:
+python align_two_proteins.py -t <opm.pdb> -f <your pdb file> -s <save_pdb_file>
+e.g.
+python align_two_proteins.py -t opm.pdb -f rib_nqr.pdb -s rib_nqr_opm.pdb
+
+2) build_system.py
+"Add a membrane (dppe), water, and 0.1 M salt(NaCl). The length of the box must be a multiple of 15. "
+TODO:
+python build_system.py -i <opm.pdb> -b "box length" -c <charge of the protein> -s <save_pdb_file>
+e.g.
+python build_system.py -i rib_nqr_opm.pdb -b "150 150 150" -c -30 -s rib_nqr_system.pdb
+
