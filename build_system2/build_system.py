@@ -3,7 +3,7 @@ import sys
 import numpy as np
 
 
-def read_prt_heavy_atoms(fname_prt, box_min, fout):
+def read_prt_heavy_atoms(fname_prt, box, fout):
     """
     fname_prt : string, file name containing coordinates of a protein
     fout: output file
@@ -11,9 +11,30 @@ def read_prt_heavy_atoms(fname_prt, box_min, fout):
     numpy.array([x,y,z])
     """
 
-    f_pdb = open(fname_prt, 'r')
-    l_pdb = f_pdb.read().split('\n')
-    f_pdb.close()
+    l_pdb = open(fname_prt, 'r').readlines()
+
+    prt_min = box
+    prt_max = -box
+
+    for line in l_pdb:
+
+        if line[:6] in ['ATOM  ', 'HETATM']:
+            words = line[30:].split()
+            sym = words[-1]
+            x = float(words[0])
+            y = float(words[1])
+            z = float(words[2])
+
+            if sym != 'H':
+                crd = np.array([x, y, z])
+                prt_min = np.minimum(prt_min, crd)
+                prt_max = np.maximum(prt_max, crd)
+
+    print('prt_min', prt_min)
+    print('prt_max', prt_max)
+    prt_com = 0.5*(prt_min+prt_max)
+    box_com = 0.5*box
+    t_com = -prt_com + box_com
 
     prt_heavy_atoms = []
     for line in l_pdb[:-1]:
@@ -22,14 +43,14 @@ def read_prt_heavy_atoms(fname_prt, box_min, fout):
         if line[:6] in ['ATOM  ', 'HETATM']:
             words = line[30:].split()
             sym = words[-1]
-            x = float(words[0]) - box_min[0]
-            y = float(words[1]) - box_min[1]
-            z = float(words[2]) - box_min[2]
+            x = float(words[0]) + t_com[0]
+            y = float(words[1]) + t_com[1]
+            z = float(words[2]) + t_com[2]
             sx = ("%8.3f" % x)[:8]
             sy = ("%8.3f" % y)[:8]
             sz = ("%8.3f" % z)[:8]
 
-            line_new = line[0:30]+sx+sy+sz+line[54:]
+            line_new = line[0:30]+sx+sy+sz+line[54:-1]
             print(line_new, file=fout)
 
             if sym != 'H':
@@ -38,8 +59,12 @@ def read_prt_heavy_atoms(fname_prt, box_min, fout):
             print(line, file=fout)
 
     prt_heavy_atoms = np.array(prt_heavy_atoms)
+    prt_min = prt_heavy_atoms.min(axis=0)
+    prt_max = prt_heavy_atoms.max(axis=0)
+    print('prt_min', prt_min)
+    print('prt_max', prt_max)
 
-    return prt_heavy_atoms
+    return prt_heavy_atoms, t_com[2]
 
 
 def build_membrane(prt_heavy_atoms, fname_mem, box, shift_z, fout):
@@ -180,8 +205,12 @@ def build_solution(prt_heavy_atoms, mem_heavy_atoms,
 
     #
     perWat = int(1.0/(molarity*0.03345))
+    if mem_heavy_atoms.shape[0] != 0:
+        heavy_atoms = np.concatenate(
+            (prt_heavy_atoms, mem_heavy_atoms), axis=0)
+    else:
+        heavy_atoms = prt_heavy_atoms
 
-    heavy_atoms = np.concatenate((prt_heavy_atoms, mem_heavy_atoms), axis=0)
     ndim_min = np.array(heavy_atoms.min(axis=0)//5, dtype=np.int)
     ndim_max = np.array(heavy_atoms.max(axis=0)//5, dtype=np.int)+1
 
@@ -253,9 +282,10 @@ def build_solution(prt_heavy_atoms, mem_heavy_atoms,
                 for iw in range(nwat):
 
                     po = wo_list[iw] + cell0
-                    if -18 + shift_z < po[2] and po[2] < 18 + shift_z:
-                        # where the mebrane is placed
-                        continue
+                    if mem_heavy_atoms.shape[0] != 0:
+                        if -18 + shift_z < po[2] and po[2] < 18 + shift_z:
+                            # where the mebrane is placed
+                            continue
 
                     icel = np.array(po//5, dtype=np.int)
 
@@ -349,68 +379,68 @@ def build_solution(prt_heavy_atoms, mem_heavy_atoms,
 
 if __name__ == '__main__':
 
-    import getopt
     """
     1. Build membrane with DPPE
     2. Build Solution with 0.1 M NaCl
     (Molarity = # of NaCl/ (0.03345* # of Water), 
      where 0.03345 is the number density of water (1 g/cm^{-3}))
     """
+    import json
+    import getopt
 
     argv = sys.argv[1:]
-    opts, args = getopt.getopt(argv, "hi:b:c:s:",
-                               ["help=", "input=", "box=", "charge=", "save="])
 
-    if len(opts) == 0:
-        print('python build_system.py -i <opm pdb file> -b "box lengths" -c <charge> -s <save_pdb_file>')
+    opts, args = getopt.getopt(
+        argv, "hi:", ["help=", "input="])
+
+    if (len(opts) == 0):
+        print("python build_system.py -i <input_file.json>")
         sys.exit(2)
-    #    box_min = np.array([-60.0, -60.0, -90.0])
-    #    box_max = np.array([60.0, 60.0, 75.0])
-    box_min = np.array([-75.0, -75.0, -75.0])
-    box_max = np.array([75.0, 75.0, 75.0])
-    box = box_max - box_min
-    prt_chg = 0  # -27
-    molarity = 0.1
-    fname_prt = "opm.pdb"
-    fname_sys = "system.pdb"
+
+    fname_json = 'input.json'
     for opt, arg in opts:
-        if opt in ('-h', '--help'):
-            print(
-                'python build_system.py -i <opm pdb file> -b "box lengths" -c <charge> -s <save_pdb_file>')
+        if opt in ("-h", "--help"):
+            print("python build_system.py -i <input_file.json>")
             sys.exit(1)
-        elif opt in ('-i', '--input'):
-            fname_prt = arg
-        elif opt in ('-b', '--box'):
-            bl = arg.split()
-            box = np.array([float(bl[0]), float(bl[1]), float(bl[2])])
-            box_min = -0.5*box
-            box_max = 0.5*box
-        elif opt in ('-c', '--charge'):
-            prt_chg = int(arg)
-        elif opt in ('-s', '--save'):
-            fname_sys = arg
+        elif opt in ("-i", "--input"):
+            fname_json = arg
 
-    fout = open(fname_sys, 'w', 1)
+    with open(fname_json) as f:
+        data = json.load(f)
 
-    alpha = 90.0
-    beta = 90.0
-    gamma = 90.0
-    print("CRYST1%9.3f%9.3f%9.3f%7.2f%7.2f%7.2f P 1 1 " % (
-        box[0], box[1], box[2], alpha, beta, gamma), file=fout)
-    fname_prt = 'rib_nqr_opm.pdb'
-    prt_heavy_atoms = read_prt_heavy_atoms(fname_prt, box_min, fout)
+        fname_prt = data['fname_protein']
+        fname_sys = data["fname_system"]
 
-    #
-    print("Build Membrane")
-    fname_mem = 'dppe_box15.pdb'
-    shift_z = -box_min[2]
-    mem_heavy_atoms = build_membrane(prt_heavy_atoms, fname_mem,
-                                     box, shift_z, fout)
+        box = np.array(data['box'])
+        prt_chg = data['protein_charge']
 
-    print("Build Solution (0.1 M NaCl)")
-    fname_wat = 'water_box15.xyz'
-    build_solution(prt_heavy_atoms, mem_heavy_atoms, fname_wat,
-                   prt_chg, molarity,
-                   box, shift_z, fout)
+        fout = open(fname_sys, 'w', 1)
 
-    fout.close()
+        alpha = 90.0
+        beta = 90.0
+        gamma = 90.0
+        print("CRYST1%9.3f%9.3f%9.3f%7.2f%7.2f%7.2f P 1 1 " % (
+            box[0], box[1], box[2], alpha, beta, gamma), file=fout)
+
+        prt_heavy_atoms, shift_z = read_prt_heavy_atoms(fname_prt, box, fout)
+
+        #
+        mem_heavy_atoms = np.array([])
+
+        if data['membrane']['bool']:
+            print("Build Membrane")
+            fname_mem = data['membrane']['fname_unit']
+
+            mem_heavy_atoms = build_membrane(prt_heavy_atoms, fname_mem,
+                                             box, shift_z, fout)
+
+        #
+        if data['solvent']['bool']:
+            molarity = data['solvent']['NaCl(Molarity)']
+            print("Build Solution (%6.2f M NaCl)" % (molarity))
+            fname_wat = data['solvent']['fname_unit']
+            build_solution(prt_heavy_atoms, mem_heavy_atoms, fname_wat,
+                           prt_chg, molarity,
+                           box, shift_z, fout)
+
+        fout.close()

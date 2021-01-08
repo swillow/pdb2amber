@@ -1,0 +1,19 @@
+{
+    "fname_protein": "dimer.pdb",
+    "protein_charge": -8,
+    "fname_system": "dimer_wat.pdb",
+    "box": [
+         90,
+        120,
+        120
+    ],
+    "membrane": {
+        "fname_unit": "dppe_box15.pdb",
+        "bool": false
+    },
+    "solvent": {
+        "fname_unit": "water_box15.xyz",
+        "bool": true,
+        "NaCl(Molarity)": 0.1
+    }
+}
