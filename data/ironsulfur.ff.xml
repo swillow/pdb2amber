@@ -3,8 +3,9 @@
     <DateGenerated>2019-04-03</DateGenerated>
     <Note>FES(2Fe-2S)--4CYF (total charge: -2)</Note>
     <Note>FE(Fe)     --4CYG (total charge: -1)</Note>
-    <Note>SF4(4Fe-4S)--4CY4 (total charge:  0)</Note>
-    <Note>SF3(3Fe-4S)--3CY3 (total charge: -2)</Note>
+    <Note>SF4(4Fe-4S)--4CYF (total charge: -2)</Note>
+    <Note>F3S(3Fe-4S)--3CYF (total charge: -2)</Note>
+    <Note>FET(2Fe-2S)--3CYF*ASP (total charge:  -2)</Note>
   </Info>
   <AtomTypes>
     <Type class="FE1"  element="Fe" mass="55.8000" name="fe-FE1" />
@@ -29,52 +30,64 @@
       <ExternalBond atomName="FE1"/>
       <ExternalBond atomName="FE2"/>
     </Residue>
-    <Residue name="SF4">  
-      <Atom charge="+0.7946" name="FE1" type="fe-FE2" />
-      <Atom charge="+0.7946" name="FE2" type="fe-FE2" />
-      <Atom charge="+0.7946" name="FE3" type="fe-FE2" />
-      <Atom charge="+0.7946" name="FE4" type="fe-FE2" />
-      <Atom charge="-0.5234" name="S1"  type="fe-SB" />
-      <Atom charge="-0.5234" name="S2"  type="fe-SB" />
-      <Atom charge="-0.5234" name="S3"  type="fe-SB" />
-      <Atom charge="-0.5234" name="S4"  type="fe-SB" />
+    <Residue name="FET">  
+      <Atom charge="+0.7149" name="FE1" type="fe-FE2" />
+      <Atom charge="+0.7149" name="FE2" type="fe-FE2" />
+      <Atom charge="-0.4019" name="S1"  type="fe-SB" />
+      <Atom charge="-0.4019" name="S2"  type="fe-SB" />
       <Bond atomName1="FE1" atomName2="S1"/>
       <Bond atomName1="FE1" atomName2="S2"/>
+      <Bond atomName1="FE2" atomName2="S1"/>
+      <Bond atomName1="FE2" atomName2="S2"/>
+      <ExternalBond atomName="FE1"/>
+      <ExternalBond atomName="FE2"/>
+    </Residue>
+    <Residue name="SF4">  
+      <Atom charge="+0.6800" name="FE1" type="fe-FE2" />
+      <Atom charge="+0.6800" name="FE2" type="fe-FE2" />
+      <Atom charge="+0.6800" name="FE3" type="fe-FE2" />
+      <Atom charge="+0.6800" name="FE4" type="fe-FE2" />
+      <Atom charge="-0.6380" name="S1"  type="fe-SB" />
+      <Atom charge="-0.6380" name="S2"  type="fe-SB" />
+      <Atom charge="-0.6380" name="S3"  type="fe-SB" />
+      <Atom charge="-0.6380" name="S4"  type="fe-SB" />
+      <Bond atomName1="FE1" atomName2="S2"/>
       <Bond atomName1="FE1" atomName2="S3"/>
+      <Bond atomName1="FE1" atomName2="S4"/>
       <Bond atomName1="FE2" atomName2="S1"/>
       <Bond atomName1="FE2" atomName2="S3"/>
       <Bond atomName1="FE2" atomName2="S4"/>
       <Bond atomName1="FE3" atomName2="S1"/>
       <Bond atomName1="FE3" atomName2="S2"/>
       <Bond atomName1="FE3" atomName2="S4"/>
+      <Bond atomName1="FE4" atomName2="S1"/>
       <Bond atomName1="FE4" atomName2="S2"/>
       <Bond atomName1="FE4" atomName2="S3"/>
-      <Bond atomName1="FE4" atomName2="S4"/>
       <ExternalBond atomName="FE1"/>
       <ExternalBond atomName="FE2"/>
       <ExternalBond atomName="FE3"/>
       <ExternalBond atomName="FE4"/>
     </Residue>
     <Residue name="F3S">  
-      <Atom charge="+1.2098" name="FE1" type="fe-FE2" />
-      <Atom charge="+1.2098" name="FE2" type="fe-FE2" />
-      <Atom charge="+1.2098" name="FE3" type="fe-FE2" />
-      <Atom charge="-0.6581" name="S1"  type="fe-SX" />
-      <Atom charge="-0.6581" name="S2"  type="fe-SX" />
-      <Atom charge="-0.6581" name="S3"  type="fe-SX" />
-      <Atom charge="-1.1734" name="S4"  type="fe-SB" />
+      <Atom charge="+1.0876" name="FE1" type="fe-FE2" />
+      <Atom charge="+1.0876" name="FE3" type="fe-FE2" />
+      <Atom charge="+1.0876" name="FE4" type="fe-FE2" />
+      <Atom charge="-0.7804" name="S1"  type="fe-SX" />
+      <Atom charge="-0.7804" name="S2"  type="fe-SX" />
+      <Atom charge="-1.2956" name="S3"  type="fe-SB" />
+      <Atom charge="-0.7804" name="S4"  type="fe-SX" />
       <Bond atomName1="FE1" atomName2="S1"/>
+      <Bond atomName1="FE1" atomName2="S2"/>
       <Bond atomName1="FE1" atomName2="S3"/>
-      <Bond atomName1="FE1" atomName2="S4"/>
-      <Bond atomName1="FE2" atomName2="S1"/>
-      <Bond atomName1="FE2" atomName2="S2"/>
-      <Bond atomName1="FE2" atomName2="S4"/>
-      <Bond atomName1="FE3" atomName2="S2"/>
+      <Bond atomName1="FE3" atomName2="S1"/>
       <Bond atomName1="FE3" atomName2="S3"/>
       <Bond atomName1="FE3" atomName2="S4"/>
+      <Bond atomName1="FE4" atomName2="S2"/>
+      <Bond atomName1="FE4" atomName2="S3"/>
+      <Bond atomName1="FE4" atomName2="S4"/>
       <ExternalBond atomName="FE1"/>
-      <ExternalBond atomName="FE2"/>
       <ExternalBond atomName="FE3"/>
+      <ExternalBond atomName="FE4"/>
     </Residue>
   </Residues>
   <HarmonicBondForce>
@@ -101,6 +114,7 @@
     <Angle angle="1.7976891295541593" k="144.7664" type1="protein-O2" type2="fe-FE2" type3="protein-S"/>
     <Angle angle="1.7976891295541593" k="144.7664" type1="fe-SB" type2="fe-FE2" type3="protein-O2"/>
     <Angle angle="1.7976891295541593" k="573.208" type1="fe-FE1" type2="protein-S" type3="protein-2C"/>
+    <Angle angle="1.7976891295541593" k="0.000" type1="protein-O2" type2="fe-FE2" type3="protein-O2"/>
   </HarmonicAngleForce>
   <PeriodicTorsionForce ordering="amber">
     <Proper k1="20.92" periodicity1="1" phase1="3.141592653589793" type1="fe-FE2" type2="fe-SB" type3="fe-FE2" type4="fe-SB"/>

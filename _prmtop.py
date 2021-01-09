@@ -239,7 +239,7 @@ class PrmTop (object):
         tot_chg = 0.0
         for chg in self.chg_list:
             tot_chg += chg
-        print ('tot_chg ', tot_chg, tot_chg/18.2223)
+        print ('tot_chg ', tot_chg/18.2223)
 
         print_integer_data ('ATOMIC_NUMBER', self.atomic_number_list, fout)
         print_double_data ('MASS',   self.mass_list, fout)

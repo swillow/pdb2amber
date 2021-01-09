@@ -65,7 +65,8 @@ class MyPDBFile(object):
                          'ARG', 'ASP', 'GLN', 'GLY', 'ILE', 'LYS', 'PHE', 'SER', 'TRP', 'VAL',
                          'A', 'G', 'C', 'U', 'I', 'DA', 'DG', 'DC', 'DT', 'DI', 'HOH']
 
-    def __init__(self, file, link_residues=None, extraParticleIdentifier='EP'):
+    def __init__(self, file, ff_fnames,
+                 link_residues=None, extraParticleIdentifier='EP'):
         """Load a PDB file.
 
         The atom positions and Topology can be retrieved by calling getPositions() and getTopology().
@@ -166,7 +167,7 @@ class MyPDBFile(object):
         # The atom positions read from the PDB file.  If the file contains multiple frames, these are the positions in the first frame.
         self.positions = self._positions[0]
         self.topology.setPeriodicBoxVectors(pdb.get_periodic_box_vectors())
-        self.topology.createStandardBonds(self.positions)
+        self.topology.createStandardBonds(self.positions, ff_fnames)
         self.topology.createDisulfideBonds(self.positions)
 
         if link_residues is not None:

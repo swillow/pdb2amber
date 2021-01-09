@@ -1,6 +1,6 @@
 <ForceField>
   <Info>
-    <DateGenerated>2020-12-14</DateGenerated>
+    <DateGenerated>2020-11-20</DateGenerated>
   </Info>
   <AtomTypes>
     <Type class="P5" element="P" mass="30.9700" name="nadh-P5" />
@@ -22,84 +22,84 @@
     <Type class="HN" element="H" mass="1.0080" name="nadh-HN" />
     <Type class="H1" element="H" mass="1.0080" name="nadh-H1" />
     <Type class="H5" element="H" mass="1.0080" name="nadh-H5" />
-    <Type class="H4" element="H" mass="1.0080" name="nadh-H4" />
-    <Type class="HA" element="H" mass="1.0080" name="nadh-HA" />
-    <Type class="HC" element="H" mass="1.0080" name="nadh-HC" />
     <Type class="H2" element="H" mass="1.0080" name="nadh-H2" />
+    <Type class="H4" element="H" mass="1.0080" name="nadh-H4" />
+    <Type class="HC" element="H" mass="1.0080" name="nadh-HC" />
+    <Type class="HA" element="H" mass="1.0080" name="nadh-HA" />
   </AtomTypes>
   <Residues>
     <Residue name="NAD">
-      <Atom charge="  1.624800" name="PA" type="nadh-P5" />
-      <Atom charge=" -0.887000" name="O1A" type="nadh-O" />
-      <Atom charge=" -0.887000" name="O2A" type="nadh-O" />
-      <Atom charge=" -0.614200" name="O5B" type="nadh-OS" />
-      <Atom charge="  0.156400" name="C5B" type="nadh-C3" />
-      <Atom charge="  0.070100" name="C4B" type="nadh-C3" />
-      <Atom charge=" -0.422600" name="O4B" type="nadh-OS" />
-      <Atom charge="  0.097100" name="C3B" type="nadh-C3" />
-      <Atom charge=" -0.643800" name="O3B" type="nadh-OH" />
-      <Atom charge="  0.111100" name="C2B" type="nadh-C3" />
-      <Atom charge=" -0.602800" name="O2B" type="nadh-OH" />
-      <Atom charge="  0.217800" name="C1B" type="nadh-C3" />
-      <Atom charge=" -0.269000" name="N9A" type="nadh-NA" />
-      <Atom charge="  0.453700" name="C8A" type="nadh-CC" />
-      <Atom charge=" -0.580100" name="N7A" type="nadh-ND" />
+      <Atom charge="  1.627800" name="PA" type="nadh-P5" />
+      <Atom charge=" -0.892500" name="O1A" type="nadh-O" />
+      <Atom charge=" -0.892500" name="O2A" type="nadh-O" />
+      <Atom charge=" -0.603200" name="O5B" type="nadh-OS" />
+      <Atom charge="  0.189400" name="C5B" type="nadh-C3" />
+      <Atom charge="  0.068100" name="C4B" type="nadh-C3" />
+      <Atom charge=" -0.425600" name="O4B" type="nadh-OS" />
+      <Atom charge="  0.107100" name="C3B" type="nadh-C3" />
+      <Atom charge=" -0.645800" name="O3B" type="nadh-OH" />
+      <Atom charge="  0.112100" name="C2B" type="nadh-C3" />
+      <Atom charge=" -0.601800" name="O2B" type="nadh-OH" />
+      <Atom charge="  0.219800" name="C1B" type="nadh-C3" />
+      <Atom charge=" -0.271000" name="N9A" type="nadh-NA" />
+      <Atom charge="  0.456700" name="C8A" type="nadh-CC" />
+      <Atom charge=" -0.577100" name="N7A" type="nadh-ND" />
       <Atom charge=" -0.206200" name="C5A" type="nadh-CA" />
-      <Atom charge="  0.707200" name="C6A" type="nadh-CA" />
-      <Atom charge=" -0.934500" name="N6A" type="nadh-NH" />
+      <Atom charge="  0.710200" name="C6A" type="nadh-CA" />
+      <Atom charge=" -0.936500" name="N6A" type="nadh-NH" />
       <Atom charge=" -0.803000" name="N1A" type="nadh-NB" />
-      <Atom charge="  0.648900" name="C2A" type="nadh-CA" />
-      <Atom charge=" -0.716000" name="N3A" type="nadh-NB" />
-      <Atom charge="  0.440800" name="C4A" type="nadh-CA" />
-      <Atom charge=" -0.829800" name="O3" type="nadh-OS" />
+      <Atom charge="  0.649900" name="C2A" type="nadh-CA" />
+      <Atom charge=" -0.719000" name="N3A" type="nadh-NB" />
+      <Atom charge="  0.439800" name="C4A" type="nadh-CA" />
+      <Atom charge=" -0.826800" name="O3" type="nadh-OS" />
       <Atom charge="  1.583800" name="PN" type="nadh-P5" />
-      <Atom charge=" -0.857000" name="O1N" type="nadh-O" />
-      <Atom charge=" -0.857000" name="O2N" type="nadh-O" />
-      <Atom charge=" -0.594200" name="O5D" type="nadh-OS" />
-      <Atom charge="  0.183400" name="C5D" type="nadh-C3" />
-      <Atom charge="  0.094100" name="C4D" type="nadh-C3" />
-      <Atom charge=" -0.435600" name="O4D" type="nadh-OS" />
+      <Atom charge=" -0.856500" name="O1N" type="nadh-O" />
+      <Atom charge=" -0.856500" name="O2N" type="nadh-O" />
+      <Atom charge=" -0.595200" name="O5D" type="nadh-OS" />
+      <Atom charge="  0.181400" name="C5D" type="nadh-C3" />
+      <Atom charge="  0.093100" name="C4D" type="nadh-C3" />
+      <Atom charge=" -0.442600" name="O4D" type="nadh-OS" />
       <Atom charge="  0.119100" name="C3D" type="nadh-C3" />
       <Atom charge=" -0.662800" name="O3D" type="nadh-OH" />
-      <Atom charge="  0.108100" name="C2D" type="nadh-C3" />
-      <Atom charge=" -0.618800" name="O2D" type="nadh-OH" />
-      <Atom charge="  0.399300" name="C1D" type="nadh-C3" />
-      <Atom charge=" -0.542200" name="N1N" type="nadh-NH" />
-      <Atom charge="  0.148000" name="C2N" type="nadh-C2" />
-      <Atom charge=" -0.326400" name="C3N" type="nadh-CE" />
+      <Atom charge="  0.114100" name="C2D" type="nadh-C3" />
+      <Atom charge=" -0.614800" name="O2D" type="nadh-OH" />
+      <Atom charge="  0.393300" name="C1D" type="nadh-C3" />
+      <Atom charge=" -0.541200" name="N1N" type="nadh-NH" />
+      <Atom charge="  0.147000" name="C2N" type="nadh-C2" />
+      <Atom charge=" -0.323400" name="C3N" type="nadh-CE" />
       <Atom charge="  0.687300" name="C7N" type="nadh-C" />
-      <Atom charge=" -0.648100" name="O7N" type="nadh-O" />
-      <Atom charge=" -0.684000" name="N7N" type="nadh-N" />
-      <Atom charge="  0.053000" name="C4N" type="nadh-C3" />
-      <Atom charge=" -0.260200" name="C5N" type="nadh-C2" />
-      <Atom charge="  0.057000" name="C6N" type="nadh-C2" />
-      <Atom charge="  0.491000" name="HO3N" type="nadh-HO" />
-      <Atom charge="  0.482000" name="HO3A" type="nadh-HO" />
-      <Atom charge="  0.428000" name="HO2N" type="nadh-HO" />
-      <Atom charge="  0.425000" name="HO2A" type="nadh-HO" />
-      <Atom charge="  0.290000" name="H72N" type="nadh-HN" />
-      <Atom charge="  0.290000" name="H71N" type="nadh-HN" />
-      <Atom charge="  0.415800" name="H62A" type="nadh-HN" />
-      <Atom charge="  0.415800" name="H61A" type="nadh-HN" />
-      <Atom charge="  0.038700" name="H52N" type="nadh-H1" />
-      <Atom charge="  0.068700" name="H52A" type="nadh-H1" />
-      <Atom charge="  0.038700" name="H51N" type="nadh-H1" />
-      <Atom charge="  0.068700" name="H51A" type="nadh-H1" />
-      <Atom charge="  0.144800" name="H8A" type="nadh-H5" />
-      <Atom charge="  0.220000" name="H6N" type="nadh-H4" />
-      <Atom charge="  0.142000" name="H5N" type="nadh-HA" />
-      <Atom charge="  0.031200" name="H4N" type="nadh-HC" />
-      <Atom charge="  0.072700" name="H4D" type="nadh-H1" />
-      <Atom charge="  0.076700" name="H4B" type="nadh-H1" />
-      <Atom charge="  0.126700" name="H3D" type="nadh-H1" />
-      <Atom charge="  0.123700" name="H3B" type="nadh-H1" />
-      <Atom charge="  0.132000" name="H2N" type="nadh-H4" />
-      <Atom charge="  0.091700" name="H2D" type="nadh-H1" />
-      <Atom charge="  0.081700" name="H2B" type="nadh-H1" />
-      <Atom charge="  0.031100" name="H2A" type="nadh-H5" />
-      <Atom charge="  0.061700" name="H1D" type="nadh-H2" />
-      <Atom charge="  0.104700" name="H1B" type="nadh-H2" />
-      <Atom charge="  0.031200" name="H9A" type="nadh-HC" />
+      <Atom charge=" -0.647100" name="O7N" type="nadh-O" />
+      <Atom charge=" -0.682000" name="N7N" type="nadh-N" />
+      <Atom charge="  0.052000" name="C4N" type="nadh-C3" />
+      <Atom charge=" -0.257200" name="C5N" type="nadh-C2" />
+      <Atom charge="  0.052000" name="C6N" type="nadh-C2" />
+      <Atom charge="  0.491000" name="H1" type="nadh-HO" />
+      <Atom charge="  0.485000" name="H2" type="nadh-HO" />
+      <Atom charge="  0.427000" name="H3" type="nadh-HO" />
+      <Atom charge="  0.424000" name="H4" type="nadh-HO" />
+      <Atom charge="  0.289500" name="H5" type="nadh-HN" />
+      <Atom charge="  0.289500" name="H6" type="nadh-HN" />
+      <Atom charge="  0.418300" name="H7" type="nadh-HN" />
+      <Atom charge="  0.418300" name="H8" type="nadh-HN" />
+      <Atom charge="  0.038200" name="H9" type="nadh-H1" />
+      <Atom charge="  0.048200" name="H10" type="nadh-H1" />
+      <Atom charge="  0.038200" name="H11" type="nadh-H1" />
+      <Atom charge="  0.048200" name="H12" type="nadh-H1" />
+      <Atom charge="  0.146800" name="H13" type="nadh-H5" />
+      <Atom charge="  0.103700" name="H14" type="nadh-H2" />
+      <Atom charge="  0.064700" name="H15" type="nadh-H2" />
+      <Atom charge="  0.031100" name="H16" type="nadh-H5" />
+      <Atom charge="  0.218000" name="H17" type="nadh-H4" />
+      <Atom charge="  0.074700" name="H18" type="nadh-H1" />
+      <Atom charge="  0.063700" name="H19" type="nadh-H1" />
+      <Atom charge="  0.128700" name="H20" type="nadh-H1" />
+      <Atom charge="  0.113700" name="H21" type="nadh-H1" />
+      <Atom charge="  0.132000" name="H22" type="nadh-H4" />
+      <Atom charge="  0.091700" name="H23" type="nadh-H1" />
+      <Atom charge="  0.085700" name="H24" type="nadh-H1" />
+      <Atom charge="  0.031700" name="H25" type="nadh-HC" />
+      <Atom charge="  0.031700" name="H26" type="nadh-HC" />
+      <Atom charge="  0.143000" name="H27" type="nadh-HA" />
       <Bond atomName1="PA" atomName2="O1A" />
       <Bond atomName1="PA" atomName2="O2A" />
       <Bond atomName1="PA" atomName2="O5B" />
@@ -148,33 +148,33 @@
       <Bond atomName1="C7N" atomName2="N7N" />
       <Bond atomName1="C4N" atomName2="C5N" />
       <Bond atomName1="C5N" atomName2="C6N" />
-      <Bond atomName1="C5B" atomName2="H52A" />
-      <Bond atomName1="C5B" atomName2="H51A" />
-      <Bond atomName1="C4B" atomName2="H4B" />
-      <Bond atomName1="C3B" atomName2="H3B" />
-      <Bond atomName1="O3B" atomName2="HO3A" />
-      <Bond atomName1="C2B" atomName2="H2B" />
-      <Bond atomName1="O2B" atomName2="HO2A" />
-      <Bond atomName1="C1B" atomName2="H1B" />
-      <Bond atomName1="C8A" atomName2="H8A" />
-      <Bond atomName1="N6A" atomName2="H62A" />
-      <Bond atomName1="N6A" atomName2="H61A" />
-      <Bond atomName1="C2A" atomName2="H2A" />
-      <Bond atomName1="C5D" atomName2="H52N" />
-      <Bond atomName1="C5D" atomName2="H51N" />
-      <Bond atomName1="C4D" atomName2="H4D" />
-      <Bond atomName1="C3D" atomName2="H3D" />
-      <Bond atomName1="O3D" atomName2="HO3N" />
-      <Bond atomName1="C2D" atomName2="H2D" />
-      <Bond atomName1="O2D" atomName2="HO2N" />
-      <Bond atomName1="C1D" atomName2="H1D" />
-      <Bond atomName1="C2N" atomName2="H2N" />
-      <Bond atomName1="N7N" atomName2="H72N" />
-      <Bond atomName1="N7N" atomName2="H71N" />
-      <Bond atomName1="C4N" atomName2="H4N" />
-      <Bond atomName1="C4N" atomName2="H9A" />
-      <Bond atomName1="C5N" atomName2="H5N" />
-      <Bond atomName1="C6N" atomName2="H6N" />
+      <Bond atomName1="C5B" atomName2="H10" />
+      <Bond atomName1="C5B" atomName2="H12" />
+      <Bond atomName1="C4B" atomName2="H19" />
+      <Bond atomName1="C3B" atomName2="H21" />
+      <Bond atomName1="O3B" atomName2="H2" />
+      <Bond atomName1="C2B" atomName2="H24" />
+      <Bond atomName1="O2B" atomName2="H4" />
+      <Bond atomName1="C1B" atomName2="H14" />
+      <Bond atomName1="C8A" atomName2="H13" />
+      <Bond atomName1="N6A" atomName2="H7" />
+      <Bond atomName1="N6A" atomName2="H8" />
+      <Bond atomName1="C2A" atomName2="H16" />
+      <Bond atomName1="C5D" atomName2="H9" />
+      <Bond atomName1="C5D" atomName2="H11" />
+      <Bond atomName1="C4D" atomName2="H18" />
+      <Bond atomName1="C3D" atomName2="H20" />
+      <Bond atomName1="O3D" atomName2="H1" />
+      <Bond atomName1="C2D" atomName2="H23" />
+      <Bond atomName1="O2D" atomName2="H3" />
+      <Bond atomName1="C1D" atomName2="H15" />
+      <Bond atomName1="C2N" atomName2="H22" />
+      <Bond atomName1="N7N" atomName2="H5" />
+      <Bond atomName1="N7N" atomName2="H6" />
+      <Bond atomName1="C4N" atomName2="H25" />
+      <Bond atomName1="C4N" atomName2="H26" />
+      <Bond atomName1="C5N" atomName2="H27" />
+      <Bond atomName1="C6N" atomName2="H17" />
     </Residue>
   </Residues>
   <HarmonicBondForce>
@@ -311,9 +311,9 @@
     <Proper k1="6.150480" periodicity1="1" phase1="0.0000000000000000" type1="nadh-C2" type2="nadh-C2" type3="nadh-C3" type4="nadh-HC" />
     <Proper k1="0.472792" periodicity1="3" phase1="0.0000000000000000" type1="nadh-HO" type2="nadh-OH" type3="nadh-C3" type4="nadh-H1" />
     <Proper k1="0.650844" periodicity1="3" phase1="0.0000000000000000" type1="nadh-H1" type2="nadh-C3" type3="nadh-C3" type4="nadh-H1" />
+    <Proper k1="0.650844" periodicity1="3" phase1="0.0000000000000000" type1="nadh-H2" type2="nadh-C3" type3="nadh-C3" type4="nadh-H1" />
     <Proper k1="27.823600" periodicity1="2" phase1="3.1415926535897931" type1="nadh-H4" type2="nadh-C2" type3="nadh-C2" type4="nadh-HA" />
-    <Proper k1="0.000000" periodicity1="2" phase1="0.0000000000000000" type1="nadh-HA" type2="nadh-C2" type3="nadh-C3" type4="nadh-HC" />
-    <Proper k1="0.650844" periodicity1="3" phase1="0.0000000000000000" type1="nadh-H1" type2="nadh-C3" type3="nadh-C3" type4="nadh-H2" />
+    <Proper k1="0.000000" periodicity1="2" phase1="0.0000000000000000" type1="nadh-HC" type2="nadh-C3" type3="nadh-C2" type4="nadh-HA" />
     <Proper k1="16.526800" periodicity1="1" phase1="3.1415926535897931" type1="nadh-P5" type2="nadh-OS" type3="nadh-C3" type4="nadh-C3" />
     <Proper k1="3.347200" periodicity1="2" phase1="0.0000000000000000" type1="nadh-P5" type2="nadh-OS" type3="nadh-P5" type4="nadh-O" />
     <Proper k1="3.347200" periodicity1="2" phase1="0.0000000000000000" type1="nadh-P5" type2="nadh-OS" type3="nadh-P5" type4="nadh-OS" />
@@ -412,9 +412,9 @@
     <Atom epsilon="0.0418400" sigma="0.1106496207546381" type="nadh-HN" />
     <Atom epsilon="0.0870272" sigma="0.2421997255202334" type="nadh-H1" />
     <Atom epsilon="0.0673624" sigma="0.2447298778464148" type="nadh-H5" />
-    <Atom epsilon="0.0673624" sigma="0.2536388651896133" type="nadh-H4" />
-    <Atom epsilon="0.0673624" sigma="0.2625478522039127" type="nadh-HA" />
-    <Atom epsilon="0.0870272" sigma="0.2600176998083396" type="nadh-HC" />
     <Atom epsilon="0.0870272" sigma="0.2243817511424393" type="nadh-H2" />
+    <Atom epsilon="0.0673624" sigma="0.2536388651896133" type="nadh-H4" />
+    <Atom epsilon="0.0870272" sigma="0.2600176998083396" type="nadh-HC" />
+    <Atom epsilon="0.0673624" sigma="0.2625478522039127" type="nadh-HA" />
   </NonbondedForce>
 </ForceField>

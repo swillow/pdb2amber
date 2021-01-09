@@ -95,9 +95,9 @@ def get_improper_typeID(improper_database, type1, type2, type3, type4):
     return None
 
 
-def pdb2amber(pdb_fname, prmtop_fname, inpcrd_fname, link_residues, ff_fnames):
+def pdb2amber(pdb_fname, prmtop_fname, inpcrd_fname, ff_fnames, link_residues=None):
 
-    pdb = MyPDBFile(pdb_fname, link_residues)
+    pdb = MyPDBFile(pdb_fname, ff_fnames, link_residues)
     my_ff = MyForceFields(ff_fnames)
 
     _atomType = {}
@@ -119,7 +119,7 @@ def pdb2amber(pdb_fname, prmtop_fname, inpcrd_fname, link_residues, ff_fnames):
         # radian-->degree, nm --> A
         prm.box_info = [beta*180.0/np.pi, a*10.0, b*10.0, c*10.0]
 
-    if inpcrd_fname != '':
+    if inpcrd_fname is not None:
         if vectors is not None:
             box = 10.0*np.array([a, b, c])
             vel = np.zeros((len(_atoms), 3))
@@ -252,8 +252,6 @@ def pdb2amber(pdb_fname, prmtop_fname, inpcrd_fname, link_residues, ff_fnames):
                     prm.chg_list.append(at_chg)
                     prm.mass_list.append(mass)
 
-                if res.name in ['OAA', 'UQ2', 'CDN']:
-                    print('res_chg', res.name, res_chg)
             else:
                 raise Exception("No Residue2 '%s'." % res.name)
 
@@ -314,10 +312,6 @@ def pdb2amber(pdb_fname, prmtop_fname, inpcrd_fname, link_residues, ff_fnames):
 
         type1 = _atomType[bond[0]]
         type2 = _atomType[bond[1]]
-
-        if iatom in [29983, 30043] or jatom in [29983, 30043]:
-            print('bond ', iatom, jatom)
-            print('Elem', iatElem, jatElem, type1, type2)
 
         itype = -1
         if type1 < type2:
@@ -730,44 +724,36 @@ def pdb2amber(pdb_fname, prmtop_fname, inpcrd_fname, link_residues, ff_fnames):
 
 
 if __name__ == "__main__":
+    import json
 
-    pdb_fname = ''
-    inpcrd_fname = ''
-    prmtop_fname = ''
     argv = sys.argv[1:]
 
     opts, args = getopt.getopt(
-        argv, "hi:o:c:", ["help=", "ifile=", "ofile=", "cfile="])
+        argv, "hi:", ["help=", "input="])
 
     if (len(opts) == 0):
-        print("pdb2amber.py -i <pdbfile.pdb> -o <prmtopfile.prmtop> -c <inpcrdfile.inpcrd>")
+        print("python pdb2amber.py -i <input_file.json>")
         sys.exit(2)
 
+    fname_json = 'input.json'
     for opt, arg in opts:
         if opt in ("-h", "--help"):
-            print(
-                "pdb2amber.py -i <pdbfile.pdb> -o <prmtopfile.prmtop> -c <inpcrdfile.inpcrd>")
+            print("python pdb2amber.py -i <input_file.json>")
             sys.exit(1)
-        elif opt in ("-i", "--ifile"):
-            pdb_fname = arg
-        elif opt in ("-o", "--ofile"):
-            prmtop_fname = arg
-        elif opt in ("-c", "--cfile"):
-            inpcrd_fname = arg
+        elif opt in ("-i", "--input"):
+            fname_json = arg
 
-    ff_fnames = ['./data/protein.ff14SB.xml',
-                 './data/lipid17.xml',
-                 './data/fadh.ff.xml',
-                 './data/ribh.ff.xml',
-                 './data/ironsulfur_reduced.ff.xml',
-                 './data/fmn.ff.xml',
-                 './data/nadh.ff.xml',
-                 './data/wat_opc3.xml']
-#            './data/tip3p.xml']
-#            './data/tip3pfb.xml']
-    link_residues = [('FE1 FES', 'SG CYF'),
-                     ('FE2 FES', 'SG CYF'),
-                     ('P   FMN', 'OG1 THO'),
-                     ('FE FE', 'SG  CYG')]
+    with open(fname_json) as f:
+        data = json.load(f)
 
-    pdb2amber(pdb_fname, prmtop_fname, inpcrd_fname, link_residues, ff_fnames)
+        pdb_fname = data["fname_pdb"]
+        prmtop_fname = data["fname_prmtop"]
+        inpcrd_fname = None
+        if "inpcrd_fname" in data:
+            inpcrd_fname = data["inpcrd_fname"]
+        ff_fnames = data["fname_ff"]
+        link_residues = None
+        if "linked_residues" in data:
+            link_residues = data["linked_residues"]
+        pdb2amber(pdb_fname, prmtop_fname, inpcrd_fname,
+                  ff_fnames, link_residues)

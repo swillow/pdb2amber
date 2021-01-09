@@ -142,10 +142,16 @@
  <Residue name="HIE" type="Protein" alt1="HSP" alt2="HSH" alt3="HIH" alt4="HIS" alt5="HSD">
   <Atom name="HB2" alt1="2HB"/>
   <Atom name="HB3" alt1="HB1" alt2="1HB" alt3="3HB"/>
-  <Atom name="HD1" alt1="HND" alt2="HND1"/>
   <Atom name="HD2" alt1="HD"/>
   <Atom name="HE1" alt1="HE"/>
   <Atom name="HE2" alt1="HNE" alt2="HNE2"/>
+ </Residue>
+ <Residue name="HIP" type="Protein"> 
+  <Atom name="HB2" alt1="2HB"/>
+  <Atom name="HB3" alt1="HB1" alt2="1HB" alt3="3HB"/>
+  <Atom name="HD1" alt1="HND" alt2="HND1"/>
+  <Atom name="HD2" alt1="HD"/>
+  <Atom name="HE1" alt1="HE"/>
  </Residue>
  <Residue name="HID" type="Protein"> 
   <Atom name="HB2" alt1="2HB"/>

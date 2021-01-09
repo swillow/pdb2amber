@@ -39,8 +39,18 @@ from simtk.openmm.vec3 import Vec3
 from simtk.openmm.app.internal.singleton import Singleton
 from simtk.unit import nanometers, sqrt, is_quantity
 from copy import deepcopy
-
+import sys
 # Enumerated values for bond type
+
+_standardResidues = ['ALA', 'ARG', 'ASH', 'ASN', 'ASP', 'CYM', 'CYS', 'CYX', 'CYG', 'CYF', 'GLH', 'GLN', 'GLU',
+                     'GLY', 'HIS', 'HID', 'HIE', 'HIP', 'HYP', 'ILE', 'LEU', 'LYN', 'LYS', 'MET', 'PHE',
+                     'PRO', 'SER', 'THO', 'THR', 'TRP', 'TYR', 'VAL', 'HI5']
+
+_atomNameReplacements = {'HN': 'H', 'H1': 'H', '1H': 'H', 'HN1': 'H', 'HT1': 'H',
+                         '2H': 'H2', 'HN2': 'H2', 'HT2': 'H2',
+                         '3H': 'H3', 'HN3': 'H3', 'HT3': 'H3',
+                         'O1': 'O', 'OT1': 'O', 'OCT1': 'O', 'OC1': 'O',
+                         'O2': 'OXT', 'OT2': 'OXT', 'OCT2': 'OXT', 'OC2': 'OXT', 'OT': 'OXT'}
 
 
 class Single(Singleton):
@@ -297,7 +307,7 @@ class MyTopology(object):
                 0, dimensions[1], 0), Vec3(0, 0, dimensions[2]))*nanometers
 
     @staticmethod
-    def loadBondDefinitions(file):
+    def loadBondDefinitions(ff_file):
         """Load an XML file containing definitions of bonds that should be used by createStandardBonds().
 
         The built in residues.xml file containing definitions for standard amino acids and nucleotides is loaded automatically.
@@ -306,14 +316,41 @@ class MyTopology(object):
         Also note that PDBFile calls createStandardBonds() automatically when a file is loaded, so the newly loaded definitions
         will be used for any PDB file loaded after this is called.
         """
-        tree = etree.parse(file)
-        for residue in tree.getroot().findall('Residue'):
-            bonds = []
-            MyTopology._standardBonds[residue.attrib['name']] = bonds
-            for bond in residue.findall('Bond'):
-                bonds.append((bond.attrib['from'], bond.attrib['to']))
 
-    def createStandardBonds(self, positions):
+        tree = etree.parse(ff_file)
+        element = tree.getroot().find('Residues')
+        for residue in element.findall('Residue'):
+            bonds = []
+            resname = residue.attrib['name']
+            l_pdb = False
+            if len(resname) >= 3:
+                if resname[-3:] in _standardResidues:
+                    l_pdb = True
+            MyTopology._standardBonds[resname] = bonds
+            for bond in residue.findall('Bond'):
+                atnm1 = bond.attrib['atomName1']
+                atnm2 = bond.attrib['atomName2']
+                if l_pdb:
+                    if atnm1 in _atomNameReplacements:
+                        atnm1 = _atomNameReplacements[atnm1]
+                    if atnm2 in _atomNameReplacements:
+                        atnm2 = _atomNameReplacements[atnm2]
+
+                #bonds.append((bond.attrib['from'], bond.attrib['to']))
+                bonds.append((atnm1, atnm2))
+
+            exBonds = []
+            for bond in residue.findall('ExternalBond'):
+                exBonds.append(bond.attrib['atomName'])
+            if l_pdb:
+                # Protein Backbone
+                bonds.append(('C', '+N'))
+            elif len(exBonds) == 2:
+                # Nucleic Acids (DNA and RNA) Backbone
+                if exBonds[0] in ['O3', 'P'] and exBonds[1] in ['O3', 'P']:
+                    bonds.append(('-O3', 'P'))
+
+    def createStandardBonds(self, positions, ff_fileNames):
         """Create bonds based on the atom and residue names for all standard residue types.
 
         Definitions for standard amino acids and nucleotides are built in.  You can call loadBondDefinitions() to load
@@ -321,29 +358,63 @@ class MyTopology(object):
         """
         if not MyTopology._hasLoadedStandardBonds:
             # Load the standard bond definitions.
-            xml_file_name = './data/residues_new.xml'
-            MyTopology.loadBondDefinitions(xml_file_name)
+
+            for ff_fname in ff_fileNames:
+                MyTopology.loadBondDefinitions(ff_fname)
             MyTopology._hasLoadedStandardBonds = True
+
         for chain in self._chains:
             # First build a map of atom names to atoms.
+            nres = chain._residues[0]
+            cres = chain._residues[-1]
 
             atomMaps = []
+
             for residue in chain._residues:
                 atomMap = {}
                 atomMaps.append(atomMap)
+
                 for atom in residue._atoms:
+                    # if atom.name in _atomNameReplacements:
+                    #    atom.name = _atomNameReplacements[atom.name]
                     atomMap[atom.name] = atom
 
             # Loop over residues and construct bonds.
 
             for i in range(len(chain._residues)):
-                name = chain._residues[i].name
+                res = chain._residues[i]
+                name = res.name
+                if name in _standardResidues:
+                    if res == nres:
+                        name = "N" + res.name
+                    elif res == cres:
+                        name = "C" + res.name
+
+                    if name in ['HIE', 'HIS']:
+                        """
+                        HIE: no HD1, yes HE2
+                        HID: yes HD1, no HE2
+                        HIP: yes HD1, yes HE2
+                        """
+                        atomNames = []
+                        name = 'HIE'
+                        for atom in res._atoms:
+                            atomNames.append(atom.name)
+
+                        if 'HD1' in atomNames:
+                            if 'HE2' in atomNames:
+                                name = 'HIP'
+                            else:
+                                name = 'HID'
+                        res.name = name
+
                 if name in MyTopology._standardBonds:
                     for bond in MyTopology._standardBonds[name]:
+
                         if bond[0].startswith('-') and i > 0:
                             fromResidue = i-1
                             fromAtom = bond[0][1:]
-                        elif bond[0].startswith('+') and i < len(chain._residues):
+                        elif bond[0].startswith('+') and i < len(chain._residues)-1:
                             fromResidue = i+1
                             fromAtom = bond[0][1:]
                         else:
@@ -352,7 +423,7 @@ class MyTopology(object):
                         if bond[1].startswith('-') and i > 0:
                             toResidue = i-1
                             toAtom = bond[1][1:]
-                        elif bond[1].startswith('+') and i < len(chain._residues):
+                        elif bond[1].startswith('+') and i < len(chain._residues)-1:
                             toResidue = i+1
                             toAtom = bond[1][1:]
                         else:
@@ -377,6 +448,8 @@ class MyTopology(object):
                         if l_add_Bond:
                             self.addBond(
                                 atomMaps[fromResidue][fromAtom], atomMaps[toResidue][toAtom])
+
+        # sys.exit()
 
     def createDisulfideBonds(self, positions):
         """Identify disulfide bonds based on proximity and add them to the
@@ -482,7 +555,7 @@ class MyTopology(object):
                 delta = [x1 - x2 for (x1, x2) in zip(pos1, pos2)]
                 distance = sqrt(delta[0]*delta[0] + delta[1]
                                 * delta[1] + delta[2]*delta[2])
-#                print 'SG ', sg.index, ' Distance ', distance
+
                 if distance < 0.3*nanometers:
                     print('addBond ', fe.index, sg.index, distance)
                     self.addBond(fe, sg)
