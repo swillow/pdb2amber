@@ -1,0 +1,8 @@
+{
+    "fname_pdb": "receptor.pdb",
+    "fname_prmtop": "receptor.prmtop",
+    "fname_ff": [
+        "./data/protein.ff14SB.xml",
+        "./data/wat_opc3.xml"
+    ]
+}
