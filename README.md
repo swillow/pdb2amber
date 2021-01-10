@@ -18,4 +18,19 @@ _forcefield.py was made based on forcefield.py at (...)/site-packages/simtk/open
 
 # Howto
 
-python pdb2amber.py -i receptor.pdb -o receptor.prmtop
+python pdb2amber.py -i input.json
+
+---`input.json'---
+
+```
+{
+    "fname_pdb" : "abc.pdb",
+    "fname_prmtop" : "abc.prmtop",
+    "fname_ff" : [
+        "./data/protein.ff14SB.xml",
+        "./data/wat_opc3.xml"
+    ]
+}
+```
+
+
