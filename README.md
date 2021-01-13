@@ -10,11 +10,8 @@ Here, 'build_forcefield' introduces how to build an OpenMM forcefield file (in a
 
 # Note
 
-_topology.py and _pdbfile.py are topology.py and pdbfile.py at the directory of (...)/site-packages/simtk/openmm/app.
-The key modification in _topology.py and _pdbfile.py is that those files read the local data files (./data/residues_new.xml ./data/pdbNames.xml).
-I added the bonds of 'CYX' into './data/residues_new.xml'. 
+_topology.py, _pdbfile.py, and _forcefield.py were modified codes of topology.py, pdbfile.py, and forcefield.py at the directory of (...)/site-packages/simtk/openmm/app for this goal.
 
-_forcefield.py was made based on forcefield.py at (...)/site-packages/simtk/openmm/app.
 
 # Howto
 
@@ -32,5 +29,3 @@ python pdb2amber.py -i input.json
     ]
 }
 ```
-
-
