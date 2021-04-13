@@ -1,8 +1,30 @@
 import numpy as np
 import sys
-import MDAnalysis as mda
+#import MDAnalysis as mda
 from MDAnalysis.analysis import align
 from MDAnalysis.analysis.rms import rmsd
+
+
+def write_pdb(save_pdb_fname, from_pdb_file,
+              from_com, to_com, Rm):
+    l_from = open(from_pdb_file).readlines()
+    fout = open(save_pdb_fname, 'w')
+
+    for line in l_from:
+        if line[:6] in ['ATOM  ', 'HETATM']:
+            words = line[30:].split()
+            x = float(words[0])
+            y = float(words[1])
+            z = float(words[2])
+            pi = np.array([x, y, z])
+            pi -= from_com
+            pj = np.dot(Rm, pi)
+            pj += to_com
+            pos = '%8.3f%8.3f%8.3f' % (pj[0], pj[1], pj[2])
+            sline = line[:30]+pos+line[54:-1]
+            print(sline, file=fout)
+        else:
+            print(line[:-1], file=fout)
 
 
 def get_CA_positions(to_pdb_fname, from_pdb_fname):
@@ -80,8 +102,4 @@ if __name__ == "__main__":
 
     R, rmsd = align.rotation_matrix(from_pos, to_pos)
 
-    prt = mda.Universe(from_pdb_file)
-    prt.atoms.translate(-from_com)
-    prt.atoms.rotate(R)
-    prt.atoms.translate(to_com)
-    prt.atoms.write(save_pdb_file)
+    write_pdb(save_pdb_file, from_pdb_file, from_com, to_com, R)
