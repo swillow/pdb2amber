@@ -78,7 +78,7 @@ if __name__ == "__main__":
     to_pos -= to_com
     from_pos -= from_com
 
-    R, rmsd = align.rotation_matrix(to_pos, from_pos)
+    R, rmsd = align.rotation_matrix(from_pos, to_pos)
 
     prt = mda.Universe(from_pdb_file)
     prt.atoms.translate(-from_com)
