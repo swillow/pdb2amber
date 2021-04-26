@@ -1,0 +1,466 @@
+<ForceField>
+  <Info>
+    <DateGenerated>2020-11-15</DateGenerated>
+  </Info>
+  <AtomTypes>
+    <Type class="P5" element="P" mass="30.9700" name="fadh2-P5" />
+    <Type class="O" element="O" mass="16.0000" name="fadh2-O" />
+    <Type class="OS" element="O" mass="16.0000" name="fadh2-OS" />
+    <Type class="C3" element="C" mass="12.0100" name="fadh2-C3" />
+    <Type class="OH" element="O" mass="16.0000" name="fadh2-OH" />
+    <Type class="NA" element="N" mass="14.0100" name="fadh2-NA" />
+    <Type class="CC" element="C" mass="12.0100" name="fadh2-CC" />
+    <Type class="ND" element="N" mass="14.0100" name="fadh2-ND" />
+    <Type class="CA" element="C" mass="12.0100" name="fadh2-CA" />
+    <Type class="NH" element="N" mass="14.0100" name="fadh2-NH" />
+    <Type class="NB" element="N" mass="14.0100" name="fadh2-NB" />
+    <Type class="N" element="N" mass="14.0100" name="fadh2-N" />
+    <Type class="C" element="C" mass="12.0100" name="fadh2-C" />
+    <Type class="CD" element="C" mass="12.0100" name="fadh2-CD" />
+    <Type class="H1" element="H" mass="1.0080" name="fadh2-H1" />
+    <Type class="HO" element="H" mass="1.0080" name="fadh2-HO" />
+    <Type class="H2" element="H" mass="1.0080" name="fadh2-H2" />
+    <Type class="H5" element="H" mass="1.0080" name="fadh2-H5" />
+    <Type class="HN" element="H" mass="1.0080" name="fadh2-HN" />
+    <Type class="HA" element="H" mass="1.0080" name="fadh2-HA" />
+    <Type class="HC" element="H" mass="1.0080" name="fadh2-HC" />
+  </AtomTypes>
+  <Residues>
+    <Residue name="FAD">
+      <Atom charge="  1.615800" name="PA" type="fadh2-P5" />
+      <Atom charge=" -0.883000" name="O1A" type="fadh2-O" />
+      <Atom charge=" -0.883000" name="O2A" type="fadh2-O" />
+      <Atom charge=" -0.581200" name="O5B" type="fadh2-OS" />
+      <Atom charge="  0.193400" name="C5B" type="fadh2-C3" />
+      <Atom charge="  0.114100" name="C4B" type="fadh2-C3" />
+      <Atom charge=" -0.425600" name="O4B" type="fadh2-OS" />
+      <Atom charge="  0.130100" name="C3B" type="fadh2-C3" />
+      <Atom charge=" -0.603800" name="O3B" type="fadh2-OH" />
+      <Atom charge="  0.055100" name="C2B" type="fadh2-C3" />
+      <Atom charge=" -0.605800" name="O2B" type="fadh2-OH" />
+      <Atom charge="  0.228800" name="C1B" type="fadh2-C3" />
+      <Atom charge=" -0.275000" name="N9A" type="fadh2-NA" />
+      <Atom charge="  0.456700" name="C8A" type="fadh2-CC" />
+      <Atom charge=" -0.585100" name="N7A" type="fadh2-ND" />
+      <Atom charge=" -0.205200" name="C5A" type="fadh2-CA" />
+      <Atom charge="  0.710200" name="C6A" type="fadh2-CA" />
+      <Atom charge=" -0.942500" name="N6A" type="fadh2-NH" />
+      <Atom charge=" -0.806000" name="N1A" type="fadh2-NB" />
+      <Atom charge="  0.645900" name="C2A" type="fadh2-CA" />
+      <Atom charge=" -0.721000" name="N3A" type="fadh2-NB" />
+      <Atom charge="  0.436800" name="C4A" type="fadh2-CA" />
+      <Atom charge=" -0.459100" name="N1" type="fadh2-N" />
+      <Atom charge="  0.809500" name="C2" type="fadh2-C" />
+      <Atom charge=" -0.618500" name="O2" type="fadh2-O" />
+      <Atom charge=" -0.591500" name="N3" type="fadh2-N" />
+      <Atom charge="  0.743100" name="C4" type="fadh2-C" />
+      <Atom charge=" -0.663500" name="O4" type="fadh2-O" />
+      <Atom charge=" -0.321900" name="C4X" type="fadh2-CC" />
+      <Atom charge=" -0.172100" name="N5" type="fadh2-NA" />
+      <Atom charge=" -0.010300" name="C5X" type="fadh2-CA" />
+      <Atom charge=" -0.154000" name="C6" type="fadh2-CA" />
+      <Atom charge=" -0.087300" name="C7" type="fadh2-CA" />
+      <Atom charge=" -0.040800" name="C7M" type="fadh2-C3" />
+      <Atom charge=" -0.088300" name="C8" type="fadh2-CA" />
+      <Atom charge=" -0.043800" name="C8M" type="fadh2-C3" />
+      <Atom charge=" -0.130000" name="C9" type="fadh2-CA" />
+      <Atom charge="  0.032700" name="C9A" type="fadh2-CA" />
+      <Atom charge=" -0.171100" name="N10" type="fadh2-NA" />
+      <Atom charge="  0.231300" name="C10" type="fadh2-CD" />
+      <Atom charge="  0.005300" name="C1'" type="fadh2-C3" />
+      <Atom charge="  0.132100" name="C2'" type="fadh2-C3" />
+      <Atom charge=" -0.613800" name="O2'" type="fadh2-OH" />
+      <Atom charge="  0.081100" name="C3'" type="fadh2-C3" />
+      <Atom charge=" -0.652800" name="O3'" type="fadh2-OH" />
+      <Atom charge="  0.103100" name="C4'" type="fadh2-C3" />
+      <Atom charge=" -0.669800" name="O4'" type="fadh2-OH" />
+      <Atom charge="  0.174400" name="C5'" type="fadh2-C3" />
+      <Atom charge=" -0.596200" name="O5'" type="fadh2-OS" />
+      <Atom charge="  1.603800" name="P" type="fadh2-P5" />
+      <Atom charge=" -0.871500" name="O1P" type="fadh2-O" />
+      <Atom charge=" -0.871500" name="O2P" type="fadh2-O" />
+      <Atom charge=" -0.820800" name="O3P" type="fadh2-OS" />
+      <Atom charge="  0.033200" name="H51A" type="fadh2-H1" />
+      <Atom charge="  0.033200" name="H52A" type="fadh2-H1" />
+      <Atom charge="  0.076700" name="H4B" type="fadh2-H1" />
+      <Atom charge="  0.105700" name="H3B" type="fadh2-H1" />
+      <Atom charge="  0.405000" name="HO3A" type="fadh2-HO" />
+      <Atom charge="  0.141700" name="H2B" type="fadh2-H1" />
+      <Atom charge="  0.401000" name="HO2A" type="fadh2-HO" />
+      <Atom charge="  0.093700" name="H1B" type="fadh2-H2" />
+      <Atom charge="  0.178800" name="H8A" type="fadh2-H5" />
+      <Atom charge="  0.420300" name="H61A" type="fadh2-HN" />
+      <Atom charge="  0.420300" name="H62A" type="fadh2-HN" />
+      <Atom charge="  0.029100" name="H2A" type="fadh2-H5" />
+      <Atom charge="  0.345500" name="HN3" type="fadh2-HN" />
+      <Atom charge="  0.130000" name="H6" type="fadh2-HA" />
+      <Atom charge="  0.034800" name="HM71" type="fadh2-HC" />
+      <Atom charge="  0.034800" name="HM72" type="fadh2-HC" />
+      <Atom charge="  0.034800" name="HM73" type="fadh2-HC" />
+      <Atom charge="  0.038600" name="HM81" type="fadh2-HC" />
+      <Atom charge="  0.038600" name="HM82" type="fadh2-HC" />
+      <Atom charge="  0.038600" name="HM83" type="fadh2-HC" />
+      <Atom charge="  0.170000" name="H9" type="fadh2-HA" />
+      <Atom charge="  0.074200" name="H1'1" type="fadh2-H1" />
+      <Atom charge="  0.074200" name="H1'2" type="fadh2-H1" />
+      <Atom charge="  0.088700" name="H2'" type="fadh2-H1" />
+      <Atom charge="  0.418000" name="HO2'" type="fadh2-HO" />
+      <Atom charge="  0.108700" name="H3'" type="fadh2-H1" />
+      <Atom charge="  0.456000" name="HO3'" type="fadh2-HO" />
+      <Atom charge="  0.036700" name="H4'" type="fadh2-H1" />
+      <Atom charge="  0.483000" name="HO4'" type="fadh2-HO" />
+      <Atom charge="  0.037200" name="H5'1" type="fadh2-H1" />
+      <Atom charge="  0.037200" name="H5'2" type="fadh2-H1" />
+      <Atom charge="  0.238700" name="HN5" type="fadh2-HN" />
+      <Atom charge="  0.405500" name="HN1" type="fadh2-HN" />
+      <Bond atomName1="PA" atomName2="O1A" />
+      <Bond atomName1="PA" atomName2="O2A" />
+      <Bond atomName1="PA" atomName2="O5B" />
+      <Bond atomName1="PA" atomName2="O3P" />
+      <Bond atomName1="O5B" atomName2="C5B" />
+      <Bond atomName1="C5B" atomName2="C4B" />
+      <Bond atomName1="C4B" atomName2="O4B" />
+      <Bond atomName1="C4B" atomName2="C3B" />
+      <Bond atomName1="O4B" atomName2="C1B" />
+      <Bond atomName1="C3B" atomName2="O3B" />
+      <Bond atomName1="C3B" atomName2="C2B" />
+      <Bond atomName1="C2B" atomName2="O2B" />
+      <Bond atomName1="C2B" atomName2="C1B" />
+      <Bond atomName1="C1B" atomName2="N9A" />
+      <Bond atomName1="N9A" atomName2="C8A" />
+      <Bond atomName1="N9A" atomName2="C4A" />
+      <Bond atomName1="C8A" atomName2="N7A" />
+      <Bond atomName1="N7A" atomName2="C5A" />
+      <Bond atomName1="C5A" atomName2="C6A" />
+      <Bond atomName1="C5A" atomName2="C4A" />
+      <Bond atomName1="C6A" atomName2="N6A" />
+      <Bond atomName1="C6A" atomName2="N1A" />
+      <Bond atomName1="N1A" atomName2="C2A" />
+      <Bond atomName1="C2A" atomName2="N3A" />
+      <Bond atomName1="N3A" atomName2="C4A" />
+      <Bond atomName1="N1" atomName2="C2" />
+      <Bond atomName1="N1" atomName2="C10" />
+      <Bond atomName1="C2" atomName2="O2" />
+      <Bond atomName1="C2" atomName2="N3" />
+      <Bond atomName1="N3" atomName2="C4" />
+      <Bond atomName1="C4" atomName2="O4" />
+      <Bond atomName1="C4" atomName2="C4X" />
+      <Bond atomName1="C4X" atomName2="N5" />
+      <Bond atomName1="C4X" atomName2="C10" />
+      <Bond atomName1="N5" atomName2="C5X" />
+      <Bond atomName1="C5X" atomName2="C6" />
+      <Bond atomName1="C5X" atomName2="C9A" />
+      <Bond atomName1="C6" atomName2="C7" />
+      <Bond atomName1="C7" atomName2="C7M" />
+      <Bond atomName1="C7" atomName2="C8" />
+      <Bond atomName1="C8" atomName2="C8M" />
+      <Bond atomName1="C8" atomName2="C9" />
+      <Bond atomName1="C9" atomName2="C9A" />
+      <Bond atomName1="C9A" atomName2="N10" />
+      <Bond atomName1="N10" atomName2="C10" />
+      <Bond atomName1="N10" atomName2="C1'" />
+      <Bond atomName1="C1'" atomName2="C2'" />
+      <Bond atomName1="C2'" atomName2="O2'" />
+      <Bond atomName1="C2'" atomName2="C3'" />
+      <Bond atomName1="C3'" atomName2="O3'" />
+      <Bond atomName1="C3'" atomName2="C4'" />
+      <Bond atomName1="C4'" atomName2="O4'" />
+      <Bond atomName1="C4'" atomName2="C5'" />
+      <Bond atomName1="C5'" atomName2="O5'" />
+      <Bond atomName1="O5'" atomName2="P" />
+      <Bond atomName1="P" atomName2="O1P" />
+      <Bond atomName1="P" atomName2="O2P" />
+      <Bond atomName1="P" atomName2="O3P" />
+      <Bond atomName1="C5B" atomName2="H51A" />
+      <Bond atomName1="C5B" atomName2="H52A" />
+      <Bond atomName1="C4B" atomName2="H4B" />
+      <Bond atomName1="C3B" atomName2="H3B" />
+      <Bond atomName1="O3B" atomName2="HO3A" />
+      <Bond atomName1="C2B" atomName2="H2B" />
+      <Bond atomName1="O2B" atomName2="HO2A" />
+      <Bond atomName1="C1B" atomName2="H1B" />
+      <Bond atomName1="C8A" atomName2="H8A" />
+      <Bond atomName1="N6A" atomName2="H61A" />
+      <Bond atomName1="N6A" atomName2="H62A" />
+      <Bond atomName1="C2A" atomName2="H2A" />
+      <Bond atomName1="N1" atomName2="HN1" />
+      <Bond atomName1="N3" atomName2="HN3" />
+      <Bond atomName1="N5" atomName2="HN5" />
+      <Bond atomName1="C6" atomName2="H6" />
+      <Bond atomName1="C7M" atomName2="HM71" />
+      <Bond atomName1="C7M" atomName2="HM72" />
+      <Bond atomName1="C7M" atomName2="HM73" />
+      <Bond atomName1="C8M" atomName2="HM81" />
+      <Bond atomName1="C8M" atomName2="HM82" />
+      <Bond atomName1="C8M" atomName2="HM83" />
+      <Bond atomName1="C9" atomName2="H9" />
+      <Bond atomName1="C1'" atomName2="H1'1" />
+      <Bond atomName1="C1'" atomName2="H1'2" />
+      <Bond atomName1="C2'" atomName2="H2'" />
+      <Bond atomName1="O2'" atomName2="HO2'" />
+      <Bond atomName1="C3'" atomName2="H3'" />
+      <Bond atomName1="O3'" atomName2="HO3'" />
+      <Bond atomName1="C4'" atomName2="H4'" />
+      <Bond atomName1="O4'" atomName2="HO4'" />
+      <Bond atomName1="C5'" atomName2="H5'1" />
+      <Bond atomName1="C5'" atomName2="H5'2" />
+    </Residue>
+  </Residues>
+  <HarmonicBondForce>
+    <Bond k="443085.600000" length="0.148700" type1="fadh2-O" type2="fadh2-P5" />
+    <Bond k="289700.160000" length="0.161500" type1="fadh2-OS" type2="fadh2-P5" />
+    <Bond k="238320.640000" length="0.143200" type1="fadh2-C3" type2="fadh2-OS" />
+    <Bond k="194556.000000" length="0.153800" type1="fadh2-C3" type2="fadh2-C3" />
+    <Bond k="245517.120000" length="0.142300" type1="fadh2-C3" type2="fadh2-OH" />
+    <Bond k="219994.720000" length="0.146300" type1="fadh2-C3" type2="fadh2-NA" />
+    <Bond k="296645.600000" length="0.138000" type1="fadh2-CC" type2="fadh2-NA" />
+    <Bond k="292461.600000" length="0.138400" type1="fadh2-CA" type2="fadh2-NA" />
+    <Bond k="377145.760000" length="0.131700" type1="fadh2-CC" type2="fadh2-ND" />
+    <Bond k="330201.280000" length="0.135200" type1="fadh2-CA" type2="fadh2-ND" />
+    <Bond k="316812.480000" length="0.139800" type1="fadh2-CA" type2="fadh2-CA" />
+    <Bond k="290453.280000" length="0.138600" type1="fadh2-CA" type2="fadh2-NH" />
+    <Bond k="346602.560000" length="0.133900" type1="fadh2-CA" type2="fadh2-NB" />
+    <Bond k="298068.160000" length="0.137900" type1="fadh2-C" type2="fadh2-N" />
+    <Bond k="296059.840000" length="0.138100" type1="fadh2-CD" type2="fadh2-N" />
+    <Bond k="546095.680000" length="0.121800" type1="fadh2-C" type2="fadh2-O" />
+    <Bond k="247190.720000" length="0.146800" type1="fadh2-C" type2="fadh2-CC" />
+    <Bond k="348192.480000" length="0.137300" type1="fadh2-CC" type2="fadh2-CD" />
+    <Bond k="209451.040000" length="0.151600" type1="fadh2-C3" type2="fadh2-CA" />
+    <Bond k="296645.600000" length="0.138000" type1="fadh2-CD" type2="fadh2-NA" />
+    <Bond k="314553.120000" length="0.109700" type1="fadh2-C3" type2="fadh2-H1" />
+    <Bond k="471536.800000" length="0.097300" type1="fadh2-HO" type2="fadh2-OH" />
+    <Bond k="315724.640000" length="0.109600" type1="fadh2-C3" type2="fadh2-H2" />
+    <Bond k="337648.800000" length="0.108200" type1="fadh2-CC" type2="fadh2-H5" />
+    <Bond k="443085.600000" length="0.101200" type1="fadh2-HN" type2="fadh2-NH" />
+    <Bond k="328360.320000" length="0.108800" type1="fadh2-CA" type2="fadh2-H5" />
+    <Bond k="441244.640000" length="0.101300" type1="fadh2-HN" type2="fadh2-N" />
+    <Bond k="447771.680000" length="0.101000" type1="fadh2-HN" type2="fadh2-NA" />
+    <Bond k="331121.760000" length="0.108600" type1="fadh2-CA" type2="fadh2-HA" />
+    <Bond k="314553.120000" length="0.109700" type1="fadh2-C3" type2="fadh2-HC" />
+  </HarmonicBondForce>
+  <HarmonicAngleForce>
+    <Angle angle="2.086367" k="697.054400" type1="fadh2-C3" type2="fadh2-OS" type3="fadh2-P5" />
+    <Angle angle="2.203479" k="893.702400" type1="fadh2-P5" type2="fadh2-OS" type3="fadh2-P5" />
+    <Angle angle="2.021092" k="715.464000" type1="fadh2-O" type2="fadh2-P5" type3="fadh2-O" />
+    <Angle angle="2.015158" k="684.502400" type1="fadh2-O" type2="fadh2-P5" type3="fadh2-OS" />
+    <Angle angle="1.777444" k="702.075200" type1="fadh2-OS" type2="fadh2-P5" type3="fadh2-OS" />
+    <Angle angle="1.884433" k="713.790400" type1="fadh2-C3" type2="fadh2-C3" type3="fadh2-OS" />
+    <Angle angle="1.946217" k="543.083200" type1="fadh2-C3" type2="fadh2-C3" type3="fadh2-C3" />
+    <Angle angle="1.963147" k="554.798400" type1="fadh2-C3" type2="fadh2-OS" type3="fadh2-C3" />
+    <Angle angle="1.923179" k="707.932800" type1="fadh2-C3" type2="fadh2-C3" type3="fadh2-OH" />
+    <Angle angle="1.902933" k="914.622400" type1="fadh2-NA" type2="fadh2-C3" type3="fadh2-OS" />
+    <Angle angle="1.970128" k="692.033600" type1="fadh2-C3" type2="fadh2-C3" type3="fadh2-NA" />
+    <Angle angle="2.207144" k="533.041600" type1="fadh2-C3" type2="fadh2-NA" type3="fadh2-CC" />
+    <Angle angle="2.170492" k="537.225600" type1="fadh2-C3" type2="fadh2-NA" type3="fadh2-CA" />
+    <Angle angle="1.958609" k="966.504000" type1="fadh2-NA" type2="fadh2-CC" type3="fadh2-ND" />
+    <Angle angle="2.065424" k="729.689600" type1="fadh2-CA" type2="fadh2-CA" type3="fadh2-NA" />
+    <Angle angle="2.218140" k="900.396800" type1="fadh2-NA" type2="fadh2-CA" type3="fadh2-NB" />
+    <Angle angle="1.974841" k="580.739200" type1="fadh2-CA" type2="fadh2-NA" type3="fadh2-CC" />
+    <Angle angle="1.830502" k="624.252800" type1="fadh2-CA" type2="fadh2-ND" type3="fadh2-CC" />
+    <Angle angle="2.089509" k="733.036800" type1="fadh2-CA" type2="fadh2-CA" type3="fadh2-ND" />
+    <Angle angle="2.110977" k="721.321600" type1="fadh2-CA" type2="fadh2-CA" type3="fadh2-NH" />
+    <Angle angle="2.145709" k="726.342400" type1="fadh2-CA" type2="fadh2-CA" type3="fadh2-NB" />
+    <Angle angle="2.094745" k="575.718400" type1="fadh2-CA" type2="fadh2-CA" type3="fadh2-CA" />
+    <Angle angle="2.045876" k="589.107200" type1="fadh2-CA" type2="fadh2-NB" type3="fadh2-CA" />
+    <Angle angle="2.040989" k="938.052800" type1="fadh2-NB" type2="fadh2-CA" type3="fadh2-NH" />
+    <Angle angle="2.221107" k="915.459200" type1="fadh2-NB" type2="fadh2-CA" type3="fadh2-NB" />
+    <Angle angle="2.147629" k="952.278400" type1="fadh2-N" type2="fadh2-C" type3="fadh2-O" />
+    <Angle angle="1.981997" k="940.563200" type1="fadh2-N" type2="fadh2-C" type3="fadh2-N" />
+    <Angle angle="2.117609" k="728.016000" type1="fadh2-CC" type2="fadh2-CD" type3="fadh2-N" />
+    <Angle angle="2.131397" k="906.254400" type1="fadh2-N" type2="fadh2-CD" type3="fadh2-NA" />
+    <Angle angle="2.151468" k="557.308800" type1="fadh2-C" type2="fadh2-N" type3="fadh2-CD" />
+    <Angle angle="2.217965" k="548.940800" type1="fadh2-C" type2="fadh2-N" type3="fadh2-C" />
+    <Angle angle="1.966987" k="728.852800" type1="fadh2-CC" type2="fadh2-C" type3="fadh2-N" />
+    <Angle angle="2.151468" k="574.881600" type1="fadh2-C" type2="fadh2-CC" type3="fadh2-NA" />
+    <Angle angle="2.117958" k="562.329600" type1="fadh2-C" type2="fadh2-CC" type3="fadh2-CD" />
+    <Angle angle="2.162987" k="725.505600" type1="fadh2-CC" type2="fadh2-C" type3="fadh2-O" />
+    <Angle angle="1.867329" k="775.713600" type1="fadh2-CC" type2="fadh2-CD" type3="fadh2-NA" />
+    <Angle angle="1.867329" k="775.713600" type1="fadh2-CD" type2="fadh2-CC" type3="fadh2-NA" />
+    <Angle angle="2.107835" k="548.940800" type1="fadh2-C3" type2="fadh2-CA" type3="fadh2-CA" />
+    <Angle angle="1.974841" k="580.739200" type1="fadh2-CA" type2="fadh2-NA" type3="fadh2-CD" />
+    <Angle angle="2.207144" k="533.041600" type1="fadh2-C3" type2="fadh2-NA" type3="fadh2-CD" />
+    <Angle angle="1.916023" k="522.163200" type1="fadh2-H1" type2="fadh2-C3" type3="fadh2-OS" />
+    <Angle angle="1.912184" k="392.459200" type1="fadh2-C3" type2="fadh2-C3" type3="fadh2-H1" />
+    <Angle angle="1.912533" k="522.163200" type1="fadh2-H2" type2="fadh2-C3" type3="fadh2-OS" />
+    <Angle angle="1.872041" k="410.032000" type1="fadh2-C3" type2="fadh2-OH" type3="fadh2-HO" />
+    <Angle angle="1.924401" k="523.000000" type1="fadh2-H1" type2="fadh2-C3" type3="fadh2-OH" />
+    <Angle angle="1.923703" k="390.785600" type1="fadh2-C3" type2="fadh2-C3" type3="fadh2-H2" />
+    <Angle angle="1.872914" k="518.816000" type1="fadh2-H2" type2="fadh2-C3" type3="fadh2-NA" />
+    <Angle angle="2.121449" k="512.121600" type1="fadh2-H5" type2="fadh2-CC" type3="fadh2-NA" />
+    <Angle angle="2.190738" k="523.000000" type1="fadh2-H5" type2="fadh2-CC" type3="fadh2-ND" />
+    <Angle angle="2.025805" k="408.358400" type1="fadh2-CA" type2="fadh2-NH" type3="fadh2-HN" />
+    <Angle angle="2.021441" k="536.388800" type1="fadh2-H5" type2="fadh2-CA" type3="fadh2-NB" />
+    <Angle angle="2.051635" k="407.521600" type1="fadh2-C" type2="fadh2-N" type3="fadh2-HN" />
+    <Angle angle="2.190389" k="394.132800" type1="fadh2-CC" type2="fadh2-NA" type3="fadh2-HN" />
+    <Angle angle="2.191087" k="393.296000" type1="fadh2-CA" type2="fadh2-NA" type3="fadh2-HN" />
+    <Angle angle="2.092302" k="407.521600" type1="fadh2-CA" type2="fadh2-CA" type3="fadh2-HA" />
+    <Angle angle="1.928066" k="395.806400" type1="fadh2-CA" type2="fadh2-C3" type3="fadh2-HC" />
+    <Angle angle="1.898570" k="514.632000" type1="fadh2-H1" type2="fadh2-C3" type3="fadh2-NA" />
+    <Angle angle="2.081481" k="404.174400" type1="fadh2-CD" type2="fadh2-N" type3="fadh2-HN" />
+    <Angle angle="1.892985" k="324.678400" type1="fadh2-H1" type2="fadh2-C3" type3="fadh2-H1" />
+    <Angle angle="2.009224" k="330.536000" type1="fadh2-HN" type2="fadh2-NH" type3="fadh2-HN" />
+    <Angle angle="1.877626" k="326.352000" type1="fadh2-HC" type2="fadh2-C3" type3="fadh2-HC" />
+  </HarmonicAngleForce>
+  <PeriodicTorsionForce>
+    <Proper k1="0.907928" periodicity1="3" phase1="0.0000000000000000" type1="fadh2-P5" type2="fadh2-OS" type3="fadh2-C3" type4="fadh2-H1" />
+    <Proper k1="1.046000" periodicity1="1" phase1="0.0000000000000000" type1="fadh2-OS" type2="fadh2-C3" type3="fadh2-C3" type4="fadh2-H1" />
+    <Proper k1="0.650844" periodicity1="3" phase1="0.0000000000000000" type1="fadh2-C3" type2="fadh2-C3" type3="fadh2-C3" type4="fadh2-H1" />
+    <Proper k1="1.603867" periodicity1="3" phase1="0.0000000000000000" type1="fadh2-C3" type2="fadh2-OS" type3="fadh2-C3" type4="fadh2-H2" />
+    <Proper k1="0.000000" periodicity1="3" phase1="0.0000000000000000" type1="fadh2-C3" type2="fadh2-C3" type3="fadh2-OH" type4="fadh2-HO" />
+    <Proper k1="0.650844" periodicity1="3" phase1="0.0000000000000000" type1="fadh2-C3" type2="fadh2-C3" type3="fadh2-C3" type4="fadh2-H2" />
+    <Proper k1="1.046000" periodicity1="1" phase1="0.0000000000000000" type1="fadh2-OH" type2="fadh2-C3" type3="fadh2-C3" type4="fadh2-H1" />
+    <Proper k1="0.650844" periodicity1="3" phase1="0.0000000000000000" type1="fadh2-OH" type2="fadh2-C3" type3="fadh2-C3" type4="fadh2-H2" />
+    <Proper k1="1.410008" periodicity1="3" phase1="0.0000000000000000" type1="fadh2-C3" type2="fadh2-OS" type3="fadh2-C3" type4="fadh2-H1" />
+    <Proper k1="7.112800" periodicity1="2" phase1="3.1415926535897931" type1="fadh2-C3" type2="fadh2-NA" type3="fadh2-CC" type4="fadh2-H5" />
+    <Proper k1="0.650844" periodicity1="3" phase1="0.0000000000000000" type1="fadh2-NA" type2="fadh2-C3" type3="fadh2-C3" type4="fadh2-H1" />
+    <Proper k1="0.000000" periodicity1="2" phase1="0.0000000000000000" type1="fadh2-CC" type2="fadh2-NA" type3="fadh2-C3" type4="fadh2-H2" />
+    <Proper k1="19.874000" periodicity1="2" phase1="3.1415926535897931" type1="fadh2-CA" type2="fadh2-ND" type3="fadh2-CC" type4="fadh2-H5" />
+    <Proper k1="4.393200" periodicity1="2" phase1="3.1415926535897931" type1="fadh2-CA" type2="fadh2-CA" type3="fadh2-NH" type4="fadh2-HN" />
+    <Proper k1="20.083200" periodicity1="2" phase1="3.1415926535897931" type1="fadh2-CA" type2="fadh2-NB" type3="fadh2-CA" type4="fadh2-H5" />
+    <Proper k1="4.393200" periodicity1="2" phase1="3.1415926535897931" type1="fadh2-NB" type2="fadh2-CA" type3="fadh2-NH" type4="fadh2-HN" />
+    <Proper k1="0.000000" periodicity1="2" phase1="0.0000000000000000" type1="fadh2-CA" type2="fadh2-NA" type3="fadh2-C3" type4="fadh2-H2" />
+    <Proper k1="7.112800" periodicity1="2" phase1="3.1415926535897931" type1="fadh2-CA" type2="fadh2-NA" type3="fadh2-CC" type4="fadh2-H5" />
+    <Proper k1="10.460000" periodicity1="2" phase1="3.1415926535897931" type1="fadh2-N" type2="fadh2-C" type3="fadh2-N" type4="fadh2-HN" />
+    <Proper k1="8.368000" periodicity1="1" phase1="0.0000000000000000" type1="fadh2-O" type2="fadh2-C" type3="fadh2-N" type4="fadh2-HN" />
+    <Proper k1="7.112800" periodicity1="2" phase1="3.1415926535897931" type1="fadh2-C" type2="fadh2-CC" type3="fadh2-NA" type4="fadh2-HN" />
+    <Proper k1="10.460000" periodicity1="2" phase1="3.1415926535897931" type1="fadh2-CC" type2="fadh2-C" type3="fadh2-N" type4="fadh2-HN" />
+    <Proper k1="6.903600" periodicity1="2" phase1="3.1415926535897931" type1="fadh2-CC" type2="fadh2-CD" type3="fadh2-N" type4="fadh2-HN" />
+    <Proper k1="15.167000" periodicity1="2" phase1="3.1415926535897931" type1="fadh2-NA" type2="fadh2-CA" type3="fadh2-CA" type4="fadh2-HA" />
+    <Proper k1="15.167000" periodicity1="2" phase1="3.1415926535897931" type1="fadh2-CA" type2="fadh2-CA" type3="fadh2-CA" type4="fadh2-HA" />
+    <Proper k1="1.255200" periodicity1="2" phase1="3.1415926535897931" type1="fadh2-CA" type2="fadh2-CA" type3="fadh2-NA" type4="fadh2-HN" />
+    <Proper k1="0.000000" periodicity1="2" phase1="3.1415926535897931" type1="fadh2-CA" type2="fadh2-CA" type3="fadh2-C3" type4="fadh2-HC" />
+    <Proper k1="15.167000" periodicity1="2" phase1="3.1415926535897931" type1="fadh2-C3" type2="fadh2-CA" type3="fadh2-CA" type4="fadh2-HA" />
+    <Proper k1="0.000000" periodicity1="2" phase1="0.0000000000000000" type1="fadh2-CA" type2="fadh2-NA" type3="fadh2-C3" type4="fadh2-H1" />
+    <Proper k1="6.903600" periodicity1="2" phase1="3.1415926535897931" type1="fadh2-NA" type2="fadh2-CD" type3="fadh2-N" type4="fadh2-HN" />
+    <Proper k1="7.112800" periodicity1="2" phase1="3.1415926535897931" type1="fadh2-CD" type2="fadh2-CC" type3="fadh2-NA" type4="fadh2-HN" />
+    <Proper k1="0.000000" periodicity1="2" phase1="0.0000000000000000" type1="fadh2-CD" type2="fadh2-NA" type3="fadh2-C3" type4="fadh2-H1" />
+    <Proper k1="0.650844" periodicity1="3" phase1="0.0000000000000000" type1="fadh2-H1" type2="fadh2-C3" type3="fadh2-C3" type4="fadh2-H1" />
+    <Proper k1="0.472792" periodicity1="3" phase1="0.0000000000000000" type1="fadh2-H1" type2="fadh2-C3" type3="fadh2-OH" type4="fadh2-HO" />
+    <Proper k1="0.650844" periodicity1="3" phase1="0.0000000000000000" type1="fadh2-H1" type2="fadh2-C3" type3="fadh2-C3" type4="fadh2-H2" />
+    <Proper k1="16.526800" periodicity1="1" phase1="3.1415926535897931" type1="fadh2-P5" type2="fadh2-OS" type3="fadh2-C3" type4="fadh2-C3" />
+    <Proper k1="3.347200" periodicity1="2" phase1="0.0000000000000000" type1="fadh2-P5" type2="fadh2-OS" type3="fadh2-P5" type4="fadh2-OS" />
+    <Proper k1="3.347200" periodicity1="2" phase1="0.0000000000000000" type1="fadh2-P5" type2="fadh2-OS" type3="fadh2-P5" type4="fadh2-O" />
+    <Proper k1="3.347200" periodicity1="2" phase1="0.0000000000000000" type1="fadh2-O" type2="fadh2-P5" type3="fadh2-OS" type4="fadh2-C3" />
+    <Proper k1="3.347200" periodicity1="2" phase1="0.0000000000000000" type1="fadh2-O" type2="fadh2-P5" type3="fadh2-OS" type4="fadh2-P5" />
+    <Proper k1="3.347200" periodicity1="2" phase1="0.0000000000000000" type1="fadh2-OS" type2="fadh2-P5" type3="fadh2-OS" type4="fadh2-P5" />
+    <Proper k1="0.711280" periodicity1="1" phase1="3.1415926535897931" type1="fadh2-OS" type2="fadh2-C3" type3="fadh2-C3" type4="fadh2-OS" />
+    <Proper k1="0.650844" periodicity1="3" phase1="0.0000000000000000" type1="fadh2-OS" type2="fadh2-C3" type3="fadh2-C3" type4="fadh2-C3" />
+    <Proper k1="10.920240" periodicity1="2" phase1="0.0000000000000000" type1="fadh2-OS" type2="fadh2-P5" type3="fadh2-OS" type4="fadh2-C3" />
+    <Proper k1="0.000000" periodicity1="1" phase1="0.0000000000000000" type1="fadh2-C3" type2="fadh2-C3" type3="fadh2-OS" type4="fadh2-C3" />
+    <Proper k1="0.878640" periodicity1="3" phase1="0.0000000000000000" type1="fadh2-C3" type2="fadh2-C3" type3="fadh2-C3" type4="fadh2-OH" />
+    <Proper k1="0.460240" periodicity1="1" phase1="0.0000000000000000" type1="fadh2-C3" type2="fadh2-C3" type3="fadh2-C3" type4="fadh2-C3" />
+    <Proper k1="0.000000" periodicity1="1" phase1="0.0000000000000000" type1="fadh2-C3" type2="fadh2-OS" type3="fadh2-C3" type4="fadh2-C3" />
+    <Proper k1="2.719600" periodicity1="2" phase1="0.0000000000000000" type1="fadh2-C3" type2="fadh2-OS" type3="fadh2-C3" type4="fadh2-NA" />
+    <Proper k1="0.083680" periodicity1="1" phase1="3.1415926535897931" type1="fadh2-OS" type2="fadh2-C3" type3="fadh2-C3" type4="fadh2-OH" />
+    <Proper k1="0.000000" periodicity1="2" phase1="0.0000000000000000" type1="fadh2-OS" type2="fadh2-C3" type3="fadh2-NA" type4="fadh2-CC" />
+    <Proper k1="0.000000" periodicity1="2" phase1="0.0000000000000000" type1="fadh2-OS" type2="fadh2-C3" type3="fadh2-NA" type4="fadh2-CA" />
+    <Proper k1="0.650844" periodicity1="3" phase1="0.0000000000000000" type1="fadh2-C3" type2="fadh2-C3" type3="fadh2-C3" type4="fadh2-NA" />
+    <Proper k1="4.727920" periodicity1="2" phase1="0.0000000000000000" type1="fadh2-OH" type2="fadh2-C3" type3="fadh2-C3" type4="fadh2-OH" />
+    <Proper k1="0.878640" periodicity1="3" phase1="0.0000000000000000" type1="fadh2-OH" type2="fadh2-C3" type3="fadh2-C3" type4="fadh2-C3" />
+    <Proper k1="0.000000" periodicity1="2" phase1="0.0000000000000000" type1="fadh2-C3" type2="fadh2-C3" type3="fadh2-NA" type4="fadh2-CC" />
+    <Proper k1="0.000000" periodicity1="2" phase1="0.0000000000000000" type1="fadh2-C3" type2="fadh2-C3" type3="fadh2-NA" type4="fadh2-CA" />
+    <Proper k1="0.650844" periodicity1="3" phase1="0.0000000000000000" type1="fadh2-OH" type2="fadh2-C3" type3="fadh2-C3" type4="fadh2-NA" />
+    <Proper k1="7.112800" periodicity1="2" phase1="3.1415926535897931" type1="fadh2-C3" type2="fadh2-NA" type3="fadh2-CC" type4="fadh2-ND" />
+    <Proper k1="1.255200" periodicity1="2" phase1="3.1415926535897931" type1="fadh2-C3" type2="fadh2-NA" type3="fadh2-CA" type4="fadh2-CA" />
+    <Proper k1="1.255200" periodicity1="2" phase1="3.1415926535897931" type1="fadh2-C3" type2="fadh2-NA" type3="fadh2-CA" type4="fadh2-NB" />
+    <Proper k1="19.874000" periodicity1="2" phase1="3.1415926535897931" type1="fadh2-NA" type2="fadh2-CC" type3="fadh2-ND" type4="fadh2-CA" />
+    <Proper k1="15.167000" periodicity1="2" phase1="3.1415926535897931" type1="fadh2-NA" type2="fadh2-CA" type3="fadh2-CA" type4="fadh2-ND" />
+    <Proper k1="15.167000" periodicity1="2" phase1="3.1415926535897931" type1="fadh2-NA" type2="fadh2-CA" type3="fadh2-CA" type4="fadh2-CA" />
+    <Proper k1="20.083200" periodicity1="2" phase1="3.1415926535897931" type1="fadh2-NA" type2="fadh2-CA" type3="fadh2-NB" type4="fadh2-CA" />
+    <Proper k1="2.522952" periodicity1="2" phase1="3.1415926535897931" type1="fadh2-CC" type2="fadh2-NA" type3="fadh2-CA" type4="fadh2-CA" />
+    <Proper k1="1.255200" periodicity1="2" phase1="3.1415926535897931" type1="fadh2-CC" type2="fadh2-NA" type3="fadh2-CA" type4="fadh2-NB" />
+    <Proper k1="20.083200" periodicity1="2" phase1="3.1415926535897931" type1="fadh2-CC" type2="fadh2-ND" type3="fadh2-CA" type4="fadh2-CA" />
+    <Proper k1="7.112800" periodicity1="2" phase1="3.1415926535897931" type1="fadh2-ND" type2="fadh2-CC" type3="fadh2-NA" type4="fadh2-CA" />
+    <Proper k1="15.167000" periodicity1="2" phase1="3.1415926535897931" type1="fadh2-ND" type2="fadh2-CA" type3="fadh2-CA" type4="fadh2-NH" />
+    <Proper k1="15.167000" periodicity1="2" phase1="3.1415926535897931" type1="fadh2-ND" type2="fadh2-CA" type3="fadh2-CA" type4="fadh2-NB" />
+    <Proper k1="20.083200" periodicity1="2" phase1="3.1415926535897931" type1="fadh2-CA" type2="fadh2-CA" type3="fadh2-NB" type4="fadh2-CA" />
+    <Proper k1="15.167000" periodicity1="2" phase1="3.1415926535897931" type1="fadh2-CA" type2="fadh2-CA" type3="fadh2-CA" type4="fadh2-NB" />
+    <Proper k1="20.083200" periodicity1="2" phase1="3.1415926535897931" type1="fadh2-CA" type2="fadh2-NB" type3="fadh2-CA" type4="fadh2-NB" />
+    <Proper k1="15.167000" periodicity1="2" phase1="3.1415926535897931" type1="fadh2-NH" type2="fadh2-CA" type3="fadh2-CA" type4="fadh2-CA" />
+    <Proper k1="20.083200" periodicity1="2" phase1="3.1415926535897931" type1="fadh2-NH" type2="fadh2-CA" type3="fadh2-NB" type4="fadh2-CA" />
+    <Proper k1="15.167000" periodicity1="2" phase1="3.1415926535897931" type1="fadh2-NB" type2="fadh2-CA" type3="fadh2-CA" type4="fadh2-CA" />
+    <Proper k1="20.083200" periodicity1="2" phase1="3.1415926535897931" type1="fadh2-NB" type2="fadh2-CA" type3="fadh2-NB" type4="fadh2-CA" />
+    <Proper k1="10.460000" periodicity1="2" phase1="3.1415926535897931" type1="fadh2-N" type2="fadh2-C" type3="fadh2-N" type4="fadh2-C" />
+    <Proper k1="16.736000" periodicity1="2" phase1="3.1415926535897931" type1="fadh2-N" type2="fadh2-CD" type3="fadh2-CC" type4="fadh2-C" />
+    <Proper k1="16.736000" periodicity1="2" phase1="3.1415926535897931" type1="fadh2-N" type2="fadh2-CD" type3="fadh2-CC" type4="fadh2-NA" />
+    <Proper k1="7.112800" periodicity1="2" phase1="3.1415926535897931" type1="fadh2-N" type2="fadh2-CD" type3="fadh2-NA" type4="fadh2-CA" />
+    <Proper k1="7.112800" periodicity1="2" phase1="3.1415926535897931" type1="fadh2-N" type2="fadh2-CD" type3="fadh2-NA" type4="fadh2-C3" />
+    <Proper k1="6.903600" periodicity1="2" phase1="3.1415926535897931" type1="fadh2-C" type2="fadh2-N" type3="fadh2-CD" type4="fadh2-CC" />
+    <Proper k1="6.903600" periodicity1="2" phase1="3.1415926535897931" type1="fadh2-C" type2="fadh2-N" type3="fadh2-CD" type4="fadh2-NA" />
+    <Proper k1="10.460000" periodicity1="2" phase1="3.1415926535897931" type1="fadh2-C" type2="fadh2-N" type3="fadh2-C" type4="fadh2-O" />
+    <Proper k1="10.460000" periodicity1="2" phase1="3.1415926535897931" type1="fadh2-C" type2="fadh2-N" type3="fadh2-C" type4="fadh2-CC" />
+    <Proper k1="10.460000" periodicity1="2" phase1="3.1415926535897931" type1="fadh2-O" type2="fadh2-C" type3="fadh2-N" type4="fadh2-CD" />
+    <Proper k1="10.460000" periodicity1="2" phase1="3.1415926535897931" type1="fadh2-O" type2="fadh2-C" type3="fadh2-N" type4="fadh2-C" />
+    <Proper k1="10.460000" periodicity1="2" phase1="3.1415926535897931" type1="fadh2-N" type2="fadh2-C" type3="fadh2-N" type4="fadh2-CD" />
+    <Proper k1="12.029000" periodicity1="2" phase1="3.1415926535897931" type1="fadh2-N" type2="fadh2-C" type3="fadh2-CC" type4="fadh2-NA" />
+    <Proper k1="12.029000" periodicity1="2" phase1="3.1415926535897931" type1="fadh2-N" type2="fadh2-C" type3="fadh2-CC" type4="fadh2-CD" />
+    <Proper k1="7.112800" periodicity1="2" phase1="3.1415926535897931" type1="fadh2-C" type2="fadh2-CC" type3="fadh2-NA" type4="fadh2-CA" />
+    <Proper k1="16.736000" periodicity1="2" phase1="3.1415926535897931" type1="fadh2-C" type2="fadh2-CC" type3="fadh2-CD" type4="fadh2-NA" />
+    <Proper k1="12.029000" periodicity1="2" phase1="3.1415926535897931" type1="fadh2-O" type2="fadh2-C" type3="fadh2-CC" type4="fadh2-NA" />
+    <Proper k1="12.029000" periodicity1="2" phase1="3.1415926535897931" type1="fadh2-O" type2="fadh2-C" type3="fadh2-CC" type4="fadh2-CD" />
+    <Proper k1="7.112800" periodicity1="2" phase1="3.1415926535897931" type1="fadh2-CC" type2="fadh2-CD" type3="fadh2-NA" type4="fadh2-CA" />
+    <Proper k1="7.112800" periodicity1="2" phase1="3.1415926535897931" type1="fadh2-CC" type2="fadh2-CD" type3="fadh2-NA" type4="fadh2-C3" />
+    <Proper k1="16.736000" periodicity1="2" phase1="3.1415926535897931" type1="fadh2-NA" type2="fadh2-CC" type3="fadh2-CD" type4="fadh2-NA" />
+    <Proper k1="15.167000" periodicity1="2" phase1="3.1415926535897931" type1="fadh2-NA" type2="fadh2-CA" type3="fadh2-CA" type4="fadh2-NA" />
+    <Proper k1="7.112800" periodicity1="2" phase1="3.1415926535897931" type1="fadh2-CA" type2="fadh2-NA" type3="fadh2-CC" type4="fadh2-CD" />
+    <Proper k1="15.167000" periodicity1="2" phase1="3.1415926535897931" type1="fadh2-CA" type2="fadh2-CA" type3="fadh2-CA" type4="fadh2-C3" />
+    <Proper k1="15.167000" periodicity1="2" phase1="3.1415926535897931" type1="fadh2-CA" type2="fadh2-CA" type3="fadh2-CA" type4="fadh2-CA" />
+    <Proper k1="1.255200" periodicity1="2" phase1="3.1415926535897931" type1="fadh2-CA" type2="fadh2-CA" type3="fadh2-NA" type4="fadh2-CD" />
+    <Proper k1="1.255200" periodicity1="2" phase1="3.1415926535897931" type1="fadh2-CA" type2="fadh2-CA" type3="fadh2-NA" type4="fadh2-C3" />
+    <Proper k1="15.167000" periodicity1="2" phase1="3.1415926535897931" type1="fadh2-CA" type2="fadh2-CA" type3="fadh2-CA" type4="fadh2-NA" />
+    <Proper k1="15.167000" periodicity1="2" phase1="3.1415926535897931" type1="fadh2-C3" type2="fadh2-CA" type3="fadh2-CA" type4="fadh2-C3" />
+    <Proper k1="15.167000" periodicity1="2" phase1="3.1415926535897931" type1="fadh2-C3" type2="fadh2-CA" type3="fadh2-CA" type4="fadh2-CA" />
+    <Proper k1="0.000000" periodicity1="2" phase1="0.0000000000000000" type1="fadh2-CA" type2="fadh2-NA" type3="fadh2-C3" type4="fadh2-C3" />
+    <Proper k1="0.650844" periodicity1="3" phase1="0.0000000000000000" type1="fadh2-NA" type2="fadh2-C3" type3="fadh2-C3" type4="fadh2-OH" />
+    <Proper k1="0.650844" periodicity1="3" phase1="0.0000000000000000" type1="fadh2-NA" type2="fadh2-C3" type3="fadh2-C3" type4="fadh2-C3" />
+    <Proper k1="0.000000" periodicity1="2" phase1="0.0000000000000000" type1="fadh2-CD" type2="fadh2-NA" type3="fadh2-C3" type4="fadh2-C3" />
+    <Proper k1="0.650844" periodicity1="3" phase1="0.0000000000000000" type1="fadh2-C3" type2="fadh2-C3" type3="fadh2-C3" type4="fadh2-OS" />
+    <Proper k1="16.526800" periodicity1="1" phase1="3.1415926535897931" type1="fadh2-C3" type2="fadh2-C3" type3="fadh2-OS" type4="fadh2-P5" />
+    <Proper k1="0.083680" periodicity1="1" phase1="3.1415926535897931" type1="fadh2-OH" type2="fadh2-C3" type3="fadh2-C3" type4="fadh2-OS" />
+    <Proper k1="3.347200" periodicity1="2" phase1="0.0000000000000000" type1="fadh2-C3" type2="fadh2-OS" type3="fadh2-P5" type4="fadh2-O" />
+    <Proper k1="10.920240" periodicity1="2" phase1="0.0000000000000000" type1="fadh2-C3" type2="fadh2-OS" type3="fadh2-P5" type4="fadh2-OS" />
+    <Improper k1="4.602400" periodicity1="2" phase1="3.1415926535897931" type1="fadh2-H5" type2="fadh2-NA" type3="fadh2-CC" type4="fadh2-ND" />
+    <Improper k1="4.602400" periodicity1="2" phase1="3.1415926535897931" type1="fadh2-CA" type2="fadh2-HN" type3="fadh2-NH" type4="fadh2-HN" />
+    <Improper k1="4.602400" periodicity1="2" phase1="3.1415926535897931" type1="fadh2-H5" type2="fadh2-NB" type3="fadh2-CA" type4="fadh2-NB" />
+    <Improper k1="4.602400" periodicity1="2" phase1="3.1415926535897931" type1="fadh2-C" type2="fadh2-CD" type3="fadh2-N" type4="fadh2-HN" />
+    <Improper k1="4.602400" periodicity1="2" phase1="3.1415926535897931" type1="fadh2-C" type2="fadh2-C" type3="fadh2-N" type4="fadh2-HN" />
+    <Improper k1="4.602400" periodicity1="2" phase1="3.1415926535897931" type1="fadh2-CA" type2="fadh2-CC" type3="fadh2-NA" type4="fadh2-HN" />
+    <Improper k1="4.602400" periodicity1="2" phase1="3.1415926535897931" type1="fadh2-CA" type2="fadh2-CA" type3="fadh2-CA" type4="fadh2-HA" />
+    <Improper k1="4.602400" periodicity1="2" phase1="3.1415926535897931" type1="fadh2-C3" type2="fadh2-CA" type3="fadh2-NA" type4="fadh2-CC" />
+    <Improper k1="4.602400" periodicity1="2" phase1="3.1415926535897931" type1="fadh2-CA" type2="fadh2-CA" type3="fadh2-CA" type4="fadh2-ND" />
+    <Improper k1="4.602400" periodicity1="2" phase1="3.1415926535897931" type1="fadh2-CA" type2="fadh2-NB" type3="fadh2-CA" type4="fadh2-NH" />
+    <Improper k1="4.602400" periodicity1="2" phase1="3.1415926535897931" type1="fadh2-CA" type2="fadh2-NA" type3="fadh2-CA" type4="fadh2-NB" />
+    <Improper k1="43.932000" periodicity1="2" phase1="3.1415926535897931" type1="fadh2-N" type2="fadh2-N" type3="fadh2-C" type4="fadh2-O" />
+    <Improper k1="43.932000" periodicity1="2" phase1="3.1415926535897931" type1="fadh2-CC" type2="fadh2-N" type3="fadh2-C" type4="fadh2-O" />
+    <Improper k1="4.602400" periodicity1="2" phase1="3.1415926535897931" type1="fadh2-C" type2="fadh2-CD" type3="fadh2-CC" type4="fadh2-NA" />
+    <Improper k1="4.602400" periodicity1="2" phase1="3.1415926535897931" type1="fadh2-CA" type2="fadh2-CA" type3="fadh2-CA" type4="fadh2-NA" />
+    <Improper k1="4.602400" periodicity1="2" phase1="3.1415926535897931" type1="fadh2-CA" type2="fadh2-CA" type3="fadh2-CA" type4="fadh2-C3" />
+    <Improper k1="4.602400" periodicity1="2" phase1="3.1415926535897931" type1="fadh2-C3" type2="fadh2-CA" type3="fadh2-CA" type4="fadh2-CA" />
+    <Improper k1="4.602400" periodicity1="2" phase1="3.1415926535897931" type1="fadh2-C3" type2="fadh2-CA" type3="fadh2-NA" type4="fadh2-CD" />
+    <Improper k1="4.602400" periodicity1="2" phase1="3.1415926535897931" type1="fadh2-CC" type2="fadh2-N" type3="fadh2-CD" type4="fadh2-NA" />
+  </PeriodicTorsionForce>
+  <NonbondedForce coulomb14scale="0.8333333333333334" lj14scale="0.5">
+    <UseAttributeFromResidue name="charge" />
+    <Atom epsilon="0.9602280" sigma="0.3694022445711587" type="fadh2-P5" />
+    <Atom epsilon="0.6121192" sigma="0.3048120873800651" type="fadh2-O" />
+    <Atom epsilon="0.3037584" sigma="0.3156097800335680" type="fadh2-OS" />
+    <Atom epsilon="0.4510352" sigma="0.3397709531257257" type="fadh2-C3" />
+    <Atom epsilon="0.3891120" sigma="0.3242871333503238" type="fadh2-OH" />
+    <Atom epsilon="0.8543728" sigma="0.3205809947742336" type="fadh2-NA" />
+    <Atom epsilon="0.4133792" sigma="0.3315212310028100" type="fadh2-CC" />
+    <Atom epsilon="0.3937144" sigma="0.3384167870222912" type="fadh2-ND" />
+    <Atom epsilon="0.4133792" sigma="0.3315212310028100" type="fadh2-CA" />
+    <Atom epsilon="0.8995600" sigma="0.3189951950029202" type="fadh2-NH" />
+    <Atom epsilon="0.3937144" sigma="0.3384167870222912" type="fadh2-NB" />
+    <Atom epsilon="0.6845024" sigma="0.3180864782832791" type="fadh2-N" />
+    <Atom epsilon="0.4133792" sigma="0.3315212310028100" type="fadh2-C" />
+    <Atom epsilon="0.4133792" sigma="0.3315212310028100" type="fadh2-CD" />
+    <Atom epsilon="0.0870272" sigma="0.2421997255202334" type="fadh2-H1" />
+    <Atom epsilon="0.0196648" sigma="0.0537924646085430" type="fadh2-HO" />
+    <Atom epsilon="0.0870272" sigma="0.2243817511424393" type="fadh2-H2" />
+    <Atom epsilon="0.0673624" sigma="0.2447298778464148" type="fadh2-H5" />
+    <Atom epsilon="0.0418400" sigma="0.1106496207546381" type="fadh2-HN" />
+    <Atom epsilon="0.0673624" sigma="0.2625478522039127" type="fadh2-HA" />
+    <Atom epsilon="0.0870272" sigma="0.2600176998083396" type="fadh2-HC" />
+  </NonbondedForce>
+</ForceField>
