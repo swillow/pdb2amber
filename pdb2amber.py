@@ -55,22 +55,6 @@ def get_improper_typeID(improper_database, type1, type2, type3, type4):
     typeID = 'IM_' + type2 + '_' + type1 + '_' + type3 + '_' + type4
     if typeID in improper_database:
         return typeID
-# debug
-#    typeID = 'IM_' + type2 + '_' + type4 + '_' + type3 + '_' + type1
-#    if typeID in improper_database:
-#        return typeID
-
-#    typeID = 'IM_' + type4 + '_' + type2 + '_' + type3 + '_' + type1
-#    if typeID in improper_database:
-#        return typeID
-
-#    typeID = 'IM_' + type1 + '_' + type4 + '_' + type3 + '_' + type2
-#    if typeID in improper_database:
-#        return typeID
-
-#    typeID = 'IM_' + type4 + '_' + type1 + '_' + type3 + '_' + type2
-#    if typeID in improper_database:
-#        return typeID
 
     typeID = 'IM_X_' + type1 + '_' + type3 + '_' + type4
     if typeID in improper_database:
@@ -95,10 +79,17 @@ def get_improper_typeID(improper_database, type1, type2, type3, type4):
     return None
 
 
-def pdb2amber(pdb_fname, prmtop_fname, inpcrd_fname, ff_fnames, link_residues=None):
+def pdb2amber(pdb_fname, prmtop_fname, inpcrd_fname, ff_fnames,
+              link_residues=None, qm_residues=None):
 
     pdb = MyPDBFile(pdb_fname, ff_fnames, link_residues)
     my_ff = MyForceFields(ff_fnames)
+
+    if qm_residues is None:
+        qm_residues = []
+
+    # print(qm_residues)
+    # sys.exit()
 
     _atomType = {}
     _excludedAtomWith = []
@@ -142,6 +133,7 @@ def pdb2amber(pdb_fname, prmtop_fname, inpcrd_fname, ff_fnames, link_residues=No
     at_type_list = []
     max_res_natom = 0
     is_solvent = ["DPPE", "DPP", "HOH", "WAT", "NA", "CL"]
+    qm_res_atoms = []
 
     for chain in pdb.topology.chains():
         nres = chain._residues[0]
@@ -198,6 +190,8 @@ def pdb2amber(pdb_fname, prmtop_fname, inpcrd_fname, ff_fnames, link_residues=No
                 natom = len(atoms)
                 natom_ff = len(ff_resData.atoms)
 
+                resId = "%s%d" % (res.name, res.index+1)
+
                 if max_res_natom < natom:
                     max_res_natom = natom
                 if natom != natom_ff:
@@ -241,12 +235,30 @@ def pdb2amber(pdb_fname, prmtop_fname, inpcrd_fname, ff_fnames, link_residues=No
                                   ff_resData.atoms[jj].at_name)
 
                     typeName = ff_resData.atoms[imatch].at_type
+                    at_chg = float(ff_resData.atoms[imatch].at_chg)*18.2223
+
+                    if resId in qm_residues:
+                        if atName not in ['C', 'O', 'N', 'H', 'CA', 'HA', 'OXT', 'H1', 'H2', 'H3']:
+
+                            if atName == 'CB':
+                                typeName = 'qmprt-CB'  # Turn off LJ interaction
+                            else:
+                                typeName = 'qmprt-'+atName[0]
+                                qm_res_atoms.append(atoms[ii].index)
+
+                            at_chg = 0.0
+
+                        if atName == 'CA':
+                            at_chg = 0.0  # Remove the Coulomb interaction between QM and MM
+                        # print('atom', atName, imatch,
+                        #      typeName, atoms[ii].index)
+
                     if typeName not in at_type_list:
                         at_type_list.append(typeName)
 
                     mass = my_ff._atomTypes[typeName].mass
                     _atomType[atoms[ii]] = typeName
-                    at_chg = float(ff_resData.atoms[imatch].at_chg)*18.2223
+
                     res_chg += at_chg/18.2223
 
                     prm.chg_list.append(at_chg)
@@ -255,6 +267,9 @@ def pdb2amber(pdb_fname, prmtop_fname, inpcrd_fname, ff_fnames, link_residues=No
             else:
                 raise Exception("No Residue2 '%s'." % res.name)
 
+    print('qm_res_atoms', qm_res_atoms)
+    # print('at_type_list', at_type_list)
+    # sys.exit()
     prm.max_res_natom = max_res_natom
     at_type_list = sorted(at_type_list)
     prm.atom_type_list = at_type_list
@@ -271,6 +286,7 @@ def pdb2amber(pdb_fname, prmtop_fname, inpcrd_fname, ff_fnames, link_residues=No
                 break
         prm.atom_type_index_list.append(index)
         prm.amber_atom_type_list.append(atomClass)
+
     for ii in range(numTypes):
         for jj in range(numTypes):
             prm.nb_idx_list.append(0)
@@ -302,16 +318,22 @@ def pdb2amber(pdb_fname, prmtop_fname, inpcrd_fname, ff_fnames, link_residues=No
     _type_list = []
 
     for bond in pdb.topology.bonds():
-        _bonds.append(BondData(bond[0].index, bond[1].index))
-
         iatom = bond[0].index
         jatom = bond[1].index
+
+        type1 = _atomType[bond[0]]
+        type2 = _atomType[bond[1]]
+
+        if iatom in qm_res_atoms and jatom in qm_res_atoms:
+            continue
+
+        _bonds.append(BondData(iatom, jatom))
 
         iatElem = bond[0].element
         jatElem = bond[1].element
 
-        type1 = _atomType[bond[0]]
-        type2 = _atomType[bond[1]]
+        # if type1[:5] == 'qmprt' or type2[:5] == 'qmprt':
+        #    print(type1, type2)
 
         itype = -1
         if type1 < type2:
@@ -374,6 +396,7 @@ def pdb2amber(pdb_fname, prmtop_fname, inpcrd_fname, ff_fnames, link_residues=No
         _bondedToAtom.append(set())
 
     # _bonds = sorted (_bonds)  # add willow
+
     for ii in range(len(_bonds)):
         bond = _bonds[ii]
         _bondedToAtom[bond.atom1].add(bond.atom2)
@@ -451,6 +474,9 @@ def pdb2amber(pdb_fname, prmtop_fname, inpcrd_fname, ff_fnames, link_residues=No
         type1 = _atomType[_atoms[iatom]]
         type2 = _atomType[_atoms[jatom]]
         type3 = _atomType[_atoms[katom]]
+
+        # if type2[:5] == 'qmprt':
+        #    print(type1, type2, type3)
 
         if katom not in _excludedAtomWith[iatom]:
             if iatom not in _excludedAtomWith[katom]:
@@ -545,6 +571,7 @@ def pdb2amber(pdb_fname, prmtop_fname, inpcrd_fname, ff_fnames, link_residues=No
     _unique_torsion_dict = {}
     _dihedral_index = 0
 
+    #print('Uniqure Proper', len(_propers))
     for proper in _propers:
         iatom = proper[0]
         jatom = proper[1]
@@ -555,6 +582,9 @@ def pdb2amber(pdb_fname, prmtop_fname, inpcrd_fname, ff_fnames, link_residues=No
         type2 = _atomType[_atoms[jatom]]
         type3 = _atomType[_atoms[katom]]
         type4 = _atomType[_atoms[latom]]
+
+        # if type2[:5] == 'qmprt' or type3[:5] == 'qmprt':
+        #    print(type1, type2, type3, type4)
 
         vsign = -1.0
         if latom not in _excludedAtomWith[iatom]:
@@ -631,7 +661,6 @@ def pdb2amber(pdb_fname, prmtop_fname, inpcrd_fname, ff_fnames, link_residues=No
             subset = sorted(list(bondedTo))
             _impropers.append((subset[0], subset[1], iatom, subset[2]))
 
-    debug = [19, 23, 21, 22]
     _impropers = sorted(_impropers)
     _dbg_improper_list = []
     for improper in _impropers:
@@ -725,7 +754,7 @@ def pdb2amber(pdb_fname, prmtop_fname, inpcrd_fname, ff_fnames, link_residues=No
 
 if __name__ == "__main__":
     import json
-
+   
     argv = sys.argv[1:]
 
     opts, args = getopt.getopt(
@@ -752,8 +781,14 @@ if __name__ == "__main__":
         if "inpcrd_fname" in data:
             inpcrd_fname = data["inpcrd_fname"]
         ff_fnames = data["fname_ff"]
+
         link_residues = None
         if "linked_residues" in data:
             link_residues = data["linked_residues"]
+        qm_residues = None
+        if 'qm_residues' in data:
+            qm_residues = data['qm_residues']
         pdb2amber(pdb_fname, prmtop_fname, inpcrd_fname,
-                  ff_fnames, link_residues)
+                  ff_fnames,
+                  link_residues=link_residues,
+                  qm_residues=qm_residues)

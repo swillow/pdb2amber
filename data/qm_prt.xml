@@ -1,0 +1,57 @@
+<ForceField>
+  <AtomTypes>
+    <Type class="C" element="C" mass="12.01" name="qmprt-C"/>
+    <Type class="CB" element="C" mass="12.01" name="qmprt-CB"/>
+    <Type class="H" element="H" mass="1.008" name="qmprt-H"/>
+    <Type class="N" element="N" mass="14.01" name="qmprt-N"/>
+    <Type class="O" element="O" mass="16.00" name="qmprt-O"/>
+    <Type class="S" element="S" mass="32.06" name="qmprt-S"/>
+  </AtomTypes>
+ <Residues>
+    <Residue name="CQ">
+      <Atom charge="0.0" name="CQ" type="qmprt-C"/>
+    </Residue>
+    <Residue name="NQ">
+      <Atom charge="0.0" name="NQ" type="qmprt-N"/>
+    </Residue>
+    <Residue name="HQ">
+      <Atom charge="0.0" name="HQ" type="qmprt-H"/>
+    </Residue>
+    <Residue name="OQ">
+      <Atom charge="0.0" name="OQ" type="qmprt-O"/>
+    </Residue>
+    <Residue name="SQ">
+      <Atom charge="0.0" name="SQ" type="qmprt-S"/>
+    </Residue>
+ </Residues>
+  <HarmonicBondForce>
+    <Bond k="0.0" length="0.1525" type1="qmprt-C" type2="qmprt-CB"/>
+    <Bond k="0.0" length="0.1810" type1="qmprt-S" type2="qmprt-CB"/>
+    <Bond k="0.0" length="0.1810" type1="qmprt-H" type2="qmprt-CB"/>
+    <Bond k="259407.99999999994" length="0.1526" type1="qmprt-CB" type2="protein-CX"/>
+  </HarmonicBondForce>
+  <HarmonicAngleForce>
+    <Angle angle="2.0018926520374962" k="0.00" type1="qmprt-H" type2="qmprt-CB" type3="qmprt-H"/>
+    <Angle angle="2.0018926520374962" k="0.00" type1="qmprt-C" type2="qmprt-CB" type3="qmprt-H"/>
+    <Angle angle="2.0018926520374962" k="0.00" type1="qmprt-H" type2="qmprt-CB" type3="qmprt-S"/>
+    <Angle angle="1.9390607989657"  k="527.184" type1="protein-CX" type2="qmprt-CB" type3="qmprt-C"/>
+    <Angle angle="1.911135530933791"  k="418.4" type1="protein-CX" type2="qmprt-CB" type3="qmprt-H"/> 
+    <Angle angle="2.0018926520374962" k="418.4" type1="protein-CX" type2="qmprt-CB" type3="qmprt-S"/>	
+    <Angle angle="1.911135530933791"  k="418.4" type1="protein-H1" type2="protein-CX" type3="qmprt-CB"/>
+    <Angle angle="1.9146261894377796" k="669.44" type1="protein-N" type2="protein-CX" type3="qmprt-CB"/>
+    <Angle angle="1.9390607989657"  k="527.184" type1="protein-C" type2="protein-CX" type3="qmprt-CB"/>
+  </HarmonicAngleForce>
+  <PeriodicTorsionForce ordering="amber">
+	  <Proper k1="0.6508444444444444" periodicity1="3" phase1="0.0" type1="" type2="qmprt-CB" type3="protein-CX" type4=""/>
+	  <Proper k1="0.050208" k2="0.803328" k3="1.962296" k4="0.23012000000000002" periodicity1="4" periodicity2="3" periodicity3="2" periodicity4="1" phase1="3.141592653589793" phase2="0.0" phase3="3.141592653589793" phase4="0.0" type1="protein-C" type2="protein-CX" type3="qmprt-CB" type4="qmprt-C"/>
+	  <Proper k1="0.129704" k2="0.9790560000000001" k3="1.309592" k4="0.330536" periodicity1="4" periodicity2="3" periodicity3="2" periodicity4="1" phase1="0.0" phase2="0.0" phase3="3.141592653589793" phase4="0.0" type1="protein-N" type2="protein-CX" type3="qmprt-CB" type4="qmprt-C"/>
+  </PeriodicTorsionForce>
+  <NonbondedForce coulomb14scale="0.8333333333333334" lj14scale="0.5">
+    <Atom epsilon="0.0" sigma="0.3399669508423535" type="qmprt-C"/>
+    <Atom epsilon="0.0" sigma="0.3399669508423535" type="qmprt-H"/>
+    <Atom epsilon="0.0" sigma="0.3399669508423535" type="qmprt-N"/>
+    <Atom epsilon="0.0" sigma="0.3399669508423535" type="qmprt-O"/>
+    <Atom epsilon="0.0" sigma="0.3399669508423535" type="qmprt-S"/>
+    <Atom epsilon="0.0" sigma="0.3399669508423535" type="qmprt-CB"/>
+  </NonbondedForce>
+</ForceField>

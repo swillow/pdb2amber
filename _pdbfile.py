@@ -234,7 +234,9 @@ class MyPDBFile(object):
     @staticmethod
     def _loadNameReplacementTables():
         """Load the list of atom and residue name replacements."""
-        xml_file_name = './data/pdbNames.xml'
+        print (__file__)
+        wdir = os.path.dirname(os.path.abspath(__file__))
+        xml_file_name = wdir + '/data/pdbNames.xml'
         if len(MyPDBFile._residueNameReplacements) == 0:
             tree = etree.parse(xml_file_name)
             allResidues = {}
