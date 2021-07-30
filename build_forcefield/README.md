@@ -30,7 +30,9 @@
    loadamberparams ligand_H.frcmod
    saveamberparam mol ligand.prmtop ligand.inpcrd
    quit
+   
    ```
+   (Note, there is a empty line after 'quit'.)
 
 6. Build a force field file for OpenMM from an AMBER prmtop file.
    
