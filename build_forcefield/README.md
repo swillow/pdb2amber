@@ -28,7 +28,7 @@
    source leaprc.gaff2
    mol = loadmol2 ligand_H.mol2
    loadamberparams ligand_H.frcmod
-   saveamberparam mol ligand.prmtop ligand.inpcrd
+   saveamberparm mol ligand.prmtop ligand.inpcrd
    quit
    
    ```
