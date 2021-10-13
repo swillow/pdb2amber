@@ -4,7 +4,7 @@ try:
     from simtk.openmm.vec3 import Vec3
     from simtk.openmm import *
     from simtk.unit import *
-else:
+except:
     from openmm.app.internal import amber_file_parser
     from openmm.app import *
     from openmm.vec3 import Vec3

@@ -6,7 +6,7 @@ try:
     from simtk.openmm.vec3 import Vec3
     from simtk.openmm import *
     import simtk.unit as unit
-else:
+except:
     from openmm.app.internal import amber_file_parser
     from openmm.app import *
     from openmm.vec3 import Vec3

@@ -45,7 +45,7 @@ try:
     #from simtk.openmm.app import Topology
     from simtk.unit import nanometers, angstroms, is_quantity, norm, Quantity, dot
     from simtk.openmm.app import element as elem
-else:
+except:
     from openmm import Vec3, Platform
     from openmm.app.internal.pdbstructure import PdbStructure
     from openmm.app.internal.unitcell import computeLengthsAndAngles

@@ -12,7 +12,7 @@ try:
     from simtk.openmm.app import *
     import simtk.unit as units
     from simtk.openmm.app import element as elem
-else:
+except:
     from openmm import *
     from openmm.app import *
     import openmm.unit as units

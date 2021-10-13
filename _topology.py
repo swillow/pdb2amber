@@ -39,7 +39,7 @@ try:
     from simtk.openmm.vec3 import Vec3
     from simtk.openmm.app.internal.singleton import Singleton
     from simtk.unit import nanometers, sqrt, is_quantity
-else:
+except:
     from openmm.vec3 import Vec3
     from openmm.app.internal.singleton import Singleton
     from openmm.unit import nanometers, sqrt, is_quantity
