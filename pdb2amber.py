@@ -1,12 +1,17 @@
 import sys
 import numpy as np
-from simtk.openmm import *
-from simtk.openmm.app import *
-
-from simtk.openmm.app.internal.unitcell import computeLengthsAndAngles
-
-import simtk.unit as units
-from simtk.openmm.app import element as elem
+try:
+    from simtk.openmm import *
+    from simtk.openmm.app import *
+    from simtk.openmm.app.internal.unitcell import computeLengthsAndAngles
+    import simtk.unit as units
+    from simtk.openmm.app import element as elem
+else:
+    from openmm import *
+    from openmm.app import *
+    from openmm.app.internal.unitcell import computeLengthsAndAngles
+    import openmm.unit as units
+    from openmm.app import element as elem
 
 import getopt
 

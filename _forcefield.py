@@ -7,10 +7,17 @@ import xml.etree.ElementTree as etree
 from copy import copy
 from collections import defaultdict
 from datetime import date
-from simtk.openmm import *
-from simtk.openmm.app import *
-import simtk.unit as units
-from simtk.openmm.app import element as elem
+try:
+    from simtk.openmm import *
+    from simtk.openmm.app import *
+    import simtk.unit as units
+    from simtk.openmm.app import element as elem
+else:
+    from openmm import *
+    from openmm.app import *
+    import openmm.unit as units
+    from openmm.app import element as elem
+    
 
 """
 This is a modified 'simtk.openmm.app.forcefield.py' 

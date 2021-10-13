@@ -35,9 +35,15 @@ __version__ = "1.0"
 from collections import namedtuple
 import os
 import xml.etree.ElementTree as etree
-from simtk.openmm.vec3 import Vec3
-from simtk.openmm.app.internal.singleton import Singleton
-from simtk.unit import nanometers, sqrt, is_quantity
+try:
+    from simtk.openmm.vec3 import Vec3
+    from simtk.openmm.app.internal.singleton import Singleton
+    from simtk.unit import nanometers, sqrt, is_quantity
+else:
+    from openmm.vec3 import Vec3
+    from openmm.app.internal.singleton import Singleton
+    from openmm.unit import nanometers, sqrt, is_quantity
+    
 from copy import deepcopy
 import sys
 # Enumerated values for bond type

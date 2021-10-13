@@ -38,12 +38,20 @@ import math
 import xml.etree.ElementTree as etree
 from copy import copy
 from datetime import date
-from simtk.openmm import Vec3, Platform
-from simtk.openmm.app.internal.pdbstructure import PdbStructure
-from simtk.openmm.app.internal.unitcell import computeLengthsAndAngles
-#from simtk.openmm.app import Topology
-from simtk.unit import nanometers, angstroms, is_quantity, norm, Quantity, dot
-from simtk.openmm.app import element as elem
+try:
+    from simtk.openmm import Vec3, Platform
+    from simtk.openmm.app.internal.pdbstructure import PdbStructure
+    from simtk.openmm.app.internal.unitcell import computeLengthsAndAngles
+    #from simtk.openmm.app import Topology
+    from simtk.unit import nanometers, angstroms, is_quantity, norm, Quantity, dot
+    from simtk.openmm.app import element as elem
+else:
+    from openmm import Vec3, Platform
+    from openmm.app.internal.pdbstructure import PdbStructure
+    from openmm.app.internal.unitcell import computeLengthsAndAngles
+    from openmm.unit import nanometers, angstroms, is_quantity, norm, Quantity, dot
+    from openmm.app import element as elem
+    
 from _topology import MyTopology
 
 try:

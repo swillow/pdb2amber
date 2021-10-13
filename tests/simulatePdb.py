@@ -1,7 +1,14 @@
-from simtk.openmm.app import *
-from simtk.openmm import *
-from simtk.unit import *
+try:
+    from simtk.openmm.app import *
+    from simtk.openmm import *
+    from simtk.unit import *    
+else:
+    from openmm.app import *
+    from openmm import *
+    from openmm.unit import * 
+
 from sys import stdout
+
 
 pdb = PDBFile('receptor.pdb')
 forcefield = ForceField('amber14-all.xml')

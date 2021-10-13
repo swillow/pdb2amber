@@ -1,10 +1,18 @@
 import numpy as np
-from simtk.openmm.app.internal import amber_file_parser
-from simtk.openmm.app import *
-from simtk.openmm.vec3 import Vec3
-from simtk.openmm import *
-import simtk.unit as unit
 import sys
+try:
+    from simtk.openmm.app.internal import amber_file_parser
+    from simtk.openmm.app import *
+    from simtk.openmm.vec3 import Vec3
+    from simtk.openmm import *
+    import simtk.unit as unit
+else:
+    from openmm.app.internal import amber_file_parser
+    from openmm.app import *
+    from openmm.vec3 import Vec3
+    from openmm import *
+    import openmm.unit as unit
+    
 from _inpcrd import *
 
 

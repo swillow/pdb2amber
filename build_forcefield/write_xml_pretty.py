@@ -1,11 +1,19 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-from simtk.openmm.app.internal import amber_file_parser
+try:
+    from simtk.openmm.app.internal import amber_file_parser
+    from simtk.openmm.app import *
+    from simtk.openmm.vec3 import Vec3
+    from simtk.openmm import *
+    from simtk.unit import *
+else:
+    from openmm.app.internal import amber_file_parser
+    from openmm.app import *
+    from openmm.vec3 import Vec3
+    from openmm import *
+    from openmm.unit import *
+
 import os
-from simtk.openmm.app import *
-from simtk.openmm.vec3 import Vec3
-from simtk.openmm import *
-from simtk.unit import *
 import sys
 from collections import namedtuple
 import numpy as np
