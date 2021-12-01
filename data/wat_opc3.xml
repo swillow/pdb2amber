@@ -5,6 +5,7 @@
   <AtomTypes>
   <Type name="tip4pew-Na+"       class="Na+" element="Na" mass="22.99" />
   <Type name="tip4pew-Cl-"       class="Cl-" element="Cl" mass="35.45" />
+  <Type class="tip4pew_standard-K+" element="K" mass="39.1" name="tip4pew_standard-K+"/>
   <Type name="tip4pew-Ca2+"      class="Ca2+" element="Ca" mass="40.08" />
   <Type name="opc3-O"    class="wO"   element="O"  mass="16.000"/>
   <Type name="opc3-H"    class="wH"   element="H"  mass="1.0080"/>
@@ -15,6 +16,9 @@
     </Residue>
     <Residue name="CL">
       <Atom charge="-1.0" name="CL" type="tip4pew-Cl-"/>
+    </Residue>
+    <Residue name="K">
+      <Atom charge="1.0" name="K" type="tip4pew_standard-K+"/>
     </Residue>
     <Residue name="CA">
       <Atom charge="2.0" name="CA" type="tip4pew-Ca2+"/>
@@ -36,6 +40,7 @@
  <NonbondedForce coulomb14scale="0.8333333333333334" lj14scale="0.5">
  <UseAttributeFromResidue name="charge"/>
   <Atom epsilon="0.7047424999999999" sigma="0.21844836568801118" type="tip4pew-Na+"/>
+  <Atom epsilon="1.1692819784000001" sigma="0.2833057923686279" type="tip4pew_standard-K+"/>
   <Atom epsilon="0.048791716" sigma="0.49177609241346726" type="tip4pew-Cl-"/>
   <Atom epsilon="0.46311578872000003" sigma="0.29524383519170844" type="tip4pew-Ca2+"/>
   <Atom type="opc3-O" sigma="0.317427" epsilon="0.68369"/>
