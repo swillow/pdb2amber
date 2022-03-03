@@ -1,0 +1,40 @@
+<ForceField>
+  <Info>
+  <DateGenerated>2022-03-02</DateGenerated>
+  <Note> (CYO)-SG--[OS]--NZ-(LYO)--[OS]--SG-(CYO) : charge 0 </Note>
+  </Info>
+  <AtomTypes>
+    <Type class="OS" element="O" mass="16.0000" name="son-O" />
+  </AtomTypes>
+  <Residues>
+    <Residue name="SON">
+      <Atom charge=" -0.185" name="OS" type="son-O" />
+      <ExternalBond atomName="OS" />
+    </Residue>
+  </Residues>
+  <HarmonicBondForce>
+    <Bond k="252211.520000" length="0.170400" type1="son-O" type2="protein-S" />
+    <Bond k="134390.080000" length="0.144100" type1="son-O" type2="protein-N3" />
+  </HarmonicBondForce>
+  <HarmonicAngleForce>
+    <Angle angle="1.714089" k="774.876800" type1="protein-2C" type2="protein-S" type3="son-O" />
+    <Angle angle="1.821077" k="542.246400" type1="protein-N3" type2="son-O" type3="protein-S" />
+    <Angle angle="1.846559" k="715.464000" type1="protein-C8" type2="protein-N3" type3="son-O" />
+    <Angle angle="1.859126" k="900.396800" type1="son-O" type2="protein-N3" type3="son-O" />
+  </HarmonicAngleForce>
+  <PeriodicTorsionForce>
+    <Proper k1="1.394667" periodicity1="3" phase1="0.0000000000000000" type1="protein-H1" type2="protein-2C" type3="protein-S" type4="son-O" />
+    <Proper k1="1.255200" periodicity1="3" phase1="0.0000000000000000" type1="son-O" type2="protein-N3" type3="protein-C8" type4="protein-HP" />
+    <Proper k1="1.394667" periodicity1="3" phase1="0.0000000000000000" type1="son-O" type2="protein-S" type3="protein-2C" type4="protein-H1" />
+    <Proper k1="9.204800" periodicity1="2" phase1="0.0000000000000000" type1="protein-2C" type2="protein-S" type3="son-O" type4="protein-N3" />
+    <Proper k1="7.531200" periodicity1="2" phase1="0.0000000000000000" type1="protein-S" type2="son-O" type3="protein-N3" type4="protein-C8" />
+    <Proper k1="7.531200" periodicity1="2" phase1="0.0000000000000000" type1="protein-S" type2="son-O" type3="protein-N3" type4="son-O" />
+    <Proper k1="7.531200" periodicity1="2" phase1="0.0000000000000000" type1="son-O" type2="protein-N3" type3="son-O" type4="protein-S" />
+    <Proper k1="9.204800" periodicity1="2" phase1="0.0000000000000000" type1="protein-N3" type2="son-O" type3="protein-S" type4="protein-2C" />
+    <Proper k1="7.531200" periodicity1="2" phase1="0.0000000000000000" type1="protein-C8" type2="protein-N3" type3="son-O" type4="protein-S" />
+  </PeriodicTorsionForce>
+  <NonbondedForce coulomb14scale="0.8333333333333334" lj14scale="0.5">
+    <UseAttributeFromResidue name="charge" />
+    <Atom epsilon="0.3037584" sigma="0.3156097800335680" type="son-O" />
+  </NonbondedForce>
+</ForceField>

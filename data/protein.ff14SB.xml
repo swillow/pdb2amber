@@ -324,6 +324,30 @@
       <ExternalBond atomName="N"/>
       <ExternalBond atomName="C"/>
     </Residue>
+    <Residue name="CYO">
+      <Atom charge="-0.4157" name="N" type="protein-N"/>
+      <Atom charge="0.0443" name="H" type="protein-H"/>
+      <Atom charge="0.3370" name="CA" type="protein-CX"/>
+      <Atom charge="-0.0443" name="HA" type="protein-H1"/>
+      <Atom charge="0.2159" name="CB" type="protein-2C"/>
+      <Atom charge="-0.0493" name="HB2" type="protein-H1"/>
+      <Atom charge="-0.0493" name="HB3" type="protein-H1"/>
+      <Atom charge="0.0970" name="SG" type="protein-S"/>
+      <Atom charge="0.5973" name="C" type="protein-C"/>
+      <Atom charge="-0.5679" name="O" type="protein-O"/>
+      <Bond atomName1="N" atomName2="H"/>
+      <Bond atomName1="N" atomName2="CA"/>
+      <Bond atomName1="CA" atomName2="HA"/>
+      <Bond atomName1="CA" atomName2="CB"/>
+      <Bond atomName1="CA" atomName2="C"/>
+      <Bond atomName1="CB" atomName2="HB2"/>
+      <Bond atomName1="CB" atomName2="HB3"/>
+      <Bond atomName1="CB" atomName2="SG"/>
+      <Bond atomName1="C" atomName2="O"/>
+      <ExternalBond atomName="SG"/>
+      <ExternalBond atomName="N"/>
+      <ExternalBond atomName="C"/>
+    </Residue>
     <Residue name="GLH">
       <Atom charge="-0.4157" name="N" type="protein-N"/>
       <Atom charge="0.2719" name="H" type="protein-H"/>
@@ -806,6 +830,48 @@
       <Bond atomName1="C" atomName2="O"/>
       <ExternalBond atomName="N"/>
       <ExternalBond atomName="C"/>
+    </Residue>
+    <Residue name="LYO">
+      <Atom charge="-0.4157" name="N" type="protein-N"/>
+      <Atom charge="0.2719" name="H" type="protein-H"/>
+      <Atom charge="-0.07206" name="CA" type="protein-CX"/>
+      <Atom charge="0.0994" name="HA" type="protein-H1"/>
+      <Atom charge="-0.04845" name="CB" type="protein-CT"/>
+      <Atom charge="0.034" name="HB2" type="protein-HC"/>
+      <Atom charge="0.034" name="HB3" type="protein-HC"/>
+      <Atom charge="0.06612" name="CG" type="protein-CT"/>
+      <Atom charge="0.01041" name="HG2" type="protein-HC"/>
+      <Atom charge="0.01041" name="HG3" type="protein-HC"/>
+      <Atom charge="-0.03768" name="CD" type="protein-CT"/>
+      <Atom charge="0.01155" name="HD2" type="protein-HC"/>
+      <Atom charge="0.01155" name="HD3" type="protein-HC"/>
+      <Atom charge="0.32604" name="CE" type="protein-CT"/>
+      <Atom charge="-0.03358" name="HE2" type="protein-HP"/>
+      <Atom charge="-0.03358" name="HE3" type="protein-HP"/>
+      <Atom charge="-0.22373" name="NZ" type="protein-N3"/>
+      <Atom charge="0.5973" name="C" type="protein-C"/>
+      <Atom charge="-0.5679" name="O" type="protein-O"/>
+      <Bond atomName1="N" atomName2="H"/>
+      <Bond atomName1="N" atomName2="CA"/>
+      <Bond atomName1="CA" atomName2="HA"/>
+      <Bond atomName1="CA" atomName2="CB"/>
+      <Bond atomName1="CA" atomName2="C"/>
+      <Bond atomName1="CB" atomName2="HB2"/>
+      <Bond atomName1="CB" atomName2="HB3"/>
+      <Bond atomName1="CB" atomName2="CG"/>
+      <Bond atomName1="CG" atomName2="HG2"/>
+      <Bond atomName1="CG" atomName2="HG3"/>
+      <Bond atomName1="CG" atomName2="CD"/>
+      <Bond atomName1="CD" atomName2="HD2"/>
+      <Bond atomName1="CD" atomName2="HD3"/>
+      <Bond atomName1="CD" atomName2="CE"/>
+      <Bond atomName1="CE" atomName2="HE2"/>
+      <Bond atomName1="CE" atomName2="HE3"/>
+      <Bond atomName1="CE" atomName2="NZ"/>
+      <Bond atomName1="C" atomName2="O"/>
+      <ExternalBond atomName="N"/>
+      <ExternalBond atomName="C"/>
+      <ExternalBond atomName="NZ"/>
     </Residue>
     <Residue name="MET">
       <Atom charge="-0.4157" name="N" type="protein-N"/>
