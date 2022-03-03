@@ -1,6 +1,5 @@
 import sys
 import numpy as np
-from decimal import Decimal
 
 def print_solvent_pointers  (data, fout):
     key_words = 'SOLVENT_POINTERS'
@@ -140,7 +139,7 @@ class PrmTop (object):
 #        self.scee_list = []
 #        self.scnb_list = []
 
-        self.solty_list = [Decimal(0.0), Decimal(0.0)]
+        self.solty_list = [0.0, 0.0]
         self.lj_acoef_list = []
         self.lj_bcoef_list = []
         self.nb_idx_list   = []
