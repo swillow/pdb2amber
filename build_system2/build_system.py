@@ -19,11 +19,11 @@ def read_prt_heavy_atoms(fname_prt, box, fout):
     for line in l_pdb:
 
         if line[:6] in ['ATOM  ', 'HETATM']:
-            words = line[30:].split()
-            sym = words[-1]
-            x = float(words[0])
-            y = float(words[1])
-            z = float(words[2])
+
+            x = float(line[30:38])
+            y = float(line[38:46])
+            z = float(line[46:54])
+            sym = line[76:78].strip() 
 
             if sym != 'H':
                 crd = np.array([x, y, z])
@@ -41,11 +41,11 @@ def read_prt_heavy_atoms(fname_prt, box, fout):
         if line[:3] == 'END':
             continue
         if line[:6] in ['ATOM  ', 'HETATM']:
-            words = line[30:].split()
-            sym = words[-1]
-            x = float(words[0]) + t_com[0]
-            y = float(words[1]) + t_com[1]
-            z = float(words[2]) + t_com[2]
+            x = float(line[30:38]) + t_com[0]
+            y = float(line[38:46]) + t_com[1]
+            z = float(line[46:54]) + t_com[2]
+            sym = line[76:78].strip() 
+
             sx = ("%8.3f" % x)[:8]
             sy = ("%8.3f" % y)[:8]
             sz = ("%8.3f" % z)[:8]
@@ -97,9 +97,11 @@ def build_membrane(prt_heavy_atoms, fname_mem, box, shift_z, fout):
         ic, jc, kc = np.array(pi//5, dtype=np.int)
         cell_list[(ic, jc, kc)].append(pi)
     # READ MEMBRANE
-    f_mem = open(fname_mem)
-    l_mem = f_mem.read().split('\n')
-    f_mem.close()
+    l_pdb = open(fname_prt, 'r').readlines()
+    l_mem = []
+    for line in l_pdb:
+        if line[:6] in ['ATOM  ', 'HETATM']:
+            l_mem.append(line)
 
     tatom = 0
     res_atoms_list = []
@@ -114,17 +116,16 @@ def build_membrane(prt_heavy_atoms, fname_mem, box, shift_z, fout):
         res_atoms = []
         for iatom in range(121):
             line = l_mem[tatom]
-            words = line[30:].split()
-
-            x = float(words[0])
+            
+            x = float(line[30:38])
             minx = min(x, minx)
             maxx = max(x, maxx)
 
-            y = float(words[1])
+            y = float(line[38:46])
             miny = min(y, miny)
             maxy = max(y, maxy)
 
-            z = float(words[2])
+            z = float(line[46:54])
             minz = min(z, minz)
             maxz = max(z, maxz)
 
