@@ -75,8 +75,8 @@ def build_membrane(prt_heavy_atoms, fname_mem, box, shift_z, fout):
     prt_min = prt_heavy_atoms.min(axis=0)
     prt_max = prt_heavy_atoms.max(axis=0)
 
-    ndim_min = np.array(prt_min//5, dtype=np.int)
-    ndim_max = np.array(prt_max//5, dtype=np.int) + 1
+    ndim_min = np.array(prt_min//5, dtype=np.int32)
+    ndim_max = np.array(prt_max//5, dtype=np.int32) + 1
 
     cell_list = {}
 
@@ -91,10 +91,10 @@ def build_membrane(prt_heavy_atoms, fname_mem, box, shift_z, fout):
             for kc in range(-1, 2):
                 neigh_list.append([ic, jc, kc])
 
-    neigh_list = np.array(neigh_list, dtype=np.int)
+    neigh_list = np.array(neigh_list, dtype=np.int32)
 
     for pi in prt_heavy_atoms:
-        ic, jc, kc = np.array(pi//5, dtype=np.int)
+        ic, jc, kc = np.array(pi//5, dtype=np.int32)
         cell_list[(ic, jc, kc)].append(pi)
     # READ MEMBRANE
     l_pdb = open(fname_prt, 'r').readlines()
@@ -136,7 +136,7 @@ def build_membrane(prt_heavy_atoms, fname_mem, box, shift_z, fout):
 
     res_atoms_list = np.array(res_atoms_list)
 
-    ndim_box = np.array(box//15, dtype=np.int)
+    ndim_box = np.array(box//15, dtype=np.int32)
 
     mem_heavy_atoms = []
     n_mem = 0
@@ -160,7 +160,7 @@ def build_membrane(prt_heavy_atoms, fname_mem, box, shift_z, fout):
 
                     pn = pi + pc
 
-                    icel = np.array(pn//5, dtype=np.int)
+                    icel = np.array(pn//5, dtype=np.int32)
 
                     for ncel in neigh_list:
 
@@ -212,8 +212,8 @@ def build_solution(prt_heavy_atoms, mem_heavy_atoms,
     else:
         heavy_atoms = prt_heavy_atoms
 
-    ndim_min = np.array(heavy_atoms.min(axis=0)//5, dtype=np.int)
-    ndim_max = np.array(heavy_atoms.max(axis=0)//5, dtype=np.int)+1
+    ndim_min = np.array(heavy_atoms.min(axis=0)//5, dtype=np.int32)
+    ndim_max = np.array(heavy_atoms.max(axis=0)//5, dtype=np.int32)+1
 
     cell_list = {}
     for ic in range(ndim_min[0], ndim_max[0]):
@@ -222,7 +222,7 @@ def build_solution(prt_heavy_atoms, mem_heavy_atoms,
                 cell_list[(ic, jc, kc)] = []
 
     for pi in heavy_atoms:
-        ic, jc, kc = np.array(pi//5, dtype=np.int)
+        ic, jc, kc = np.array(pi//5, dtype=np.int32)
         if (ic, jc, kc) in cell_list:
             cell_list[(ic, jc, kc)].append(pi)
         else:
@@ -234,7 +234,7 @@ def build_solution(prt_heavy_atoms, mem_heavy_atoms,
         for jc in range(-1, 2):
             for kc in range(-1, 2):
                 neigh_list.append([ic, jc, kc])
-    neigh_list = np.array(neigh_list, dtype=np.int)
+    neigh_list = np.array(neigh_list, dtype=np.int32)
 
     f_xyz = open(fname_wat)
     l_xyz = f_xyz.read().split('\n')
@@ -266,7 +266,7 @@ def build_solution(prt_heavy_atoms, mem_heavy_atoms,
     nres = 0
     natom = 0
 
-    ndim_box = np.array(box//15, dtype=np.int)
+    ndim_box = np.array(box//15, dtype=np.int32)
     ion_list = []
     l_add_ion = True
 
@@ -288,7 +288,7 @@ def build_solution(prt_heavy_atoms, mem_heavy_atoms,
                             # where the mebrane is placed
                             continue
 
-                    icel = np.array(po//5, dtype=np.int)
+                    icel = np.array(po//5, dtype=np.int32)
 
                     l_overlap = 0
                     for ncel in neigh_list:
