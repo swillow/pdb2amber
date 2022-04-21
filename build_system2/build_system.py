@@ -56,7 +56,7 @@ def read_prt_heavy_atoms(fname_prt, box, fout):
             if sym != 'H':
                 prt_heavy_atoms.append([x, y, z])
         else:
-            print(line, file=fout)
+            print(line[:-1], file=fout)
 
     prt_heavy_atoms = np.array(prt_heavy_atoms)
     prt_min = prt_heavy_atoms.min(axis=0)
@@ -191,7 +191,7 @@ def build_membrane(prt_heavy_atoms, fname_mem, box, shift_z, fout):
                         str_xyz = "%4d    %8.3f%8.3f%8.3f" % (
                             n_mem, xi, yi, zi)
 
-                        line_new = line[0:22] + str_xyz+line[54:]
+                        line_new = line[0:22] + str_xyz+line[54:-1]
                         print(line_new, file=fout)
 
                         words = line[54:].split()
