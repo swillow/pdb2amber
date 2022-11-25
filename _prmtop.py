@@ -324,7 +324,7 @@ class PrmTop (object):
         print_double_data('SCREEN', data, fout)
 
 
-        data = [1]
+        data = [0]
         print_integer_data('IPOL', data, fout)
 
         fout.close()
