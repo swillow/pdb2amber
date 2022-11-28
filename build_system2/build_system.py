@@ -97,7 +97,7 @@ def build_membrane(prt_heavy_atoms, fname_mem, box, shift_z, fout):
         ic, jc, kc = np.array(pi//5, dtype=np.int32)
         cell_list[(ic, jc, kc)].append(pi)
     # READ MEMBRANE
-    l_pdb = open(fname_prt, 'r').readlines()
+    l_pdb = open(fname_mem, 'r').readlines()
     l_mem = []
     for line in l_pdb:
         if line[:6] in ['ATOM  ', 'HETATM']:
